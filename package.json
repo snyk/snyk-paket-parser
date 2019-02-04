@@ -3,6 +3,7 @@
   "description": "Generate a dep tree given a collection of manifests",
   "main": "dist/index.js",
   "scripts": {
+    "test": "jest",
     "lint": "tslint -p tsconfig.json",
     "build": "tsc",
     "build-watch": "tsc -w",
@@ -32,6 +33,9 @@
     "@types/node": "^4.0.47",
     "ts-node": "7.0.0",
     "tslint": "5.11.0",
-    "typescript": "3.0.1"
+    "typescript": "3.0.1",
+    "@types/jest": "^23.3.13",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5"
   }
 }
