@@ -2,7 +2,18 @@ import * as _ from 'lodash';
 
 export {
   parse,
-  Node,
+};
+
+const traverse = (node: Node, json: any) => {
+  if(node.children.length === 0) {
+    json[node.data] = null;
+  } else {
+    json[node.data] = {};
+    for (let i = 0; i < node.children.length; i++) {
+      traverse(node.children[i], json[node.data]);
+    }
+  }
+  return json;
 };
 
 class Node {
@@ -18,14 +29,18 @@ class Node {
     this.children = [];
   }
 
-  // TODO pretty-print
+// Note: this is not yet returning valid JSON
+// it returns array of given tree
+  toJSON () {
+    return traverse(this, {});
+  };
 }
 
 // parse space indented lines into json format
 function parse (input: string,
                 indent: string = '  ' /* two spaces */,
                 lineSeparator: string = '\n') : object | null {
-  const lines = input.split(lineSeparator);
+  const lines = input.split(lineSeparator); // for testing
 
   const countIndents = (line: string) => {
     const count = (line.length - _.trimStart(line).length) / indent.length;
@@ -35,25 +50,33 @@ function parse (input: string,
     return count;
   };
 
-  const root = new Node('root', -1);
+  const root = new Node('dependencies', -1);
   const nodeStack = [root];
+  let stackTop = root;
+
+  const topnode = () => {
+    return nodeStack[nodeStack.length - 1];
+  }
+
 
   for (let i = 0; i < lines.length; i++) {
+    if (lines[i].trim() === '') {
+      continue;
+    }
     const indentCount = countIndents(lines[i]);
 
     if (indentCount >= 0) {
-      let stackTop = root;
-      while (indentCount - stackTop.depth <= 0) {
+      while (indentCount - topnode().depth <= 0) {
         stackTop = nodeStack.pop();
       }
 
       // inserting and restructuring the tree
       const node = new Node(lines[i].trim(), nodeStack.length - 1);
-      node.parent = stackTop;
+      node.parent = topnode();
       node.parent.children.push(node);
       nodeStack.push(node);
     }
   }
 
-  return root;
+  return root.toJSON();
 }
