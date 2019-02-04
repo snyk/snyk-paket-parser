@@ -4,7 +4,7 @@ import * as _ from 'lodash';
 
 export {
   parseLockFile,
-  parseDependenciesFile,
+  // parseDependenciesFile,
 };
 
 /*
@@ -39,9 +39,9 @@ function parseLockFile(path: string) {
   const fileContents = fs.readFileSync(path, 'utf-8');
   let lines = fileContents.split('\n');
 
-  if (!lines[0].includes('GROUP')) {
-    lines = ['GROUP main'].concat(lines); //put in a different array
-  }
+  // if (!lines[0].includes('GROUP')) {
+  //   lines = ['GROUP main'].concat(lines); //put in a different array
+  // }
 
   // algorithm
   // take group, repo type, repo link
