@@ -16,7 +16,11 @@ Input `paket.lock`:
 
 Output:
 ```
-  [
-    { name: 'Microsoft.CSharp', version: '4.5' restriction: '|| (&& (< net20) (>= netstandard1.0) (< netstandard1.3)) (&& (< net20) (>= netstandard1.3) (< netstandard2.0))'}
-  ]
+  {
+    'Microsoft.CSharp': {
+      name: 'Microsoft.CSharp',
+      version: '4.5',
+      restriction: '|| (&& (< net20) (>= netstandard1.0) (< netstandard1.3)) (&& (< net20) (>= netstandard1.3) (< netstandard2.0))'
+    }
+  }
 ```

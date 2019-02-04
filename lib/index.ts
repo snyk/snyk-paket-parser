@@ -1,100 +1,70 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as _ from 'lodash';
+import * as util from 'util';
 
+import { parse } from './indent-parser';
 export {
   parseLockFile,
-  // parseDependenciesFile,
 };
 
+export interface PkgNode {
+  name: string;
+  version: string;
+  restriction: string;
+  // ignoring for now - addressing later
+  // depType?: DepType;
+  // targetFrameworks?: string[];
+}
+
+export interface PkgTree {
+  name: string;
+  dependencies: {
+    [dep: string]: PkgNode;
+  };
+  hasDevDependencies?: boolean;
+}
+export enum DepType {
+  prod = 'prod',
+  dev = 'dev',
+}
 /*
-input:
-NUGET
-  remote: https://nuget.org/api/v2
-    FSharp.Core (4.0.0.1)
-      Newtonsoft.Json (7.0.1)
-    UnionArgParser (0.6.3)
-
-GITHUB
-  remote: forki/FsUnit
-    FsUnit.fs (81d27fd09575a32c4ed52eadb2eeac5f365b8348)
-
-Group test
-NUGET
-  remote: https://nuget.org/api/v2
-    FSharp.Core (4.0.0.1)
-GITHUB
-  remote: forki/FsUnit
-    FsUnit.fs (81d27fd09575a32c4ed52eadb2eeac5f365b8348)
-  remote: fsharp/FAKE
-    src/app/FakeLib/Globbing/Globbing.fs
-
+  As with other dotnet-deps-parser we assume this parser will get the manifestFileContents as a string
  */
-function parseLockFile(path: string) {
-  if (!fs.existsSync(path)) {
-    throw new Error('No project file found at ' +
-      `location: ${path}`);
+function parseLockFile(manifestFileContents: string) {
+  const depTree: PkgTree = {
+    dependencies: {},
+    hasDevDependencies: false,
+    name: '',
+    // version: '', does not exist
+    // depType: isDev ? DepType.dev : DepType.prod,
+  };
+
+  // assume first content is always Main GROUP
+  // parse from first line to next GROUP we find
+  const groups = manifestFileContents.split(/[Gg][Rr][Oo][Uu][Pp] +/);
+  let parsedGroups:any[] = [];
+
+  for(let i = 0; i < groups.length; i++) {
+    parsedGroups.push(parse(groups[i])); 
   }
 
-  const fileContents = fs.readFileSync(path, 'utf-8');
-  let lines = fileContents.split('\n');
+  // console.log(util.inspect(parsedGroups, false, null, true));
 
-  // if (!lines[0].includes('GROUP')) {
-  //   lines = ['GROUP main'].concat(lines); //put in a different array
-  // }
-
-  // algorithm
-  // take group, repo type, repo link
-  // call parseSpaceIndentedStructureToJSON for lines under those
-
-
-
-}
-
-/*
-input:
-NUGET
-  remote: https://nuget.org/api/v2
-    FSharp.Core (4.0.0.1)
-      Newtonsoft.Json (7.0.1)
-    UnionArgParser (0.6.3)
-output:
-{
-  "group main": {
-    "NUGET": {
-    "remote: https://nuget.org/api/v2": {
-      "FSharp.Core (4.0.0.1)": {
-        "Newtonsoft.Json (7.0.1)": {}
-      },
-      "UnionArgParser (0.6.3)": {}
-    }
+  for(let i = 0; i < parsedGroups.length; i++){
+    let currentDepGroup = parsedGroups[i].dependencies;
+    _.forEach(currentDepGroup['NUGET'], function(deps, key) {
+      _.forEach(deps, function(dep, key) {
+        const parsed = parseLockFileRow(key);
+        depTree.dependencies[parsed.name] = parsed;
+      });
+    });
   }
+
+  return depTree;
 }
 
- */
-function parseSpaceIndentedStructure (group: string[]) {
-  // we are not processing non NUGET repos
-  // if (group[0].trim() !== 'NUGET') {
-  //   return null;
-  // }
-
-}
-
-/*
-input:
-    FSharp.Core (4.0.0.1)
-      Newtonsoft.Json (7.0.1)
-    UnionArgParser (0.6.3)
- */
-function parseGroupRepoDepenencies(rows: string[]) {
-
-}
-
-/*
-input:
-    FSharp.Core (4.0.0.1)
- */
-function parseLockFileRow (row: string) {
+function parseLockFileRow (row: string) : PkgNode{
   const rowParts = row.trim().split(' - restriction: ');
   const dependencyParts = rowParts[0].split(' ');
 
