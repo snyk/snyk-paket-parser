@@ -2,7 +2,7 @@ import * as _ from 'lodash';
 
 export {
   parse,
-  indentify,
+  Node,
 };
 
 class Node {
@@ -10,12 +10,15 @@ class Node {
   data: string;
   depth: number;
   children: Node [];
+
   constructor (data: any, depth: any) {
     this.parent = null;
     this.data = data;
     this.depth = depth;
     this.children = [];
   }
+
+  // TODO pretty-print
 }
 
 // parse space indented lines into json format
