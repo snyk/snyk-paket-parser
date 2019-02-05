@@ -4,42 +4,50 @@ export {
   parse,
 };
 
+// TODO: sort out consistent interface usage
+export interface ParsedTree {
+  [dep: string]: {
+    'NUGET': object;
+  };
+}
+
+// possibly unnecessary repeated parsing without
+// taking advantage of local knowledge of paket.lock particulars
 const traverse = (node: Node, json: any) => {
-  if(node.children.length === 0) {
+  if (node.children.length === 0) {
     json[node.data] = null;
   } else {
     json[node.data] = {};
-    for (let i = 0; i < node.children.length; i++) {
-      traverse(node.children[i], json[node.data]);
+    for (const child of node.children) {
+      traverse(child, json[node.data]);
     }
   }
   return json;
 };
 
 class Node {
-  parent: Node | null;
-  data: string;
-  depth: number;
-  children: Node [];
+  public parent: Node | null;
+  public data: string;
+  public depth: number;
+  public children: Node [];
 
-  constructor (data: any, depth: any) {
+  constructor(data: any, depth: any) {
     this.parent = null;
     this.data = data;
     this.depth = depth;
     this.children = [];
   }
 
-// Note: this is not yet returning valid JSON
-// it returns array of given tree
-  toJSON () {
+  public toJSON() {
     return traverse(this, {});
-  };
+  }
 }
 
 // parse space indented lines into json format
-function parse (input: string,
-                indent: string = '  ' /* two spaces */,
-                lineSeparator: string = '\n') : object | null {
+function parse(
+  input: string,
+  indent: string = '  ' /* two spaces */,
+  lineSeparator: string = '\n'): ParsedTree | null {
   const lines = input.split(lineSeparator); // for testing
 
   const countIndents = (line: string) => {
@@ -52,27 +60,25 @@ function parse (input: string,
 
   const root = new Node('dependencies', -1);
   const nodeStack = [root];
-  let stackTop = root;
 
-  const topnode = () => {
+  const stackTop = () => {
     return nodeStack[nodeStack.length - 1];
-  }
+  };
 
-
-  for (let i = 0; i < lines.length; i++) {
-    if (lines[i].trim() === '') {
+  for (const line of lines) {
+    if (line.trim() === '') {
       continue;
     }
-    const indentCount = countIndents(lines[i]);
+    const indentCount = countIndents(line);
 
     if (indentCount >= 0) {
-      while (indentCount - topnode().depth <= 0) {
-        stackTop = nodeStack.pop();
+      while (indentCount - stackTop().depth <= 0) {
+        nodeStack.pop();
       }
 
       // inserting and restructuring the tree
-      const node = new Node(lines[i].trim(), nodeStack.length - 1);
-      node.parent = topnode();
+      const node = new Node(line.trim(), nodeStack.length - 1);
+      node.parent = stackTop();
       node.parent.children.push(node);
       nodeStack.push(node);
     }

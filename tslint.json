@@ -12,6 +12,8 @@
       "no-use-before-declare": true,
       "ordered-imports": false,
       "quotemark": [true, "single", "avoid-escape", "avoid-template"],
-      "semicolon": [true, "always"]
+      "semicolon": [true, "always"],
+      "object-literal-sort-keys": false,
+      "no-string-literal": false
   }
 }
