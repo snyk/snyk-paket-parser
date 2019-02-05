@@ -1,12 +1,7 @@
-import * as fs from 'fs';
-import * as path from 'path';
 import * as _ from 'lodash';
-import * as util from 'util';
-
 import { parse } from './indent-parser';
-export {
-  parseLockFile,
-};
+
+export { parseLockFile };
 
 export interface PkgNode {
   name: string;
@@ -24,37 +19,29 @@ export interface PkgTree {
   };
   hasDevDependencies?: boolean;
 }
-export enum DepType {
-  prod = 'prod',
-  dev = 'dev',
-}
-/*
-  As with other dotnet-deps-parser we assume this parser will get the manifestFileContents as a string
- */
+
+// as with other dotnet-deps-parser we assume this parser will get the manifestFileContents as a string
 function parseLockFile(manifestFileContents: string) {
   const depTree: PkgTree = {
     dependencies: {},
     hasDevDependencies: false,
     name: '',
-    // version: '', does not exist
-    // depType: isDev ? DepType.dev : DepType.prod,
   };
 
   // assume first content is always Main GROUP
   // parse from first line to next GROUP we find
+  // perhaps we grab more intelligently around NUGET alone to help performance?
   const groups = manifestFileContents.split(/[Gg][Rr][Oo][Uu][Pp] +/);
-  let parsedGroups:any[] = [];
 
-  for(let i = 0; i < groups.length; i++) {
-    parsedGroups.push(parse(groups[i])); 
-  }
+  for (const group of groups) {
+    const parsedGroup = parse(group);
+    const currentDepGroup = parsedGroup.dependencies;
 
-  // console.log(util.inspect(parsedGroups, false, null, true));
-
-  for(let i = 0; i < parsedGroups.length; i++){
-    let currentDepGroup = parsedGroups[i].dependencies;
-    _.forEach(currentDepGroup['NUGET'], function(deps, key) {
-      _.forEach(deps, function(dep, key) {
+    // absolutely not ideal another traversal to get NUGET
+    // logic works for MVP only
+    // TODO: make more performant
+    _.forEach(currentDepGroup['NUGET'], (deps) => {
+      _.forEach(deps, (dep, key: string) => {
         const parsed = parseLockFileRow(key);
         depTree.dependencies[parsed.name] = parsed;
       });
@@ -64,7 +51,7 @@ function parseLockFile(manifestFileContents: string) {
   return depTree;
 }
 
-function parseLockFileRow (row: string) : PkgNode{
+function parseLockFileRow(row: string): PkgNode {
   const rowParts = row.trim().split(' - restriction: ');
   const dependencyParts = rowParts[0].split(' ');
 
@@ -72,7 +59,5 @@ function parseLockFileRow (row: string) : PkgNode{
     name: dependencyParts[0],
     version: dependencyParts[1].slice(1, -1),
     restriction: rowParts[1],
-  }
+  };
 }
-
-
