@@ -1,5 +1,5 @@
 - [ ] Ready for review
-- [ ] Follows [CONTRIBUTING](https://github.com/snyk/snyk-paket-parser/blob/master/CONTRIBUTING.md) rules
+- [ ] Follows [CONTRIBUTING](CONTRIBUTING.md) rules
 - [ ] Reviewed by Snyk internal team
 
  #### What does this PR do?
