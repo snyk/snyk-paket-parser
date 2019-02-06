@@ -2,14 +2,8 @@ import * as _ from 'lodash';
 
 export {
   parse,
+  Node,
 };
-
-// TODO: sort out consistent interface usage
-export interface ParsedTree {
-  [dep: string]: {
-    'NUGET': object;
-  };
-}
 
 // possibly unnecessary repeated parsing without
 // taking advantage of local knowledge of paket.lock particulars
@@ -47,7 +41,7 @@ class Node {
 function parse(
   input: string,
   indent: string = '  ' /* two spaces */,
-  lineSeparator: string = '\n'): ParsedTree | null {
+  lineSeparator: RegExp = /\r?\n/): Node | null {
   const lines = input.split(lineSeparator); // for testing
 
   const countIndents = (line: string) => {
@@ -84,5 +78,5 @@ function parse(
     }
   }
 
-  return root.toJSON();
+  return root;
 }
