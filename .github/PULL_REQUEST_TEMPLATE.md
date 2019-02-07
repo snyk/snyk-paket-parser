@@ -2,22 +2,22 @@
 - [ ] Follows [CONTRIBUTING](CONTRIBUTING.md) rules
 - [ ] Reviewed by Snyk internal team
 
- #### What does this PR do?
+#### What does this PR do?
 
 
- #### Where should the reviewer start?
+#### Where should the reviewer start?
 
 
- #### How should this be manually tested?
+#### How should this be manually tested?
 
 
- #### Any background context you want to provide?
+#### Any background context you want to provide?
 
 
- #### What are the relevant tickets?
+#### What are the relevant tickets?
 
 
- #### Screenshots
+#### Screenshots
 
 
- #### Additional questions
+#### Additional questions
