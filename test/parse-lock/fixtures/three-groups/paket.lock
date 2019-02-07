@@ -1,0 +1,27 @@
+FRAMEWORK: NET452
+NUGET
+  remote: http://api.nuget.org/v3/index.json
+    NLog (4.3.11)
+
+GROUP build
+FRAMEWORK: NET452
+NUGET
+  remote: https://www.nuget.org/api/v2
+    GitVersion (3.6.4)
+
+GROUP tests
+FRAMEWORK: NET452
+NUGET
+  remote: https://www.nuget.org/api/v2
+    xunit (2.1)
+      xunit.assert (2.1)
+      xunit.core (2.1)
+    xunit.abstractions (2.0)
+    xunit.assert (2.1)
+    xunit.core (2.1)
+      xunit.extensibility.core (2.1)
+      xunit.extensibility.execution (2.1)
+    xunit.extensibility.core (2.1)
+      xunit.abstractions (2.0)
+    xunit.extensibility.execution (2.1)
+      xunit.extensibility.core (2.1)

@@ -1,0 +1,27 @@
+RESTRICTION: >= net40
+NUGET
+  remote: https://www.nuget.org/api/v2
+    Argu (3.7)
+    DotLiquid (2.0.145)
+    Expecto (5.0)
+      Argu (>= 3.7)
+      FSharp.Core (>= 4.1.12)
+      Mono.Cecil (>= 0.10.0-beta5)
+    FsCheck (2.9)
+      FSharp.Core (>= 4.1)
+    FSharp.Core (4.2.1)
+    FSharp.Data (2.3.3)
+    Mono.Cecil (0.10.0-beta6)
+    Suave (2.1.1)
+      FSharp.Core (>= 4.0.0.1)
+    Suave.DotLiquid (2.1.1)
+      DotLiquid (>= 2.0.64)
+      FSharp.Core (>= 4.0.0.1)
+      Suave (>= 2.1.1)
+    System.Runtime.Serialization.Primitives (4.3) - restriction: || (&& (>= net40) (< net45) (>= netstandard1.3)) (&& (>= net40) (>= dnxcore50)) (>= net46)
+    System.Runtime.Serialization.Xml (4.3)
+      System.Runtime.Serialization.Primitives (>= 4.3) - restriction: || (&& (>= net40) (< net45) (>= netstandard1.3)) (&& (>= net40) (>= dnxcore50)) (>= net46)
+    Unquote (3.2)
+GITHUB
+  remote: haf/YoLo
+    YoLo.fs (2ae49ac885e2f42812edbaa2dbc8d0e872653cab)

@@ -1,0 +1,18 @@
+NUGET
+  remote: http://api.nuget.org/v3/index.json
+    NLog (4.3.11)
+
+GROUP build
+NUGET
+  remote: https://www.nuget.org/api/v2
+    Group (1.2.3)
+    GitVersion (3.6.4)
+
+GROUP tests
+NUGET
+  remote: https://www.nuget.org/api/v2
+    xunit (2.1)
+      xunit.assert (2.1)
+      xunit.core (2.1)
+    xunit.abstractions (2.0)
+    xunit.assert (2.1)

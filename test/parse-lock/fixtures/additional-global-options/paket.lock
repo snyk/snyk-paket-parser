@@ -1,0 +1,5 @@
+IMPORT-TARGETS: FALSE
+FRAMEWORK: NET452
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    FSharp.Charting (0.90.14)
