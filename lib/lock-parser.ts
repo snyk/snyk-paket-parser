@@ -1,7 +1,8 @@
 import {startsWith} from 'lodash';
 import {Line, parse as parseLines} from './line-parser';
+import * as util from 'util';
 
-const REPOSITORY_TYPES = ['HTTP', 'GIST', 'GIT', 'NUGET', 'GITHUB'];
+const REPOSITORY_TYPES = ['HTTP', 'GIST', 'GIT', 'NUGET', 'GITHUB']; // naming convention in paket's standard parser
 const GROUP = 'GROUP';
 const REMOTE = 'remote';
 const SPECS = 'specs';
@@ -23,8 +24,17 @@ interface ResolvedDependency extends Dependency {
   dependencies: Dependency[];
 }
 
-interface LockResult {
-  dependencies: ResolvedDependency [];
+export interface Group {
+  name: string;
+  repositories: {
+    [name: string]: string[];
+  };
+  dependencies: ResolvedDependency[];
+  options: Option;
+}
+
+export interface PaketLock {
+  [name: string]: Group;
 }
 
 function parseOptions(optionsString: string): Option {
@@ -32,8 +42,9 @@ function parseOptions(optionsString: string): Option {
 
   for (const option of optionsString.split(', ')) {
     const optionParts = option.split(': ');
-
-    options[optionParts[0]] = optionParts[1];
+    if (optionParts[0] !== '') {
+      options[optionParts[0]] = optionParts[1];
+    }
   }
 
   return options;
@@ -54,10 +65,15 @@ function parseDependencyLine(line: Line): any {
   };
 }
 
-export function parseLockFile(input: string): LockResult {
-  const result = { dependencies: [] } as LockResult;
+export function parseLockFile(input: string): PaketLock {
+  const result = {} as PaketLock;
   const lines = parseLines(input);
-  let context = {} as any;
+  let group = {
+    name: 'main',
+    repositories: {} as any,
+    dependencies: [],
+  } as Group;
+  let depContext = {} as any;
   let dependency = null;
   let transitives = [];
   let oldIndentation = 0;
@@ -65,7 +81,7 @@ export function parseLockFile(input: string): LockResult {
   for (const line of lines) {
     if (oldIndentation >= line.indentation && dependency) {
       dependency.dependencies = transitives;
-      result.dependencies.push(dependency);
+      group.dependencies.push(dependency);
       dependency = null;
       transitives = [];
     }
@@ -74,10 +90,16 @@ export function parseLockFile(input: string): LockResult {
       const upperCaseLine = line.data.toUpperCase();
 
       if (startsWith(upperCaseLine, GROUP)) {
-        context = {};
-        context.group = line.data.substr(GROUP.length).trim();
+        result[group.name] = group;
+        depContext = {};
+        group = {
+          name: line.data.substr(GROUP.length).trim(),
+          repositories: {} as any,
+          dependencies: [],
+        } as Group;
       } else if (REPOSITORY_TYPES.includes(upperCaseLine)) {
-        context.repository = line.data;
+        depContext.repository = line.data;
+        group.repositories[line.data] = [];
       } else {
         const [optionName, optionValue] = line.data.split(':');
 
@@ -86,17 +108,18 @@ export function parseLockFile(input: string): LockResult {
           continue;
         }
 
-        context.options = context.options || {};
-        context.options[optionName.trim().toLowerCase()] = optionValue.trim();
+        group.options = group.options || {};
+        group.options[optionName.trim().toLowerCase()] = optionValue.trim().toLowerCase();
       }
     } else if (line.indentation === 1) {
       if (startsWith(line.data, REMOTE)) {
-        const parts = line.data.split(':');
-
-        if (parts[1]) {
-          context.remote = parts[1].trim();
+        const remote = line.data.match(/(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/);
+        if (remote && remote[0]) {
+          depContext.remote = remote[0];
+          group.repositories[depContext.repository].push(remote[0]);
         }
       } else if (startsWith(line.data, SPECS)) {
+        // TODO: We should do something with this, but what?
         continue;
       }
     } else {
@@ -105,12 +128,11 @@ export function parseLockFile(input: string): LockResult {
       if (!dep) {
         continue;
       }
-      Object.assign(dep.options, context.options);
 
       if (line.indentation === 2) { // Resolved Dependency
-        dep.group = context.group;
-        dep.remote = context.remote;
-        dep.repository = context.repository;
+        dep.group = group.name;
+        dep.remote = depContext.remote;
+        dep.repository = depContext.repository;
         dependency = dep;
       } else { // Transitive Dependency
         transitives.push(dep);
@@ -119,12 +141,14 @@ export function parseLockFile(input: string): LockResult {
     oldIndentation = line.indentation;
   }
 
-  // handles final dependency
+  // handles final dependency & group
   if (dependency) {
     dependency.dependencies = transitives;
-    result.dependencies.push(dependency);
+    group.dependencies.push(dependency);
     dependency = null;
+    transitives = [];
   }
+  result[group.name] = group;
 
   return result;
 }
