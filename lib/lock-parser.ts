@@ -54,7 +54,7 @@ function parseDependencyLine(line: Line): any {
   };
 }
 
-export function parse(input: string): LockResult {
+export function parseLockFile(input: string): LockResult {
   const result = { dependencies: [] } as LockResult;
   const lines = parseLines(input);
   let context = {} as any;
