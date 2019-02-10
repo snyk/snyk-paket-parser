@@ -1,0 +1,98 @@
+{
+  "main": {
+    "name": "main",
+    "repositories": {
+      "NUGET": [
+        "http://api.nuget.org/v3/index.json"
+      ]
+    },
+    "dependencies": [
+      {
+        "name": "NLog",
+        "options": {},
+        "version": "4.3.11",
+        "group": "main",
+        "remote": "http://api.nuget.org/v3/index.json",
+        "repository": "NUGET",
+        "dependencies": []
+      }
+    ]
+  },
+  "build": {
+    "name": "build",
+    "repositories": {
+      "NUGET": [
+        "https://www.nuget.org/api/v2"
+      ]
+    },
+    "dependencies": [
+      {
+        "name": "Group",
+        "options": {},
+        "version": "1.2.3",
+        "group": "build",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": []
+      },
+      {
+        "name": "GitVersion",
+        "options": {},
+        "version": "3.6.4",
+        "group": "build",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": []
+      }
+    ]
+  },
+  "tests": {
+    "name": "tests",
+    "repositories": {
+      "NUGET": [
+        "https://www.nuget.org/api/v2"
+      ]
+    },
+    "dependencies": [
+      {
+        "name": "xunit",
+        "options": {},
+        "version": "2.1",
+        "group": "tests",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": [
+          {
+            "name": "xunit.assert",
+            "options": {},
+            "version": "2.1"
+          }
+        ]
+      },
+      {
+        "name": "xunit.abstractions",
+        "options": {},
+        "version": "2.0",
+        "group": "tests",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": [
+          {
+            "name": "xunit.core",
+            "options": {},
+            "version": "2.1"
+          }
+        ]
+      },
+      {
+        "name": "xunit.assert",
+        "options": {},
+        "version": "2.1",
+        "group": "tests",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": []
+      }
+    ]
+  }
+}

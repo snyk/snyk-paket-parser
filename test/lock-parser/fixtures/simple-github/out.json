@@ -1,0 +1,188 @@
+{
+  "main": {
+    "name": "main",
+    "repositories": {
+      "NUGET": [
+        "https://www.nuget.org/api/v2"
+      ],
+      "GITHUB": []
+    },
+    "dependencies": [
+      {
+        "name": "Argu",
+        "options": {},
+        "version": "3.7",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": []
+      },
+      {
+        "name": "DotLiquid",
+        "options": {},
+        "version": "2.0.145",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": []
+      },
+      {
+        "name": "Expecto",
+        "options": {},
+        "version": "5.0",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": [
+          {
+            "name": "Argu",
+            "options": {},
+            "version": ">= 3.7"
+          }
+        ]
+      },
+      {
+        "name": "FsCheck",
+        "options": {},
+        "version": "2.9",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": [
+          {
+            "name": "FSharp.Core",
+            "options": {},
+            "version": ">= 4.1.12"
+          },
+          {
+            "name": "Mono.Cecil",
+            "options": {},
+            "version": ">= 0.10.0-beta5"
+          },
+          {
+            "name": "FSharp.Core",
+            "options": {},
+            "version": ">= 4.1"
+          }
+        ]
+      },
+      {
+        "name": "FSharp.Core",
+        "options": {},
+        "version": "4.2.1",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": []
+      },
+      {
+        "name": "FSharp.Data",
+        "options": {},
+        "version": "2.3.3",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": []
+      },
+      {
+        "name": "Mono.Cecil",
+        "options": {},
+        "version": "0.10.0-beta6",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": []
+      },
+      {
+        "name": "Suave",
+        "options": {},
+        "version": "2.1.1",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": [
+          {
+            "name": "FSharp.Core",
+            "options": {},
+            "version": ">= 4.0.0.1"
+          }
+        ]
+      },
+      {
+        "name": "Suave.DotLiquid",
+        "options": {},
+        "version": "2.1.1",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": [
+          {
+            "name": "DotLiquid",
+            "options": {},
+            "version": ">= 2.0.64"
+          }
+        ]
+      },
+      {
+        "name": "System.Runtime.Serialization.Primitives",
+        "options": {
+          "restriction": "|| (&& (>= net40) (< net45) (>= netstandard1.3)) (&& (>= net40) (>= dnxcore50)) (>= net46)"
+        },
+        "version": "4.3",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": [
+          {
+            "name": "FSharp.Core",
+            "options": {},
+            "version": ">= 4.0.0.1"
+          },
+          {
+            "name": "Suave",
+            "options": {},
+            "version": ">= 2.1.1"
+          }
+        ]
+      },
+      {
+        "name": "System.Runtime.Serialization.Xml",
+        "options": {},
+        "version": "4.3",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": [
+          {
+            "name": "System.Runtime.Serialization.Primitives",
+            "options": {
+              "restriction": "|| (&& (>= net40) (< net45) (>= netstandard1.3)) (&& (>= net40) (>= dnxcore50)) (>= net46)"
+            },
+            "version": ">= 4.3"
+          }
+        ]
+      },
+      {
+        "name": "Unquote",
+        "options": {},
+        "version": "3.2",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "NUGET",
+        "dependencies": []
+      },
+      {
+        "name": "YoLo.fs",
+        "options": {},
+        "version": "2ae49ac885e2f42812edbaa2dbc8d0e872653cab",
+        "group": "main",
+        "remote": "https://www.nuget.org/api/v2",
+        "repository": "GITHUB",
+        "dependencies": []
+      }
+    ],
+    "options": {
+      "restriction": ">= net40"
+    }
+  }
+}
