@@ -1,0 +1,8 @@
+source https://api.nuget.org/v3/index.json
+source https://dotnet.myget.org/F/roslyn/api/v3/index.json
+
+nuget Microsoft.Build 15.3.409 restriction: >= net461
+nuget Microsoft.Build.Tasks.Core 15.3.409 restriction: >= net461
+
+nuget Microsoft.CodeAnalysis 2.4.0-beta1-62122-04 restriction: >= net461
+nuget Microsoft.Net.Compilers 2.4.0-beta1-62122-04 restriction: >= net461

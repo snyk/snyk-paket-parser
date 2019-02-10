@@ -1,0 +1,15 @@
+source https://nuget.org/api/v2
+
+nuget FSharp.Formatting 2.8.0
+nuget FSharpVSPowerTools.Core 1.7.0
+nuget NUnit
+nuget NUnit.Runners
+nuget FAKE
+nuget SourceLink.Fake
+nuget vtortola.WebSocketListener
+nuget FSharp.Data
+nuget Microsoft.Tpl.Dataflow = 4.5.14
+nuget Newtonsoft.JSON
+nuget Nancy.Hosting.Self
+
+github fsharp/FAKE modules/Octokit/Octokit.fsx

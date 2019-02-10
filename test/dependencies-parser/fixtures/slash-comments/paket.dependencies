@@ -1,0 +1,32 @@
+source http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable
+source http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-release
+source http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-acceptance
+source http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-develop
+source http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-3rdParty
+
+// 3rd party
+nuget Moq
+nuget EULA
+nuget WiX.Toolset == 3.9.1006.0
+nuget NUnit ~> 2.6.4
+nuget NUnit.Runners
+
+// Snyk components
+nuget Snyk.Logging ~> 10000.2.0.0
+nuget Snyk.Tests.Shared ~> 11.0.0.29
+nuget Snyk.Serialization ~> 1.3.0.0
+nuget Snyk.Settings ~> 1.3.0.0
+nuget Snyk.InformationService.SchemaLint ~> 2017.5.0.0
+nuget Snyk.Orion.Core.Bin ~> 2018.4.100.0
+nuget Snyk.Orion.Core.WebSite ~> 2018.4.100.0
+nuget Snyk.Orion.Core.SwisSchemas ~> 2018.4.100.0
+nuget Snyk.Orion.Swis.Client ~> 10001.3.0.0
+nuget Snyk.Orion.Swis.PubSub ~> 10001.3.0.0
+nuget Snyk.Orion.Channels ~> 10001.3.0.0
+nuget Snyk.Orion.Configuration ~> 10001.3.0.0
+nuget Snyk.Packaging ~> 1.1.0.0
+nuget Snyk.Tools
+
+// Misc
+nuget OrionImprovement ~> 2.9.0.0
+nuget Snyk.Orion.Apollo.SDK
