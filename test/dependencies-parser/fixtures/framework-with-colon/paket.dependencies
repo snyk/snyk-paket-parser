@@ -1,0 +1,6 @@
+framework: net452
+import_targets: false
+
+source https://api.nuget.org/v3/index.json
+
+nuget FSharp.Charting

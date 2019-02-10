@@ -1,0 +1,183 @@
+source https://www.nuget.org/api/v2
+source https://api.nuget.org/v3/index.json
+storage: none
+clitool dotnet-mono 0.5.2
+clitool dotnet-sourcelink 2.8.1
+clitool dotnet-fantomas 2.8.0
+clitool dotnet-reportgenerator-cli 4.0.0-rc4
+nuget FSharp.Core 4.3.4
+nuget Expecto 8.0.0
+nuget SourceLink.Create.CommandLine 2.8.1 copy_local: true
+nuget YoloDev.Expecto.TestSdk 0.5.0
+nuget Microsoft.NET.Test.Sdk 15.7.2
+nuget altcover 4.0.603
+
+nuget Microsoft.AspNet.WebApi.Client
+nuget Microsoft.AspNetCore
+nuget Microsoft.AspNetCore.Antiforgery
+nuget Microsoft.AspNetCore.Authentication
+nuget Microsoft.AspNetCore.Authentication.Abstractions
+nuget Microsoft.AspNetCore.Authentication.Cookies
+nuget Microsoft.AspNetCore.Authentication.Core
+nuget Microsoft.AspNetCore.Authentication.Facebook
+nuget Microsoft.AspNetCore.Authentication.Google
+nuget Microsoft.AspNetCore.Authentication.JwtBearer
+nuget Microsoft.AspNetCore.Authentication.MicrosoftAccount
+nuget Microsoft.AspNetCore.Authentication.OAuth
+nuget Microsoft.AspNetCore.Authentication.OpenIdConnect
+nuget Microsoft.AspNetCore.Authentication.Twitter
+nuget Microsoft.AspNetCore.Authentication.WsFederation
+nuget Microsoft.AspNetCore.Authorization
+nuget Microsoft.AspNetCore.Authorization.Policy
+nuget Microsoft.AspNetCore.Connections.Abstractions
+nuget Microsoft.AspNetCore.CookiePolicy
+nuget Microsoft.AspNetCore.Cors
+nuget Microsoft.AspNetCore.Cryptography.Internal
+nuget Microsoft.AspNetCore.Cryptography.KeyDerivation
+nuget Microsoft.AspNetCore.DataProtection
+nuget Microsoft.AspNetCore.DataProtection.Abstractions
+nuget Microsoft.AspNetCore.DataProtection.Extensions
+nuget Microsoft.AspNetCore.Diagnostics
+nuget Microsoft.AspNetCore.Diagnostics.Abstractions
+nuget Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
+nuget Microsoft.AspNetCore.Diagnostics.HealthChecks
+nuget Microsoft.AspNetCore.HostFiltering
+nuget Microsoft.AspNetCore.Hosting
+nuget Microsoft.AspNetCore.Hosting.Abstractions
+nuget Microsoft.AspNetCore.Hosting.Server.Abstractions
+nuget Microsoft.AspNetCore.Html.Abstractions
+nuget Microsoft.AspNetCore.Http
+nuget Microsoft.AspNetCore.Http.Abstractions
+nuget Microsoft.AspNetCore.Http.Connections
+nuget Microsoft.AspNetCore.Http.Connections.Common
+nuget Microsoft.AspNetCore.Http.Extensions
+nuget Microsoft.AspNetCore.Http.Features
+nuget Microsoft.AspNetCore.HttpOverrides
+nuget Microsoft.AspNetCore.HttpsPolicy
+nuget Microsoft.AspNetCore.Identity
+nuget Microsoft.AspNetCore.Identity.EntityFrameworkCore
+nuget Microsoft.AspNetCore.Identity.UI
+nuget Microsoft.AspNetCore.JsonPatch
+nuget Microsoft.AspNetCore.Localization
+nuget Microsoft.AspNetCore.Localization.Routing
+nuget Microsoft.AspNetCore.MiddlewareAnalysis
+nuget Microsoft.AspNetCore.Mvc
+nuget Microsoft.AspNetCore.Mvc.Abstractions
+nuget Microsoft.AspNetCore.Mvc.Analyzers
+nuget Microsoft.AspNetCore.Mvc.ApiExplorer
+nuget Microsoft.AspNetCore.Mvc.Core
+nuget Microsoft.AspNetCore.Mvc.Cors
+nuget Microsoft.AspNetCore.Mvc.DataAnnotations
+nuget Microsoft.AspNetCore.Mvc.Formatters.Json
+nuget Microsoft.AspNetCore.Mvc.Formatters.Xml
+nuget Microsoft.AspNetCore.Mvc.Localization
+nuget Microsoft.AspNetCore.Mvc.Razor
+nuget Microsoft.AspNetCore.Mvc.Razor.Extensions
+nuget Microsoft.AspNetCore.Mvc.Razor.ViewCompilation
+nuget Microsoft.AspNetCore.Mvc.RazorPages
+nuget Microsoft.AspNetCore.Mvc.TagHelpers
+nuget Microsoft.AspNetCore.Mvc.ViewFeatures
+nuget Microsoft.AspNetCore.NodeServices
+nuget Microsoft.AspNetCore.Owin
+nuget Microsoft.AspNetCore.Razor
+nuget Microsoft.AspNetCore.Razor.Design
+nuget Microsoft.AspNetCore.Razor.Language
+nuget Microsoft.AspNetCore.Razor.Runtime
+nuget Microsoft.AspNetCore.ResponseCaching
+nuget Microsoft.AspNetCore.ResponseCaching.Abstractions
+nuget Microsoft.AspNetCore.ResponseCompression
+nuget Microsoft.AspNetCore.Rewrite
+nuget Microsoft.AspNetCore.Routing
+nuget Microsoft.AspNetCore.Routing.Abstractions
+nuget Microsoft.AspNetCore.Server.HttpSys
+nuget Microsoft.AspNetCore.Server.IIS
+nuget Microsoft.AspNetCore.Server.IISIntegration
+nuget Microsoft.AspNetCore.Server.Kestrel
+nuget Microsoft.AspNetCore.Server.Kestrel.Core
+nuget Microsoft.AspNetCore.Server.Kestrel.Https
+nuget Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions
+nuget Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+nuget Microsoft.AspNetCore.Session
+nuget Microsoft.AspNetCore.SignalR
+nuget Microsoft.AspNetCore.SignalR.Common
+nuget Microsoft.AspNetCore.SignalR.Core
+nuget Microsoft.AspNetCore.SignalR.Protocols.Json
+nuget Microsoft.AspNetCore.SpaServices
+nuget Microsoft.AspNetCore.SpaServices.Extensions
+nuget Microsoft.AspNetCore.StaticFiles
+nuget Microsoft.AspNetCore.WebSockets
+nuget Microsoft.AspNetCore.WebUtilities
+nuget Microsoft.CodeAnalysis.Razor
+nuget Microsoft.EntityFrameworkCore
+nuget Microsoft.EntityFrameworkCore.Abstractions
+nuget Microsoft.EntityFrameworkCore.Analyzers
+nuget Microsoft.EntityFrameworkCore.Design
+nuget Microsoft.EntityFrameworkCore.InMemory
+nuget Microsoft.EntityFrameworkCore.Relational
+nuget Microsoft.EntityFrameworkCore.SqlServer
+nuget Microsoft.EntityFrameworkCore.Tools
+nuget Microsoft.Extensions.Caching.Abstractions
+nuget Microsoft.Extensions.Caching.Memory
+nuget Microsoft.Extensions.Caching.SqlServer
+nuget Microsoft.Extensions.Configuration
+nuget Microsoft.Extensions.Configuration.Abstractions
+nuget Microsoft.Extensions.Configuration.Binder
+nuget Microsoft.Extensions.Configuration.CommandLine
+nuget Microsoft.Extensions.Configuration.EnvironmentVariables
+nuget Microsoft.Extensions.Configuration.FileExtensions
+nuget Microsoft.Extensions.Configuration.Ini
+nuget Microsoft.Extensions.Configuration.Json
+nuget Microsoft.Extensions.Configuration.KeyPerFile
+nuget Microsoft.Extensions.Configuration.UserSecrets
+nuget Microsoft.Extensions.Configuration.Xml
+nuget Microsoft.Extensions.DependencyInjection
+nuget Microsoft.Extensions.DependencyInjection.Abstractions
+nuget Microsoft.Extensions.DiagnosticAdapter
+nuget Microsoft.Extensions.Diagnostics.HealthChecks
+nuget Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions
+nuget Microsoft.Extensions.FileProviders.Abstractions
+nuget Microsoft.Extensions.FileProviders.Composite
+nuget Microsoft.Extensions.FileProviders.Embedded
+nuget Microsoft.Extensions.FileProviders.Physical
+nuget Microsoft.Extensions.FileSystemGlobbing
+nuget Microsoft.Extensions.Hosting
+nuget Microsoft.Extensions.Hosting.Abstractions
+nuget Microsoft.Extensions.Http
+nuget Microsoft.Extensions.Identity.Core
+nuget Microsoft.Extensions.Identity.Stores
+nuget Microsoft.Extensions.Localization
+nuget Microsoft.Extensions.Localization.Abstractions
+nuget Microsoft.Extensions.Logging
+nuget Microsoft.Extensions.Logging.Abstractions
+nuget Microsoft.Extensions.Logging.Configuration
+nuget Microsoft.Extensions.Logging.Console
+nuget Microsoft.Extensions.Logging.Debug
+nuget Microsoft.Extensions.Logging.EventSource
+nuget Microsoft.Extensions.Logging.TraceSource
+nuget Microsoft.Extensions.ObjectPool
+nuget Microsoft.Extensions.Options
+nuget Microsoft.Extensions.Options.ConfigurationExtensions
+nuget Microsoft.Extensions.Options.DataAnnotations
+nuget Microsoft.Extensions.Primitives
+nuget Microsoft.Extensions.WebEncoders
+nuget Microsoft.Net.Http.Headers
+nuget System.IO.Pipelines
+
+// [ FAKE GROUP ]
+group Build
+
+    storage: none
+    source https://www.nuget.org/api/v2
+    source https://api.nuget.org/v3/index.json
+    nuget Fake.IO.FileSystem
+    nuget Fake.Core.Target
+    nuget Fake.Core.ReleaseNotes
+    nuget FAKE.Core.Environment
+    nuget Fake.DotNet.Cli
+    nuget FAKE.Core.Process
+    nuget Fake.DotNet.AssemblyInfoFile
+    nuget Fake.Tools.Git
+    nuget Fake.DotNet.Paket
+    nuget Fake.Api.GitHub
+    nuget Fake.BuildServer.AppVeyor
+    nuget Fake.BuildServer.Travis

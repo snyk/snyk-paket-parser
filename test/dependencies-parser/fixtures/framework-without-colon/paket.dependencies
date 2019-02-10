@@ -1,0 +1,6 @@
+source https://www.nuget.org/api/v2
+framework >= net45
+
+nuget FAKE
+nuget FSharp.ViewModule.Core 0.9.9.1
+nuget FsXaml.Wpf 0.9.9
