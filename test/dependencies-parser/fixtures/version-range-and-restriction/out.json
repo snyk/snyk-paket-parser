@@ -1,0 +1,66 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "Autofac",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ">= 4.6.2"
+      },
+      {
+        "name": "Costura.Fody",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ">= 1.6.2"
+      },
+      {
+        "name": "FacturacionElectronica.GeneradorXml",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ">= 1.0.7"
+      },
+      {
+        "name": "FacturacionElectronica.Homologacion",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ">= 1.0.1"
+      },
+      {
+        "name": "MetroModernUI",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ">= 1.4.0.0"
+      },
+      {
+        "name": "Newtonsoft.Json",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ">= 11.0.1"
+      },
+      {
+        "name": "squirrel.windows",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ">= 1.7.9"
+      },
+      {
+        "name": "Splat",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "<= 3.0.0"
+      }
+    ],
+    "name": null,
+    "options": {},
+    "sources": [
+      {
+        "options": {},
+        "url": "https://nuget.org/api/v2/"
+      },
+      {
+        "options": {},
+        "url": "https://nuget.tisoluciones.net.pe/api/v2/"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1046 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "FSharp.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "4.3.4"
+      },
+      {
+        "name": "Expecto",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "8.0.0"
+      },
+      {
+        "name": "SourceLink.Create.CommandLine",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "2.8.1"
+      },
+      {
+        "name": "YoloDev.Expecto.TestSdk",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "0.5.0"
+      },
+      {
+        "name": "Microsoft.NET.Test.Sdk",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "15.7.2"
+      },
+      {
+        "name": "altcover",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "4.0.603"
+      },
+      {
+        "name": "Microsoft.AspNet.WebApi.Client",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Antiforgery",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.Cookies",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.Facebook",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.Google",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.JwtBearer",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.MicrosoftAccount",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.OAuth",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.Twitter",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authentication.WsFederation",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authorization",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Authorization.Policy",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Connections.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.CookiePolicy",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Cors",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Cryptography.Internal",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.DataProtection",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.DataProtection.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.DataProtection.Extensions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Diagnostics",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Diagnostics.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Diagnostics.HealthChecks",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.HostFiltering",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Hosting",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Hosting.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Hosting.Server.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Html.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Http",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Http.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Http.Connections",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Http.Connections.Common",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Http.Extensions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Http.Features",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.HttpOverrides",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.HttpsPolicy",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Identity",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Identity.UI",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.JsonPatch",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Localization",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Localization.Routing",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.MiddlewareAnalysis",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.Analyzers",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.ApiExplorer",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.Cors",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.DataAnnotations",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.Formatters.Json",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.Formatters.Xml",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.Localization",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.Razor",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.Razor.Extensions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.Razor.ViewCompilation",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.RazorPages",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.TagHelpers",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Mvc.ViewFeatures",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.NodeServices",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Owin",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Razor",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Razor.Design",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Razor.Language",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Razor.Runtime",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.ResponseCaching",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.ResponseCaching.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.ResponseCompression",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Rewrite",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Routing",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Routing.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Server.HttpSys",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Server.IIS",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Server.IISIntegration",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Server.Kestrel",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Server.Kestrel.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Server.Kestrel.Https",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.Session",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.SignalR",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.SignalR.Common",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.SignalR.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.SignalR.Protocols.Json",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.SpaServices",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.SpaServices.Extensions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.StaticFiles",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.WebSockets",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.AspNetCore.WebUtilities",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.CodeAnalysis.Razor",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Analyzers",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Design",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.InMemory",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Relational",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.SqlServer",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Tools",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Caching.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Caching.Memory",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Caching.SqlServer",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.Binder",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.CommandLine",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.FileExtensions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.Ini",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.Json",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.KeyPerFile",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.UserSecrets",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.Xml",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.DependencyInjection",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.DiagnosticAdapter",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Diagnostics.HealthChecks",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.FileProviders.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.FileProviders.Composite",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.FileProviders.Embedded",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.FileProviders.Physical",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.FileSystemGlobbing",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Hosting",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Hosting.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Http",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Identity.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Identity.Stores",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Localization",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Localization.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Logging",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Logging.Abstractions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Logging.Configuration",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Logging.Console",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Logging.Debug",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Logging.EventSource",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Logging.TraceSource",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.ObjectPool",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Options",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Options.ConfigurationExtensions",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Options.DataAnnotations",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.Primitives",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Extensions.WebEncoders",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Net.Http.Headers",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "System.IO.Pipelines",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      }
+    ],
+    "name": null,
+    "options": {
+      "storage": "none"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://www.nuget.org/api/v2"
+      },
+      {
+        "options": {},
+        "url": "https://api.nuget.org/v3/index.json"
+      }
+    ]
+  },
+  {
+    "dependencies": [
+      {
+        "name": "Fake.IO.FileSystem",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fake.Core.Target",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fake.Core.ReleaseNotes",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "FAKE.Core.Environment",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fake.DotNet.Cli",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "FAKE.Core.Process",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fake.DotNet.AssemblyInfoFile",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fake.Tools.Git",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fake.DotNet.Paket",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fake.Api.GitHub",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fake.BuildServer.AppVeyor",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fake.BuildServer.Travis",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      }
+    ],
+    "name": "Build",
+    "options": {
+      "storage": "none"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://www.nuget.org/api/v2"
+      },
+      {
+        "options": {},
+        "url": "https://api.nuget.org/v3/index.json"
+      }
+    ]
+  }
+]

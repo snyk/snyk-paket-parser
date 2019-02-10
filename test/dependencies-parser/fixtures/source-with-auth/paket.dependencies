@@ -1,0 +1,3 @@
+source http://myserver/nuget/api/v2 username: "%PRIVATE_FEED_USER%" password: "%PRIVATE_FEED_PASS%" authtype: "ntlm" // test
+source http://example.com/nuget/api/v2 username: "user name" password: "the password" authtype: "basic" # test 2
+

@@ -1,0 +1,114 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "FSharp.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Suave",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "System.Net.Http",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      }
+    ],
+    "name": null,
+    "options": {
+      "framework": "auto-detect"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://nuget.org/api/v2"
+      }
+    ]
+  },
+  {
+    "dependencies": [
+      {
+        "name": "SourceLink.Fake",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "FAKE",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "FSharp.Formatting",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "file": "modules/Octokit/Octokit.fsx",
+        "repo": "fsharp/FAKE",
+        "source": "github",
+        "token": "",
+        "version": ""
+      }
+    ],
+    "name": "Build",
+    "options": {},
+    "sources": [
+      {
+        "options": {},
+        "url": "https://nuget.org/api/v2"
+      }
+    ]
+  },
+  {
+    "dependencies": [
+      {
+        "name": "FsCheck",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "XUnit",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "FsCheck.XUnit",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "xunit.runner.console",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "file": "src/xunit.jet/Assert.fs",
+        "repo": "jet/xunit-jet",
+        "source": "github",
+        "token": "",
+        "version": ""
+      }
+    ],
+    "name": "Test",
+    "options": {},
+    "sources": [
+      {
+        "options": {},
+        "url": "https://nuget.org/api/v2"
+      }
+    ]
+  }
+]

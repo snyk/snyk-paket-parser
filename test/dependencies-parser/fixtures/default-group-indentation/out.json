@@ -1,0 +1,44 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "FSharp.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "FSharp.Data",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 2.4.0"
+      }
+    ],
+    "name": null,
+    "options": {},
+    "sources": [
+      {
+        "options": {},
+        "url": "https://www.nuget.org/api/v2"
+      }
+    ]
+  },
+  {
+    "dependencies": [
+      {
+        "name": "FAKE",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      }
+    ],
+    "name": "Build",
+    "options": {},
+    "sources": [
+      {
+        "options": {},
+        "url": "https://www.nuget.org/api/v2"
+      }
+    ]
+  }
+]

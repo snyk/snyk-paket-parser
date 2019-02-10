@@ -2,7 +2,7 @@ import {parse} from '../../lib/dependencies-parser';
 import {join} from 'path';
 import {readFileSync} from 'fs';
 
-describe.skip('dependencies parser', () => {
+describe('dependencies parser', () => {
   for (const fixtureName of [
     'additional-options',
     'cli-tools-in-groups',
@@ -15,6 +15,7 @@ describe.skip('dependencies parser', () => {
     'restriction',
     'sharp-comments',
     'slash-comments',
+    'source-with-auth',
     'version-indentation',
     'version-one-equal-sign',
     'version-option',

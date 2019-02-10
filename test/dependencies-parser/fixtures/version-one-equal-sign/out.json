@@ -1,0 +1,87 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "FSharp.Formatting",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "2.8.0"
+      },
+      {
+        "name": "FSharpVSPowerTools.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "1.7.0"
+      },
+      {
+        "name": "NUnit",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "NUnit.Runners",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "FAKE",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "SourceLink.Fake",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "vtortola.WebSocketListener",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "FSharp.Data",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Microsoft.Tpl.Dataflow",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "= 4.5.14"
+      },
+      {
+        "name": "Newtonsoft.JSON",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Nancy.Hosting.Self",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "file": "modules/Octokit/Octokit.fsx",
+        "repo": "fsharp/FAKE",
+        "source": "github",
+        "token": "",
+        "version": ""
+      }
+    ],
+    "name": null,
+    "options": {},
+    "sources": [
+      {
+        "options": {},
+        "url": "https://nuget.org/api/v2"
+      }
+    ]
+  }
+]
