@@ -1,4 +1,3 @@
-
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { parseLockFile } from '../../lib/lock-parser';
@@ -18,11 +17,11 @@ function loadFixture(fixtureName: string) {
   };
 }
 
-describe('.parseLockFile()', () => {
+describe('.parseLockFile() works', () => {
   for (const fixtureName of [
     'additional-global-options',
     'dependency-multiple-options',
-    // 'git-and-github',
+    // 'git-and-github', TODO: commented out because we do not support GIT repos yet.
     'global-restriction',
     'multiple-remotes',
     'restriction-and-multiple-remotes',

@@ -4,11 +4,11 @@ import * as util from 'util';
 
 const REPOSITORY_TYPES = ['HTTP', 'GIST', 'GIT', 'NUGET', 'GITHUB']; // naming convention in paket's standard parser
 const GROUP = 'GROUP';
-const REMOTE = 'remote';
-const SPECS = 'specs';
+const REMOTE = 'REMOTE';
+const SPECS = 'SPECS';
 
 interface Option {
-  [name: string]: string;
+  [name: string]: string | null;
 }
 
 interface Dependency {
@@ -20,7 +20,6 @@ interface Dependency {
 interface ResolvedDependency extends Dependency {
   repository: string;
   remote: string;
-  group: string;
   dependencies: Dependency[];
 }
 
@@ -31,17 +30,18 @@ export interface Group {
   };
   dependencies: ResolvedDependency[];
   options: Option;
+  specs: boolean; // TODO: keeping as meta, but what to do with this?
 }
 
 export interface PaketLock {
-  [name: string]: Group;
+  groups: Group[];
 }
 
 function parseOptions(optionsString: string): Option {
   const options = {} as Option;
 
-  for (const option of optionsString.split(', ')) {
-    const optionParts = option.split(': ');
+  for (const option of optionsString.split(/, +/)) {
+    const optionParts = option.split(/: +/);
     if (optionParts[0] !== '') {
       options[optionParts[0]] = optionParts[1];
     }
@@ -66,10 +66,12 @@ function parseDependencyLine(line: Line): any {
 }
 
 export function parseLockFile(input: string): PaketLock {
-  const result = {} as PaketLock;
+  const result = {
+    groups: [],
+  } as PaketLock;
   const lines = parseLines(input);
   let group = {
-    name: 'main',
+    name: null,
     repositories: {} as any,
     dependencies: [],
   } as Group;
@@ -86,11 +88,10 @@ export function parseLockFile(input: string): PaketLock {
       transitives = [];
     }
 
-    if (line.indentation === 0) {
-      const upperCaseLine = line.data.toUpperCase();
-
+    const upperCaseLine = line.data.toUpperCase();
+    if (line.indentation === 0) { // group or group option
       if (startsWith(upperCaseLine, GROUP)) {
-        result[group.name] = group;
+        result.groups.push(group);
         depContext = {};
         group = {
           name: line.data.substr(GROUP.length).trim(),
@@ -102,25 +103,21 @@ export function parseLockFile(input: string): PaketLock {
         group.repositories[line.data] = [];
       } else {
         const [optionName, optionValue] = line.data.split(':');
-
-        if (!optionValue) {
-          // TODO: Should we do something with it?
-          continue;
-        }
-
         group.options = group.options || {};
-        group.options[optionName.trim().toLowerCase()] = optionValue.trim().toLowerCase();
+        // TODO: keeping null option values to know the option names
+        // need to decide what to do with them
+        group.options[optionName.trim()] = optionValue ? optionValue.trim() : null;
       }
-    } else if (line.indentation === 1) {
-      if (startsWith(line.data, REMOTE)) {
-        const remote = line.data.match(/(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/);
-        if (remote && remote[0]) {
-          depContext.remote = remote[0];
-          group.repositories[depContext.repository].push(remote[0]);
+    } else if (line.indentation === 1) { // remote or specs
+      if (startsWith(upperCaseLine, REMOTE)) {
+        const remote = line.data.substring(REMOTE.length + ':'.length).trim();
+        if (remote) {
+          depContext.remote = remote;
+          group.repositories[depContext.repository].push(remote);
         }
-      } else if (startsWith(line.data, SPECS)) {
-        // TODO: We should do something with this, but what?
-        continue;
+      } else if (startsWith(upperCaseLine, SPECS)) {
+        // TODO: for now we add the specs as boolean in meta
+        group.specs = true;
       }
     } else {
       const dep = parseDependencyLine(line);
@@ -130,7 +127,6 @@ export function parseLockFile(input: string): PaketLock {
       }
 
       if (line.indentation === 2) { // Resolved Dependency
-        dep.group = group.name;
         dep.remote = depContext.remote;
         dep.repository = depContext.repository;
         dependency = dep;
@@ -148,7 +144,7 @@ export function parseLockFile(input: string): PaketLock {
     dependency = null;
     transitives = [];
   }
-  result[group.name] = group;
+  result.groups.push(group);
 
   return result;
 }

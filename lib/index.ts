@@ -62,24 +62,22 @@ export function buildDependencyTree(
     version: '',
   } as DepTree;
 
-  for (const groupName in lockFile) {
-    if (lockFile.hasOwnProperty(groupName)) {
-      const group = lockFile[groupName];
-      const isDev = groupName === 'build' || groupName === 'test' || groupName === 'tests';
-      if (isDev && !includeDev) {
-        continue;
-      }
+  for (const group of lockFile.groups) {
+    const isDev = group.name === 'build' || group.name === 'test' || group.name === 'tests';
+    if (isDev && !includeDev) {
+      continue;
+    }
 
-      for (const dep of group.dependencies) {
-        depTree.dependencies[dep.name] = {
-          depType: isDev ? DepType.dev : DepType.prod,
-          dependencies: buildSubTree(dep.dependencies),
-          name: dep.name,
-          version: dep.version,
-        };
-      }
+    for (const dep of group.dependencies) {
+      depTree.dependencies[dep.name] = {
+        depType: isDev ? DepType.dev : DepType.prod,
+        dependencies: buildSubTree(dep.dependencies),
+        name: dep.name,
+        version: dep.version,
+      };
     }
   }
+  
   return depTree;
 }
 
