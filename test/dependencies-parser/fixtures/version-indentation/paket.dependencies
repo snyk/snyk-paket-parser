@@ -1,0 +1,8 @@
+framework: net45
+source https://vrvis.myget.org/F/aardvark_public/api/v3/index.json
+source https://api.nuget.org/v3/index.json
+
+
+nuget FAKE             ~> 4.63.0
+nuget SourceLink.Fake  ~> 1.1.0
+nuget Mono.Cecil       ~> 0.10.0-beta6

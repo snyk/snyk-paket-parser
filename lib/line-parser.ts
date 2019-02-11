@@ -1,5 +1,3 @@
-import { trimStart } from 'lodash';
-
 export class Line {
   public data: string;
   public indentation: number;
@@ -11,7 +9,8 @@ export class Line {
 }
 
 function countIndents(line: string, indent: string): number {
-  const count = (line.length - trimStart(line).length) / indent.length;
+  const spaces = line.match(/^\s*/)[0].length;
+  const count = spaces / indent.length;
   if (count % 1 !== 0) {
     throw new Error('Line indentation malformed');
   }
