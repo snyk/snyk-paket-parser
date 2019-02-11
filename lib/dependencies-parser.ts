@@ -1,5 +1,6 @@
 import {startsWith} from 'lodash';
-import {Line, parse as parseLines} from './line-parser';
+import {parse as parseLines} from './line-parser';
+import {Separator, tokenize} from './string-tokenizer';
 
 const COMMENTS = ['#', '//'];
 const GROUP = 'group';
@@ -58,26 +59,38 @@ function parseNuget(line: string): NugetDependency {
     versionRange: '',
   };
 
-  // Get position of first option.
-  const firstOptionMatch = /\s*[^\s]+\s*:/.exec(line);
-  let dependencyString = line;
-  // let optionsString = '';
+  const tokens = tokenize(line);
 
-  if (firstOptionMatch) {
-    // Split line by position of first option.
-    dependencyString = line.substr(0, firstOptionMatch.index);
-    // optionsString = line.substr(firstOptionMatch.index).trim();
+  result.name = tokens[1].data;
+
+  let i = 2;
+
+  for (; i < tokens.length; i++) {
+    if ([Separator.SPACE, Separator.NONE].includes(tokens[i].separator)) {
+      if (result.versionRange) {
+        result.versionRange += ' ' + tokens[i].data;
+      } else {
+        result.versionRange = tokens[i].data;
+      }
+    } else {
+      break;
+    }
   }
 
-  dependencyString = dependencyString.replace(NUGET, '').trim();
-
-  // Split by space between words. First chunk will be name of the dependency and all rest - version.
-  const dependencyStringParts = dependencyString.split(/\s+/);
-
-  result.name = dependencyStringParts[0];
-  result.versionRange = dependencyStringParts.splice(1).join(' ');
-
-  // TODO: parse options
+  // TODO: uncomment code below and update fixtures
+  // let optionName = '';
+  //
+  // for (; i < tokens.length; i++) {
+  //   if (tokens[i].separator === Separator.COLON) {
+  //     optionName = tokens[i].data;
+  //   } else {
+  //     if (result.options[optionName]) {
+  //       result.options[optionName] += ' ' + tokens[i].data;
+  //     } else {
+  //       result.options[optionName] = tokens[i].data;
+  //     }
+  //   }
+  // }
 
   return result;
 }
@@ -99,32 +112,41 @@ function parseGithub(line: string): GithubDependency {
 
 // https://fsprojects.github.io/Paket/nuget-dependencies.html#NuGet-feeds
 function parseSource(line: string): Source {
-  // Split URL and option string including possible comments.
-  const urlRe = /^source ([^\s]+)(.*)$/i;
-  const [, url, optionsString] = line.match(urlRe);
+  const tokens = tokenize(line);
+  const result: Source = {
+    options: {},
+    url: tokens[1].data,
+  };
+  let optionName = '';
 
-  // Options in this line is always double quoted.
-  const options: Options = {};
-  const optionsRe = /(.*?)\W*:\W*"(.*?)"/g;
-  const optionsStringTrimmed = optionsString.trim();
-
-  let matches = optionsRe.exec(optionsStringTrimmed);
-  while (matches) {
-    options[matches[1].trim()] = matches[2].trim();
-    matches = optionsRe.exec(optionsStringTrimmed);
+  for (let i = 2; i < tokens.length; i++) {
+    if (tokens[i].separator === Separator.COLON) {
+      optionName = tokens[i].data;
+    } else {
+        if (result.options[optionName]) {
+          result.options[optionName] += ' ' + tokens[i].data;
+        } else {
+          result.options[optionName] = tokens[i].data;
+        }
+    }
   }
 
-  return {
-    options,
-    url,
-  };
+  return result;
 }
 
 function parseGroupOption(line: string): [string, string] {
-  // Line could be separated by space or by colon.
-  // TODO: Think what to do with possible comment in the line.
-  const result = line.match(/(\S+?)\s*(:|\s)\s*(.*)/);
-  return [result[1] || '', result[3] || ''];
+  const tokens = tokenize(line);
+  let value = '';
+
+  for (let i = 1; i < tokens.length; i++) {
+    if (value) {
+      value += ' ' + tokens[i].data;
+    } else {
+      value = tokens[i].data;
+    }
+  }
+
+  return [tokens[0].data, value];
 }
 
 export function parse(input: string): PaketDependencies {
