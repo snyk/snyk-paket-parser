@@ -1,40 +1,42 @@
 {
-  "main": {
-    "name": "main",
-    "repositories": {
-      "NUGET": [
-        "https://nuget.org/api/v2"
-      ],
-      "GITHUB": []
-    },
-    "dependencies": [
-      {
-        "name": "FAKE",
-        "options": {},
-        "version": "3.28.7",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
+  "groups": [ 
+    {
+      "name": null,
+      "repositories": {
+        "NUGET": [
+          "https://nuget.org/api/v2"
+        ],
+        "GITHUB": [
+          "fsharp/FAKE"
+        ]
       },
-      {
-        "name": "modules/Octokit/Octokit.fsx",
-        "options": {},
-        "version": "3e58233a84f9db0f6a6e34bfbc99aaa7fe8bbcdc",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "GITHUB",
-        "dependencies": []
-      },
-      {
-        "name": "Moq",
-        "options": {},
-        "version": "4.7.145",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
-      }
-    ]
-  }
+      "specs": true,
+      "dependencies": [
+        {
+          "name": "FAKE",
+          "options": {},
+          "version": "3.28.7",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "modules/Octokit/Octokit.fsx",
+          "options": {},
+          "version": "3e58233a84f9db0f6a6e34bfbc99aaa7fe8bbcdc",
+          "remote": "fsharp/FAKE",
+          "repository": "GITHUB",
+          "dependencies": []
+        },
+        {
+          "name": "Moq",
+          "options": {},
+          "version": "4.7.145",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        }
+      ]
+    }
+  ]
 }

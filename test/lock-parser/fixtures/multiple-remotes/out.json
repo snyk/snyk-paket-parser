@@ -1,6 +1,6 @@
 {
-  "main": {
-    "name": "main",
+  "groups": [ {
+    "name": null,
     "repositories": {
       "NUGET": [
         "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
@@ -12,8 +12,7 @@
         "name": "Antlr",
         "options": {},
         "version": "3.5.0.2",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -21,8 +20,7 @@
         "name": "Castle.Core",
         "options": {},
         "version": "3.3.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -30,8 +28,7 @@
         "name": "EasyNetQ",
         "options": {},
         "version": "0.54.3.424",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -45,8 +42,7 @@
         "name": "EULA",
         "options": {},
         "version": "1.0.54",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -54,8 +50,7 @@
         "name": "jQuery",
         "options": {},
         "version": "1.10.2",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -63,8 +58,7 @@
         "name": "log4net",
         "options": {},
         "version": "1.2.10",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -72,8 +66,7 @@
         "name": "Microsoft.AspNet.Cors",
         "options": {},
         "version": "5.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -81,8 +74,7 @@
         "name": "Microsoft.AspNet.Identity.Core",
         "options": {},
         "version": "2.1.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -90,8 +82,7 @@
         "name": "Microsoft.AspNet.Identity.Owin",
         "options": {},
         "version": "2.1.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -105,8 +96,7 @@
         "name": "Microsoft.AspNet.Mvc",
         "options": {},
         "version": "5.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -135,8 +125,7 @@
         "name": "Microsoft.AspNet.Razor",
         "options": {},
         "version": "3.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -150,8 +139,7 @@
         "name": "Microsoft.AspNet.SignalR",
         "options": {},
         "version": "2.1.2",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -165,8 +153,7 @@
         "name": "Microsoft.AspNet.SignalR.Core",
         "options": {},
         "version": "2.2.1",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -185,8 +172,7 @@
         "name": "Microsoft.AspNet.SignalR.JS",
         "options": {},
         "version": "2.2.1",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -215,8 +201,7 @@
         "name": "Microsoft.AspNet.SignalR.SystemWeb",
         "options": {},
         "version": "2.2.1",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -230,8 +215,7 @@
         "name": "Microsoft.AspNet.Web.Optimization",
         "options": {},
         "version": "1.1.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -250,8 +234,7 @@
         "name": "Microsoft.AspNet.WebApi",
         "options": {},
         "version": "5.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -270,8 +253,7 @@
         "name": "Microsoft.AspNet.WebApi.Client",
         "options": {},
         "version": "5.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -287,8 +269,7 @@
         "name": "Microsoft.AspNet.WebApi.Core",
         "options": {},
         "version": "5.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -309,8 +290,7 @@
         "name": "Microsoft.AspNet.WebApi.Cors",
         "options": {},
         "version": "5.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -324,8 +304,7 @@
         "name": "Microsoft.AspNet.WebApi.OData",
         "options": {},
         "version": "5.2.2",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -344,8 +323,7 @@
         "name": "Microsoft.AspNet.WebApi.Owin",
         "options": {},
         "version": "5.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -369,8 +347,7 @@
         "name": "Microsoft.AspNet.WebApi.Tracing",
         "options": {},
         "version": "5.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -394,8 +371,7 @@
         "name": "Microsoft.AspNet.WebApi.WebHost",
         "options": {},
         "version": "5.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -409,8 +385,7 @@
         "name": "Microsoft.AspNet.WebPages",
         "options": {},
         "version": "3.2.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -426,8 +401,7 @@
           "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
         },
         "version": "1.1.9",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -449,8 +423,7 @@
           "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
         },
         "version": "1.0.14",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -458,8 +431,7 @@
         "name": "Microsoft.Data.Edm",
         "options": {},
         "version": "5.6.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -467,8 +439,7 @@
         "name": "Microsoft.Data.OData",
         "options": {},
         "version": "5.6.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -484,8 +455,7 @@
           "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
         },
         "version": "2.2.28",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -504,8 +474,7 @@
         "name": "Microsoft.Owin",
         "options": {},
         "version": "4.0.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -524,8 +493,7 @@
         "name": "Microsoft.Owin.Host.SystemWeb",
         "options": {},
         "version": "3.0.1",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -539,8 +507,7 @@
         "name": "Microsoft.Owin.Hosting",
         "options": {},
         "version": "4.0.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -559,8 +526,7 @@
         "name": "Microsoft.Owin.Security",
         "options": {},
         "version": "3.0.1",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -579,8 +545,7 @@
         "name": "Microsoft.Owin.Security.Cookies",
         "options": {},
         "version": "3.0.1",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -599,8 +564,7 @@
         "name": "Microsoft.Owin.Security.OAuth",
         "options": {},
         "version": "3.0.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -624,8 +588,7 @@
         "name": "Microsoft.Owin.Testing",
         "options": {},
         "version": "4.0.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -654,8 +617,7 @@
         "name": "Microsoft.Web.Infrastructure",
         "options": {},
         "version": "1.0.0.1",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -669,8 +631,7 @@
         "name": "Moq",
         "options": {},
         "version": "4.5.30",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -686,8 +647,7 @@
         "name": "Newtonsoft.Json",
         "options": {},
         "version": "6.0.4",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -695,8 +655,7 @@
         "name": "NUnit",
         "options": {},
         "version": "2.6.4",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -704,8 +663,7 @@
         "name": "NUnit.ConsoleRunner",
         "options": {},
         "version": "3.9.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -713,8 +671,7 @@
         "name": "NUnit.Extension.NUnitProjectLoader",
         "options": {},
         "version": "3.6.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -722,8 +679,7 @@
         "name": "NUnit.Extension.NUnitV2Driver",
         "options": {},
         "version": "3.7.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -731,8 +687,7 @@
         "name": "NUnit.Extension.NUnitV2ResultWriter",
         "options": {},
         "version": "3.6.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -740,8 +695,7 @@
         "name": "NUnit.Extension.TeamCityEventListener",
         "options": {},
         "version": "1.0.3",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -749,8 +703,7 @@
         "name": "NUnit.Extension.VSProjectLoader",
         "options": {},
         "version": "3.7.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -758,8 +711,7 @@
         "name": "NUnit.Runners",
         "options": {},
         "version": "3.7.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -773,8 +725,7 @@
         "name": "OrionImprovement",
         "options": {},
         "version": "2.9.0.301",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -808,8 +759,7 @@
         "name": "Owin",
         "options": {},
         "version": "1.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -817,50 +767,45 @@
         "name": "RabbitMQ.Client",
         "options": {},
         "version": "3.6.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
       {
-        "name": "SolarWinds.Common",
+        "name": "snyk.Common",
         "options": {},
         "version": "10001.3.0.768",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Logging",
+            "name": "snyk.Logging",
             "options": {},
             "version": ">= 10000.2.0.743 < 10000.2.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Database.Client",
+        "name": "snyk.Database.Client",
         "options": {},
         "version": "0.1.0.128",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
       {
-        "name": "SolarWinds.Database.TimeSeries.Contracts",
+        "name": "snyk.Database.TimeSeries.Contracts",
         "options": {},
         "version": "0.9.0.482",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
       {
-        "name": "SolarWinds.InformationService.Addons",
+        "name": "snyk.InformationService.Addons",
         "options": {},
         "version": "2017.5.0.2127",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -871,73 +816,67 @@
         ]
       },
       {
-        "name": "SolarWinds.InformationService.Contract",
+        "name": "snyk.InformationService.Contract",
         "options": {},
         "version": "2017.5.0.2127",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Logging",
+            "name": "snyk.Logging",
             "options": {},
             "version": ">= 10000.2.0.743"
           },
           {
-            "name": "SolarWinds.Logging",
+            "name": "snyk.Logging",
             "options": {},
             "version": ">= 10000.2.0.743"
           }
         ]
       },
       {
-        "name": "Solarwinds.InformationService.Linq",
+        "name": "snyk.InformationService.Linq",
         "options": {},
         "version": "1.0.25.319",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
       {
-        "name": "Solarwinds.InformationService.Linq.Generator",
+        "name": "snyk.InformationService.Linq.Generator",
         "options": {},
         "version": "1.0.25.319",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
       {
-        "name": "SolarWinds.InformationService.SchemaLint",
+        "name": "snyk.InformationService.SchemaLint",
         "options": {},
         "version": "2017.5.0.2127",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
       {
-        "name": "SolarWinds.Internationalization",
+        "name": "snyk.Internationalization",
         "options": {},
         "version": "10001.3.0.751",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Logging",
+            "name": "snyk.Logging",
             "options": {},
             "version": ">= 10000.2.0.743 < 10000.2.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Logging",
+        "name": "snyk.Logging",
         "options": {},
         "version": "10000.2.0.743",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -948,11 +887,10 @@
         ]
       },
       {
-        "name": "SolarWinds.MessageBus",
+        "name": "snyk.MessageBus",
         "options": {},
         "version": "1.6.0.952",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -963,11 +901,10 @@
         ]
       },
       {
-        "name": "SolarWinds.Orion.Auditing",
+        "name": "snyk.Orion.Auditing",
         "options": {},
         "version": "10001.3.0.3942",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -981,112 +918,107 @@
             "version": ">= 2.0 < 2.1"
           },
           {
-            "name": "SolarWinds.InformationService.Contract",
+            "name": "snyk.InformationService.Contract",
             "options": {},
             "version": ">= 2017.5.0.2127 < 2017.5.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Batching",
+        "name": "snyk.Orion.Batching",
         "options": {},
         "version": "10001.3.0.1780",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Orion.Swis.Contract",
+            "name": "snyk.Orion.Swis.Contract",
             "options": {},
             "version": ">= 10001.3.0.3272 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Configuration",
+            "name": "snyk.Orion.Configuration",
             "options": {},
             "version": ">= 10001.3.0.1341 < 10001.3.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Channels",
+        "name": "snyk.Orion.Channels",
         "options": {},
         "version": "10001.3.0.1840",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Orion.Configuration",
+            "name": "snyk.Orion.Configuration",
             "options": {},
             "version": ">= 10001.3.0.1341 < 10001.3.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Common",
+        "name": "snyk.Orion.Common",
         "options": {},
         "version": "10001.3.0.1113",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Orion.Security",
+            "name": "snyk.Orion.Security",
             "options": {},
             "version": ">= 10001.3.0.834 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Database.Client",
+            "name": "snyk.Database.Client",
             "options": {},
             "version": ">= 0.1.0.128 < 0.1.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Configuration",
+        "name": "snyk.Orion.Configuration",
         "options": {},
         "version": "10001.3.0.1341",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Logging",
+            "name": "snyk.Logging",
             "options": {},
             "version": ">= 10000.2.0.743 < 10000.2.1"
           },
           {
-            "name": "SolarWinds.Orion.Security",
+            "name": "snyk.Orion.Security",
             "options": {},
             "version": ">= 10001.3.0.834 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Common",
+            "name": "snyk.Common",
             "options": {},
             "version": ">= 10001.3.0.768 < 10001.3.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Core.Bin",
+        "name": "snyk.Orion.Core.Bin",
         "options": {},
         "version": "2018.4.100.10499",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Internationalization",
+            "name": "snyk.Internationalization",
             "options": {},
             "version": ">= 10001.3.0.751 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Logging",
+            "name": "snyk.Logging",
             "options": {},
             "version": ">= 10000.2.0.743 < 10000.2.1"
           },
           {
-            "name": "SolarWinds.Orion.Common",
+            "name": "snyk.Orion.Common",
             "options": {},
             "version": ">= 10001.3.0.1113 < 10001.3.1"
           },
@@ -1098,367 +1030,350 @@
         ]
       },
       {
-        "name": "SolarWinds.Orion.Core.Bin.Metadata",
+        "name": "snyk.Orion.Core.Bin.Metadata",
         "options": {},
         "version": "2018.4.100.10499",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Database.TimeSeries.Contracts",
+            "name": "snyk.Database.TimeSeries.Contracts",
             "options": {},
             "version": "0.9.0.482"
           },
           {
-            "name": "Solarwinds.InformationService.Linq",
+            "name": "snyk.InformationService.Linq",
             "options": {},
             "version": ">= 1.0 < 1.1"
           },
           {
-            "name": "Solarwinds.InformationService.Linq.Generator",
+            "name": "snyk.InformationService.Linq.Generator",
             "options": {},
             "version": ">= 1.0 < 1.1"
           },
           {
-            "name": "SolarWinds.Orion.Core.Bin.Metadata",
+            "name": "snyk.Orion.Core.Bin.Metadata",
             "options": {},
             "version": "2018.4.100.10499"
           },
           {
-            "name": "SolarWinds.Orion.Core.SwisSchemas",
+            "name": "snyk.Orion.Core.SwisSchemas",
             "options": {},
             "version": "2018.4.100.10499"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Core.SharedCredentials",
+        "name": "snyk.Orion.Core.SharedCredentials",
         "options": {},
         "version": "10001.3.0.1184",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Common",
+            "name": "snyk.Common",
             "options": {},
             "version": ">= 10001.3.0.768 < 10001.3.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Core.SwisSchemas",
+        "name": "snyk.Orion.Core.SwisSchemas",
         "options": {},
         "version": "2018.4.100.10499",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Logging",
+            "name": "snyk.Logging",
             "options": {},
             "version": ">= 10000.2.0.743 < 10000.2.1"
           },
           {
-            "name": "SolarWinds.Orion.Common",
+            "name": "snyk.Orion.Common",
             "options": {},
             "version": ">= 10001.3.0.1113 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Security",
+            "name": "snyk.Orion.Security",
             "options": {},
             "version": ">= 10001.3.0.834 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Core.Bin.Metadata",
+            "name": "snyk.Orion.Core.Bin.Metadata",
             "options": {},
             "version": "2018.4.100.10499"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Core.TypeScript.3rdParty",
+        "name": "snyk.Orion.Core.TypeScript.3rdParty",
         "options": {},
         "version": "2018.4.100.10499",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
       {
-        "name": "SolarWinds.Orion.Core.TypeScript.Orion",
+        "name": "snyk.Orion.Core.TypeScript.Orion",
         "options": {},
         "version": "2018.4.100.10499",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
       {
-        "name": "SolarWinds.Orion.Core.Web.Metadata",
+        "name": "snyk.Orion.Core.Web.Metadata",
         "options": {},
         "version": "2018.4.100.10499",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Orion.Core.Bin.Metadata",
+            "name": "snyk.Orion.Core.Bin.Metadata",
             "options": {},
             "version": "2018.4.100.10499"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Core.WebSite",
+        "name": "snyk.Orion.Core.WebSite",
         "options": {},
         "version": "2018.4.100.10499",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Orion.Core.TypeScript.3rdParty",
+            "name": "snyk.Orion.Core.TypeScript.3rdParty",
             "options": {},
             "version": "2018.4.100.10499"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.I18N",
+        "name": "snyk.Orion.I18N",
         "options": {},
         "version": "10001.3.0.1204",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Orion.Core.TypeScript.Orion",
+            "name": "snyk.Orion.Core.TypeScript.Orion",
             "options": {},
             "version": "2018.4.100.10499"
           },
           {
-            "name": "SolarWinds.Orion.Core.Web.Metadata",
+            "name": "snyk.Orion.Core.Web.Metadata",
             "options": {},
             "version": "2018.4.100.10499"
           },
           {
-            "name": "SolarWinds.Internationalization",
+            "name": "snyk.Internationalization",
             "options": {},
             "version": ">= 10001.3.0.751 < 10001.3.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.PubSub",
+        "name": "snyk.Orion.PubSub",
         "options": {},
         "version": "10001.3.0.2346",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Logging",
+            "name": "snyk.Logging",
             "options": {},
             "version": ">= 10000.2.0.743 < 10000.2.1"
           },
           {
-            "name": "SolarWinds.Orion.Common",
+            "name": "snyk.Orion.Common",
             "options": {},
             "version": ">= 10001.3.0.1113 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Configuration",
+            "name": "snyk.Orion.Configuration",
             "options": {},
             "version": ">= 10001.3.0.1341 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.MessageBus",
+            "name": "snyk.MessageBus",
             "options": {},
             "version": ">= 1.6.0.952 < 1.6.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Security",
+        "name": "snyk.Orion.Security",
         "options": {},
         "version": "10001.3.0.834",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Logging",
+            "name": "snyk.Logging",
             "options": {},
             "version": ">= 10000.2.0.743 < 10000.2.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Swis.Client",
+        "name": "snyk.Orion.Swis.Client",
         "options": {},
         "version": "10001.3.0.3942",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.InformationService.Addons",
+            "name": "snyk.InformationService.Addons",
             "options": {},
             "version": ">= 2017.5.0.2127 < 2017.5.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Swis.Contract",
+        "name": "snyk.Orion.Swis.Contract",
         "options": {},
         "version": "10001.3.0.3272",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.InformationService.Contract",
+            "name": "snyk.InformationService.Contract",
             "options": {},
             "version": ">= 2017.5.0.2127 < 2017.5.1"
           },
           {
-            "name": "SolarWinds.Orion.Auditing",
+            "name": "snyk.Orion.Auditing",
             "options": {},
             "version": ">= 10001.3.0.3942 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Channels",
+            "name": "snyk.Orion.Channels",
             "options": {},
             "version": ">= 10001.3.0.1840 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Common",
+            "name": "snyk.Orion.Common",
             "options": {},
             "version": ">= 10001.3.0.1113 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Swis.Contract",
+            "name": "snyk.Orion.Swis.Contract",
             "options": {},
             "version": ">= 10001.3.0.3272 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.InformationService.Contract",
+            "name": "snyk.InformationService.Contract",
             "options": {},
             "version": ">= 2017.5.0.2127 < 2017.5.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Orion.Swis.PubSub",
+        "name": "snyk.Orion.Swis.PubSub",
         "options": {},
         "version": "10001.3.0.3942",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.Orion.I18N",
+            "name": "snyk.Orion.I18N",
             "options": {},
             "version": ">= 10001.3.0.1204 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.InformationService.Addons",
+            "name": "snyk.InformationService.Addons",
             "options": {},
             "version": ">= 2017.5.0.2127 < 2017.5.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Packaging",
+        "name": "snyk.Packaging",
         "options": {},
         "version": "1.1.0.600",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
-            "name": "SolarWinds.InformationService.Contract",
+            "name": "snyk.InformationService.Contract",
             "options": {},
             "version": ">= 2017.5.0.2127 < 2017.5.1"
           },
           {
-            "name": "SolarWinds.MessageBus",
+            "name": "snyk.MessageBus",
             "options": {},
             "version": ">= 1.6.0.952 < 1.6.1"
           },
           {
-            "name": "SolarWinds.Orion.Auditing",
+            "name": "snyk.Orion.Auditing",
             "options": {},
             "version": ">= 10001.3.0.3942 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Batching",
+            "name": "snyk.Orion.Batching",
             "options": {},
             "version": ">= 10001.3.0.1780 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Channels",
+            "name": "snyk.Orion.Channels",
             "options": {},
             "version": ">= 10001.3.0.1840 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Configuration",
+            "name": "snyk.Orion.Configuration",
             "options": {},
             "version": ">= 10001.3.0.1341 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Core.SharedCredentials",
+            "name": "snyk.Orion.Core.SharedCredentials",
             "options": {},
             "version": ">= 10001.3.0.1184 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.PubSub",
+            "name": "snyk.Orion.PubSub",
             "options": {},
             "version": ">= 10001.3.0.2346 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Swis.Client",
+            "name": "snyk.Orion.Swis.Client",
             "options": {},
             "version": ">= 10001.3.0.3942 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Orion.Swis.Contract",
+            "name": "snyk.Orion.Swis.Contract",
             "options": {},
             "version": ">= 10001.3.0.3272 < 10001.3.1"
           },
           {
-            "name": "SolarWinds.Settings",
+            "name": "snyk.Settings",
             "options": {},
             "version": ">= 1.3.0.679 < 1.3.1"
           }
         ]
       },
       {
-        "name": "SolarWinds.Serialization",
+        "name": "snyk.Serialization",
         "options": {},
         "version": "1.3.0.787",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
       {
-        "name": "SolarWinds.Settings",
+        "name": "snyk.Settings",
         "options": {},
         "version": "1.3.0.679",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
       {
-        "name": "SolarWinds.Tests.Shared",
+        "name": "snyk.Tests.Shared",
         "options": {},
         "version": "11.0.0.77",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -1469,11 +1384,10 @@
         ]
       },
       {
-        "name": "SolarWinds.Tools",
+        "name": "snyk.Tools",
         "options": {},
         "version": "1.0.0.2",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -1487,8 +1401,7 @@
         "name": "System.IO.Abstractions",
         "options": {},
         "version": "2.0.0.144",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -1496,8 +1409,7 @@
         "name": "System.Spatial",
         "options": {},
         "version": "5.6.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": []
       },
@@ -1505,8 +1417,7 @@
         "name": "WebGrease",
         "options": {},
         "version": "1.6.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -1520,8 +1431,7 @@
         "name": "WiX.Toolset",
         "options": {},
         "version": "3.9.1006.0",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -1532,11 +1442,10 @@
         ]
       },
       {
-        "name": "SolarWinds.Orion.Apollo.SDK",
+        "name": "snyk.Orion.Apollo.SDK",
         "options": {},
         "version": "4.0.0.2472",
-        "group": "main",
-        "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-acceptance",
+                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-acceptance",
         "repository": "NUGET",
         "dependencies": [
           {
@@ -1548,4 +1457,5 @@
       }
     ]
   }
+]
 }

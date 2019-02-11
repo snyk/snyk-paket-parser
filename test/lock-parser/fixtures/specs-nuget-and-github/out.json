@@ -1,239 +1,225 @@
 {
-  "main": {
-    "name": "main",
-    "repositories": {
-      "NUGET": [
-        "https://nuget.org/api/v2"
-      ],
-      "GITHUB": []
-    },
-    "dependencies": [
-      {
-        "name": "FAKE",
-        "options": {},
-        "version": "3.28.7",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
+  "groups": [ 
+    {
+      "name": null,
+      "specs": true,
+      "repositories": {
+        "NUGET": [
+          "https://nuget.org/api/v2"
+        ],
+        "GITHUB": [
+          "fsharp/FAKE"
+        ]
       },
-      {
-        "name": "FSharp.Compiler.Service",
-        "options": {},
-        "version": "0.0.89",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "FSharp.Data",
-        "options": {},
-        "version": "2.2.0",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Zlib.Portable",
-            "options": {
-              "framework": "portable-net40+sl50+wp80+win80"
+      "dependencies": [
+        {
+          "name": "FAKE",
+          "options": {},
+          "version": "3.28.7",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "FSharp.Compiler.Service",
+          "options": {},
+          "version": "0.0.89",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "FSharp.Data",
+          "options": {},
+          "version": "2.2.0",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": [
+            {
+              "name": "Zlib.Portable",
+              "options": {
+                "framework": "portable-net40+sl50+wp80+win80"
+              },
+              "version": ">= 1.10.0"
+            }
+          ]
+        },
+        {
+          "name": "FSharp.Formatting",
+          "options": {},
+          "version": "2.8.0",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": [
+            {
+              "name": "FSharp.Compiler.Service",
+              "options": {},
+              "version": ">= 0.0.86"
+            }
+          ]
+        },
+        {
+          "name": "FSharpVSPowerTools.Core",
+          "options": {},
+          "version": "1.7.0",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": [
+            {
+              "name": "FSharpVSPowerTools.Core",
+              "options": {},
+              "version": ">= 1.7.0"
             },
-            "version": ">= 1.10.0"
-          }
-        ]
-      },
-      {
-        "name": "FSharp.Formatting",
-        "options": {},
-        "version": "2.8.0",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "FSharp.Compiler.Service",
-            "options": {},
-            "version": ">= 0.0.86"
-          }
-        ]
-      },
-      {
-        "name": "FSharpVSPowerTools.Core",
-        "options": {},
-        "version": "1.7.0",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "FSharpVSPowerTools.Core",
-            "options": {},
-            "version": ">= 1.7.0"
-          },
-          {
-            "name": "FSharp.Compiler.Service",
-            "options": {},
-            "version": ">= 0.0.81"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Bcl",
-        "options": {},
-        "version": "1.1.10",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Bcl.Build",
-            "options": {},
-            "version": ">= 1.0.14"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Bcl.Build",
-        "options": {},
-        "version": "1.0.21",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "Microsoft.Net.Http",
-        "options": {},
-        "version": "2.2.29",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Bcl",
-            "options": {},
-            "version": ">= 1.1.10"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Tpl.Dataflow",
-        "options": {},
-        "version": "4.5.14",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Bcl.Build",
-            "options": {},
-            "version": ">= 1.0.14"
-          }
-        ]
-      },
-      {
-        "name": "Nancy",
-        "options": {},
-        "version": "1.2.0",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "Nancy.Hosting.Self",
-        "options": {},
-        "version": "1.2.0",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Nancy",
-            "options": {},
-            "version": ">= 1.2.0"
-          }
-        ]
-      },
-      {
-        "name": "Newtonsoft.Json",
-        "options": {},
-        "version": "6.0.8",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "NUnit",
-        "options": {},
-        "version": "2.6.4",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "NUnit.Runners",
-        "options": {},
-        "version": "2.6.4",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "Octokit",
-        "options": {},
-        "version": "0.10.0",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "SourceLink.Fake",
-        "options": {},
-        "version": "0.5.0",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "vtortola.WebSocketListener",
-        "options": {},
-        "version": "2.1.5.0",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Tpl.Dataflow",
-            "options": {},
-            "version": ">= 4.5.9"
-          }
-        ]
-      },
-      {
-        "name": "Zlib.Portable",
-        "options": {},
-        "version": "1.10.0",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "modules/Octokit/Octokit.fsx",
-        "options": {},
-        "version": "3e58233a84f9db0f6a6e34bfbc99aaa7fe8bbcdc",
-        "group": "main",
-        "remote": "https://nuget.org/api/v2",
-        "repository": "GITHUB",
-        "dependencies": []
-      }
-    ]
-  }
+            {
+              "name": "FSharp.Compiler.Service",
+              "options": {},
+              "version": ">= 0.0.81"
+            }
+          ]
+        },
+        {
+          "name": "Microsoft.Bcl",
+          "options": {},
+          "version": "1.1.10",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": [
+            {
+              "name": "Microsoft.Bcl.Build",
+              "options": {},
+              "version": ">= 1.0.14"
+            }
+          ]
+        },
+        {
+          "name": "Microsoft.Bcl.Build",
+          "options": {},
+          "version": "1.0.21",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "Microsoft.Net.Http",
+          "options": {},
+          "version": "2.2.29",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": [
+            {
+              "name": "Microsoft.Bcl",
+              "options": {},
+              "version": ">= 1.1.10"
+            }
+          ]
+        },
+        {
+          "name": "Microsoft.Tpl.Dataflow",
+          "options": {},
+          "version": "4.5.14",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": [
+            {
+              "name": "Microsoft.Bcl.Build",
+              "options": {},
+              "version": ">= 1.0.14"
+            }
+          ]
+        },
+        {
+          "name": "Nancy",
+          "options": {},
+          "version": "1.2.0",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "Nancy.Hosting.Self",
+          "options": {},
+          "version": "1.2.0",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": [
+            {
+              "name": "Nancy",
+              "options": {},
+              "version": ">= 1.2.0"
+            }
+          ]
+        },
+        {
+          "name": "Newtonsoft.Json",
+          "options": {},
+          "version": "6.0.8",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "NUnit",
+          "options": {},
+          "version": "2.6.4",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "NUnit.Runners",
+          "options": {},
+          "version": "2.6.4",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "Octokit",
+          "options": {},
+          "version": "0.10.0",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "SourceLink.Fake",
+          "options": {},
+          "version": "0.5.0",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "vtortola.WebSocketListener",
+          "options": {},
+          "version": "2.1.5.0",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": [
+            {
+              "name": "Microsoft.Tpl.Dataflow",
+              "options": {},
+              "version": ">= 4.5.9"
+            }
+          ]
+        },
+        {
+          "name": "Zlib.Portable",
+          "options": {},
+          "version": "1.10.0",
+          "remote": "https://nuget.org/api/v2",
+          "repository": "NUGET",
+          "dependencies": []
+        },
+        {
+          "name": "modules/Octokit/Octokit.fsx",
+          "options": {},
+          "version": "3e58233a84f9db0f6a6e34bfbc99aaa7fe8bbcdc",
+          "remote": "fsharp/FAKE",
+          "repository": "GITHUB",
+          "dependencies": []
+        }
+      ]
+    }
+  ]
 }
