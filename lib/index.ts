@@ -77,7 +77,7 @@ export function buildDependencyTree(
       };
     }
   }
-  
+
   return depTree;
 }
 
