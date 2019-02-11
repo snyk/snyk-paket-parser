@@ -1,0 +1,27 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "Invoke-Build",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "file": "Tasks/Ask/Ask.tasks.ps1",
+        "repo": "nightroman/Invoke-Build",
+        "source": "github",
+        "token": "",
+        "version": ""
+      }
+    ],
+    "name": null,
+    "options": {},
+    "sources": [
+      {
+        "options": {},
+        "url": "https://www.nuget.org/api/v2"
+      }
+    ]
+  }
+]

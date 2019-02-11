@@ -1,0 +1,38 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "FAKE",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 4.63.0"
+      },
+      {
+        "name": "SourceLink.Fake",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 1.1.0"
+      },
+      {
+        "name": "Mono.Cecil",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 0.10.0-beta6"
+      }
+    ],
+    "name": null,
+    "options": {
+      "framework": "net45"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://vrvis.myget.org/F/aardvark_public/api/v3/index.json"
+      },
+      {
+        "options": {},
+        "url": "https://api.nuget.org/v3/index.json"
+      }
+    ]
+  }
+]

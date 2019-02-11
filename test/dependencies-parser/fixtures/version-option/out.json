@@ -1,0 +1,72 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "FSharp.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 4.2.0"
+      },
+      {
+        "name": "WebSharper",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "prerelease"
+      },
+      {
+        "name": "WebSharper.FSharp",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "prerelease"
+      }
+    ],
+    "name": null,
+    "options": {
+      "version": "5.173.1",
+      "framework": "net461, netstandard2.0",
+      "storage": "none"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://api.nuget.org/v3/index.json"
+      },
+      {
+        "options": {},
+        "url": "https://daily.websharper.com/nuget"
+      }
+    ]
+  },
+  {
+    "dependencies": [
+      {
+        "name": "FAKE",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Paket.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "5.173.1"
+      }
+    ],
+    "name": "build",
+    "options": {
+      "framework": "net45"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://api.nuget.org/v3/index.json"
+      }
+    ]
+  },
+  {
+    "dependencies": [],
+    "name": "wsbuild",
+    "options": {},
+    "sources": []
+  }
+]

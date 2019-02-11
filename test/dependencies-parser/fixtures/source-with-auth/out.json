@@ -1,0 +1,25 @@
+[
+  {
+    "dependencies": [],
+    "name": null,
+    "options": {},
+    "sources": [
+      {
+        "options": {
+          "username": "%PRIVATE_FEED_USER%",
+          "password": "%PRIVATE_FEED_PASS%",
+          "authtype": "ntlm"
+        },
+        "url": "http://myserver/nuget/api/v2"
+      },
+      {
+        "options": {
+          "username": "user name",
+          "password": "the password",
+          "authtype": "basic"
+        },
+        "url": "http://example.com/nuget/api/v2"
+      }
+    ]
+  }
+]

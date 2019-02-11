@@ -1,0 +1,42 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "Microsoft.Build",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "15.3.409"
+      },
+      {
+        "name": "Microsoft.Build.Tasks.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "15.3.409"
+      },
+      {
+        "name": "Microsoft.CodeAnalysis",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "2.4.0-beta1-62122-04"
+      },
+      {
+        "name": "Microsoft.Net.Compilers",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "2.4.0-beta1-62122-04"
+      }
+    ],
+    "name": null,
+    "options": {},
+    "sources": [
+      {
+        "options": {},
+        "url": "https://api.nuget.org/v3/index.json"
+      },
+      {
+        "options": {},
+        "url": "https://dotnet.myget.org/F/roslyn/api/v3/index.json"
+      }
+    ]
+  }
+]

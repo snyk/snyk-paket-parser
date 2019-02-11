@@ -1,0 +1,28 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "Fable.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fable.Import.Browser",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      }
+    ],
+    "name": null,
+    "options": {
+      "storage": "none"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://nuget.org/api/v2"
+      }
+    ]
+  }
+]

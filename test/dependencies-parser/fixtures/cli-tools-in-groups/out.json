@@ -1,0 +1,104 @@
+[
+  {
+    "dependencies": [],
+    "name": null,
+    "options": {},
+    "sources": []
+  },
+  {
+    "dependencies": [
+      {
+        "name": "FSharp.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Saturn",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fable.JsonConverter",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      }
+    ],
+    "name": "Server",
+    "options": {
+      "storage": "none"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://api.nuget.org/v3/index.json"
+      }
+    ]
+  },
+  {
+    "dependencies": [
+      {
+        "name": "Fable.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fable.Elmish.Debugger",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fable.Elmish.React",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fable.Elmish.HMR",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Fulma",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      }
+    ],
+    "name": "Client",
+    "options": {
+      "storage": "none"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://api.nuget.org/v3/index.json"
+      }
+    ]
+  },
+  {
+    "dependencies": [
+      {
+        "name": "FAKE",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      }
+    ],
+    "name": "Build",
+    "options": {
+      "generate_load_scripts": "true"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://api.nuget.org/v3/index.json"
+      }
+    ]
+  }
+]

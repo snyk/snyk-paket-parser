@@ -1,0 +1,34 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "FAKE",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "FSharp.ViewModule.Core",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "0.9.9.1"
+      },
+      {
+        "name": "FsXaml.Wpf",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "0.9.9"
+      }
+    ],
+    "name": null,
+    "options": {
+      "framework": ">= net45"
+    },
+    "sources": [
+      {
+        "options": {},
+        "url": "https://www.nuget.org/api/v2"
+      }
+    ]
+  }
+]

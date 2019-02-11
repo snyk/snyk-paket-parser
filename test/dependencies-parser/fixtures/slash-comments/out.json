@@ -1,0 +1,156 @@
+[
+  {
+    "dependencies": [
+      {
+        "name": "Moq",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "EULA",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "WiX.Toolset",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "== 3.9.1006.0"
+      },
+      {
+        "name": "NUnit",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 2.6.4"
+      },
+      {
+        "name": "NUnit.Runners",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "Snyk.Logging",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 10000.2.0.0"
+      },
+      {
+        "name": "Snyk.Tests.Shared",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 11.0.0.29"
+      },
+      {
+        "name": "Snyk.Serialization",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 1.3.0.0"
+      },
+      {
+        "name": "Snyk.Settings",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 1.3.0.0"
+      },
+      {
+        "name": "Snyk.InformationService.SchemaLint",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 2017.5.0.0"
+      },
+      {
+        "name": "Snyk.Orion.Core.Bin",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 2018.4.100.0"
+      },
+      {
+        "name": "Snyk.Orion.Core.WebSite",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 2018.4.100.0"
+      },
+      {
+        "name": "Snyk.Orion.Core.SwisSchemas",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 2018.4.100.0"
+      },
+      {
+        "name": "Snyk.Orion.Swis.Client",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 10001.3.0.0"
+      },
+      {
+        "name": "Snyk.Orion.Swis.PubSub",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 10001.3.0.0"
+      },
+      {
+        "name": "Snyk.Orion.Channels",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 10001.3.0.0"
+      },
+      {
+        "name": "Snyk.Orion.Configuration",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 10001.3.0.0"
+      },
+      {
+        "name": "Snyk.Packaging",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 1.1.0.0"
+      },
+      {
+        "name": "Snyk.Tools",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      },
+      {
+        "name": "OrionImprovement",
+        "options": {},
+        "source": "nuget",
+        "versionRange": "~> 2.9.0.0"
+      },
+      {
+        "name": "Snyk.Orion.Apollo.SDK",
+        "options": {},
+        "source": "nuget",
+        "versionRange": ""
+      }
+    ],
+    "name": null,
+    "options": {},
+    "sources": [
+      {
+        "options": {},
+        "url": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable"
+      },
+      {
+        "options": {},
+        "url": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-release"
+      },
+      {
+        "options": {},
+        "url": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-acceptance"
+      },
+      {
+        "options": {},
+        "url": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-develop"
+      },
+      {
+        "options": {},
+        "url": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-3rdParty"
+      }
+    ]
+  }
+]
