@@ -18,7 +18,7 @@ function loadFixture(fixtureName: string) {
 }
 
 function buildOptions(options: any) {
-  let opts = [];
+  const opts = [];
 
   if (!options || Object.keys(options).length === 0) {
     return '';

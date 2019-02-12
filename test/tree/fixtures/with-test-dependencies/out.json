@@ -1,0 +1,75 @@
+{
+  "dependencies": {
+    "System.Net.Http": {
+      "depType": "prod",
+      "dependencies": {
+        "System.Diagnostics.DiagnosticSource": {
+          "depType": "prod",
+          "dependencies": {},
+          "name": "System.Diagnostics.DiagnosticSource",
+          "version": "4.5.1"
+        },
+        "System.Security.Cryptography.X509Certificates": {
+          "depType": "prod",
+          "dependencies": {
+            "System.Security.Cryptography.Algorithms": {
+              "depType": "prod",
+              "dependencies": {
+                "System.IO": {
+                  "depType": "prod",
+                  "dependencies": {},
+                  "name": "System.IO",
+                  "version": "4.3"
+                },
+                "System.Runtime": {
+                  "depType": "prod",
+                  "dependencies": {},
+                  "name": "System.Runtime",
+                  "version": "4.3"
+                },
+                "System.Security.Cryptography.Encoding": {
+                  "depType": "prod",
+                  "dependencies": {},
+                  "name": "System.Security.Cryptography.Encoding",
+                  "version": "4.3"
+                },
+                "System.Security.Cryptography.Primitives": {
+                  "depType": "prod",
+                  "dependencies": {},
+                  "name": "System.Security.Cryptography.Primitives",
+                  "version": "4.3"
+                }
+              },
+              "name": "System.Security.Cryptography.Algorithms",
+              "version": "4.3.1"
+            },
+            "System.Security.Cryptography.Encoding": {
+              "depType": "prod",
+              "dependencies": {},
+              "name": "System.Security.Cryptography.Encoding",
+              "version": "4.3"
+            }
+          },
+          "name": "System.Security.Cryptography.X509Certificates",
+          "version": "4.3.2"
+        }
+      },
+      "name": "System.Net.Http",
+      "version": "4.3"
+    },
+    "FAKE": {
+      "depType": "prod",
+      "dependencies": {},
+      "name": "FAKE",
+      "version": "5.8.4"
+    },
+    "NUnit": {
+      "depType": "dev",
+      "dependencies": {},
+      "name": "NUnit",
+      "version": "3.11.0"
+    }
+  },
+  "name": "test",
+  "version": ""
+}

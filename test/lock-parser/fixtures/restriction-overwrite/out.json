@@ -7,7 +7,16 @@
           "https://www.nuget.org/api/v2"
         ]
       },
-      "dependencies": [],
+      "dependencies": [
+        {
+          "name": "FSharp.Core",
+          "version": "4.0.0.1",
+          "options": {},
+          "dependencies": [],
+          "remote": "https://www.nuget.org/api/v2",
+          "repository": "NUGET"
+        }
+      ],
       "options": {
         "RESTRICTION": "|| (== net45) (== portable-net45+win8+wp8+wpa81)"
       }
@@ -149,6 +158,20 @@
           "dependencies": [],
           "remote": "https://www.nuget.org/api/v2",
           "repository": "NUGET"
+        },
+        {
+          "name": "modules/Octokit/Octokit.fsx",
+          "version": "b5933798c1944051bf358a460fcdc8ffbd678dfc",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Octokit",
+              "version": ">= 0.20",
+              "options": {}
+            }
+          ],
+          "remote": "fsharp/FAKE",
+          "repository": "GITHUB"
         }
       ],
       "options": {

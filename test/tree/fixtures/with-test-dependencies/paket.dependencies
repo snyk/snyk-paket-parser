@@ -1,0 +1,10 @@
+framework: >= net451
+source https://api.nuget.org/v3/index.json
+
+nuget System.Net.Http 4.3.0
+nuget FAKE
+
+group Test
+storage: yes
+source https://api.nuget.org/v3/index.json
+nuget NUnit version_in_path: true, framework: net451, strategy: min
