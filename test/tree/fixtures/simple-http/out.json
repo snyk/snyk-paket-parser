@@ -14,6 +14,19 @@
           "dependencies": {},
           "name": "FSharp.Compiler.Service",
           "version": "1.4.2.3"
+        },
+        "FSharpVSPowerTools.Core": {
+          "depType": "prod",
+          "dependencies": {
+            "FSharp.Compiler.Service": {
+              "depType": "prod",
+              "dependencies": {},
+              "name": "FSharp.Compiler.Service",
+              "version": "1.4.2.3"
+            }
+          },
+          "name": "FSharpVSPowerTools.Core",
+          "version": "2.2.0"
         }
       },
       "name": "FSharp.Formatting",
@@ -39,7 +52,14 @@
     },
     "Exira.ErrorHandling": {
       "depType": "prod",
-      "dependencies": {},
+      "dependencies": {
+        "FSharp.Core": {
+          "depType": "prod",
+          "dependencies": {},
+          "name": "FSharp.Core",
+          "version": "4.0.0.1"
+        }
+      },
       "name": "Exira.ErrorHandling",
       "version": "0.2.37"
     },
@@ -55,12 +75,6 @@
         "Microsoft.Owin": {
           "depType": "prod",
           "dependencies": {
-            "Microsoft.Bcl.Build": {
-              "depType": "prod",
-              "dependencies": {},
-              "name": "Microsoft.Bcl.Build",
-              "version": "1.0.21"
-            },
             "Owin": {
               "depType": "prod",
               "dependencies": {},
@@ -70,6 +84,12 @@
           },
           "name": "Microsoft.Owin",
           "version": "3.0.1"
+        },
+        "Owin": {
+          "depType": "prod",
+          "dependencies": {},
+          "name": "Owin",
+          "version": "1.0"
         }
       },
       "name": "Microsoft.Owin.Hosting",
@@ -78,21 +98,9 @@
     "Microsoft.Owin.StaticFiles": {
       "depType": "prod",
       "dependencies": {
-        "Owin": {
-          "depType": "prod",
-          "dependencies": {},
-          "name": "Owin",
-          "version": "1.0"
-        },
         "Microsoft.Owin": {
           "depType": "prod",
           "dependencies": {
-            "Microsoft.Bcl.Build": {
-              "depType": "prod",
-              "dependencies": {},
-              "name": "Microsoft.Bcl.Build",
-              "version": "1.0.21"
-            },
             "Owin": {
               "depType": "prod",
               "dependencies": {},
@@ -102,12 +110,24 @@
           },
           "name": "Microsoft.Owin",
           "version": "3.0.1"
+        },
+        "Microsoft.Owin.FileSystems": {
+          "depType": "prod",
+          "dependencies": {},
+          "name": "Microsoft.Owin.FileSystems",
+          "version": "3.0.1"
+        },
+        "Owin": {
+          "depType": "prod",
+          "dependencies": {},
+          "name": "Owin",
+          "version": "1.0"
         }
       },
       "name": "Microsoft.Owin.StaticFiles",
       "version": "3.0.1"
     }
   },
-  "name": "",
+  "name": "test",
   "version": ""
 }

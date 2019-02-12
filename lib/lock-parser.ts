@@ -10,7 +10,7 @@ interface Option {
   [name: string]: string | null;
 }
 
-interface Dependency {
+export interface Dependency {
   name: string;
   version: string;
   options: Option;
