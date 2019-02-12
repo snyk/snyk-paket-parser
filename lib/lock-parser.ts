@@ -1,5 +1,5 @@
 import {startsWith} from 'lodash';
-import {Line, parse as parseLines} from './line-parser';
+import {Line, parseLines} from './line-parser';
 
 const REPOSITORY_TYPES = ['HTTP', 'GIST', 'GIT', 'NUGET', 'GITHUB']; // naming convention in paket's standard parser
 const GROUP = 'GROUP';
@@ -10,7 +10,7 @@ interface Option {
   [name: string]: string | null;
 }
 
-interface Dependency {
+export interface Dependency {
   name: string;
   version: string;
   options: Option;
@@ -94,6 +94,7 @@ export function parseLockFile(input: string): PaketLock {
 
   for (const line of lines) {
     const upperCaseLine = line.data.toUpperCase();
+
     if (line.indentation === 0) { // group or group option
       if (startsWith(upperCaseLine, GROUP)) {
         result.groups.push(group);
@@ -128,9 +129,6 @@ export function parseLockFile(input: string): PaketLock {
       const dep = parseDependencyLine(line, line.indentation === 3);
 
       if (line.indentation === 2) { // Resolved Dependency
-        if (dependency) {
-          group.dependencies.push(dependency);
-        }
         dep.remote = depContext.remote;
         dep.repository = depContext.repository;
         dependency = dep;
@@ -138,12 +136,12 @@ export function parseLockFile(input: string): PaketLock {
         dependency.dependencies.push(dep);
       }
     }
+
+    if (group && dependency && !group.dependencies.includes(dependency)) {
+      group.dependencies.push(dependency);
+    }
   }
 
-  // handles final dependency & group
-  if (dependency) {
-    group.dependencies.push(dependency);
-  }
   result.groups.push(group);
 
   return result;

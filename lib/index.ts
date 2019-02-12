@@ -1,12 +1,16 @@
-import { parseLockFile, PaketLock } from './lock-parser';
+import {parseLockFile, PaketLock, Dependency} from './lock-parser';
+import {parseDependenciesFile, PaketDependencies, NugetDependency} from './dependencies-parser';
 import * as path from 'path';
 import * as fs from 'fs';
+import {InvalidUserInputError} from './errors';
 
-interface DepTree {
+const DEV_GROUPS = ['build', 'test', 'tests'];
+
+export interface DepTree {
   name: string;
   version: string;
   dependencies: {
-    [dep: string]: DepTree;
+    [dep: string]: {};
   };
   depType?: DepType;
   hasDevDependencies?: boolean;
@@ -14,47 +18,57 @@ interface DepTree {
   targetFrameworks?: string[];
 }
 
-enum DepType {
+export enum DepType {
   prod = 'prod',
   dev = 'dev',
 }
 
-function parse(manifestFileContents: string, lockFileContents: string, includeDev = false): DepTree {
-  // parse manifestFileContents here too when the time comes
-  const lockFile = parseLockFile(lockFileContents);
-  return buildDependencyTree(lockFile, includeDev);
-}
-
-function parseFromFile(
+export async function buildDepTreeFromFiles(
   root: string,
   manifestFilePath: string,
   lockFilePath: string,
   includeDev = false,
-): DepTree {
-  if (!root || !manifestFilePath || !lockFilePath) {
-    throw new Error('Missing required parameters for parseFromFile()');
-  }
-
+  strict = true,
+): Promise<DepTree> {
   const manifestFileFullPath = path.resolve(root, manifestFilePath);
-  const lockFileeFullPath = path.resolve(root, lockFilePath);
+  const lockFileFullPath = path.resolve(root, lockFilePath);
 
   if (!fs.existsSync(manifestFileFullPath)) {
-    throw new Error('No paket.dependencies file found at ' +
+    throw new InvalidUserInputError('Target file paket.dependencies not found at ' +
       `location: ${manifestFileFullPath}`);
   }
-  if (!fs.existsSync(lockFileeFullPath)) {
-    throw new Error('No paket.lock file found at ' +
-      `location: ${lockFileeFullPath}`);
+  if (!fs.existsSync(lockFileFullPath)) {
+    throw new InvalidUserInputError('Lockfile not found at location: ' +
+      lockFileFullPath);
   }
 
   const manifestFileContents = fs.readFileSync(manifestFileFullPath, 'utf-8');
-  const lockFileContents = fs.readFileSync(manifestFileFullPath, 'utf-8');
+  const lockFileContents = fs.readFileSync(lockFileFullPath, 'utf-8');
 
-  return parse(manifestFileContents, manifestFileContents, includeDev);
+  return await buildDepTree(manifestFileContents, lockFileContents, includeDev, strict, manifestFileFullPath);
 }
 
-export function buildDependencyTree(
-  /* manifestFile: PaketManifest, */ lockFile: PaketLock, includeDev: boolean = false,
+export async function buildDepTree(
+  manifestFileContents: string,
+  lockFileContents: string,
+  includeDev: boolean = false,
+  strict: boolean = true,
+  defaultManifestFileName: string = 'paket.dependencies',
+): Promise<DepTree> {
+  const manifestFile = parseDependenciesFile(manifestFileContents);
+  const lockFile = parseLockFile(lockFileContents);
+
+  const tree = buildDependencyTree(manifestFile, lockFile, includeDev);
+
+  tree.name = defaultManifestFileName;
+
+  return tree;
+}
+
+function buildDependencyTree(
+  manifestFile: PaketDependencies,
+  lockFile: PaketLock,
+  includeDev: boolean = false,
 ) {
   const depTree = {
     dependencies: {},
@@ -62,35 +76,57 @@ export function buildDependencyTree(
     version: '',
   } as DepTree;
 
+  const dependencies: { [dep: string]: {} } = {};
+
+  for (const group of manifestFile) {
+    for (const dep of group.dependencies) {
+      const current = dep as NugetDependency;
+      if (current.name) {
+        dependencies[current.name] = {
+          name: current.name,
+        };
+      }
+    }
+  }
+
   for (const group of lockFile.groups) {
-    const isDev = group.name === 'build' || group.name === 'test' || group.name === 'tests';
+    const isDev = DEV_GROUPS.includes((group.name || '').toLowerCase());
+
     if (isDev && !includeDev) {
       continue;
     }
 
     for (const dep of group.dependencies) {
-      depTree.dependencies[dep.name] = {
-        depType: isDev ? DepType.dev : DepType.prod,
-        dependencies: buildSubTree(dep.dependencies),
-        name: dep.name,
-        version: dep.version,
-      };
+      if (dependencies[dep.name]) {
+        dependencies[dep.name] = {
+          depType: isDev ? DepType.dev : DepType.prod,
+          dependencies: buildSubTree(dep.dependencies, group.dependencies, isDev),
+          name: dep.name,
+          version: dep.version,
+        };
+      }
     }
   }
+
+  depTree.dependencies = dependencies;
 
   return depTree;
 }
 
-function buildSubTree(dependency: any) {
-  const subTree: {[dep: string]: DepTree} = {};
+function buildSubTree(dependencies: any, groupDeps: Dependency[], isDev: boolean) {
+  const subTree: { [dep: string]: {} } = {};
 
-  for (const dep of dependency) {
-    subTree[dep.name] = {
-      dependencies: {},
-      name: dep.name,
-      version: dep.version,
-    };
+  for (const currDep of dependencies) {
+    for (const dep of groupDeps) {
+      if (dep.name === currDep.name) {
+        subTree[dep.name] = {
+          depType: isDev ? DepType.dev : DepType.prod,
+          dependencies: buildSubTree(dep.dependencies, groupDeps, isDev),
+          name: dep.name,
+          version: dep.version,
+        };
+      }
+    }
   }
-
   return subTree;
 }

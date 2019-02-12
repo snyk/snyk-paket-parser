@@ -7,7 +7,16 @@
           "http://api.nuget.org/v3/index.json"
         ]
       },
-      "dependencies": []
+      "dependencies": [
+        {
+          "name": "NLog",
+          "version": "4.3.11",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://api.nuget.org/v3/index.json",
+          "repository": "NUGET"
+        }
+      ]
     },
     {
       "name": "build",
@@ -28,6 +37,14 @@
         {
           "name": "Group",
           "version": "1.2.3",
+          "options": {},
+          "dependencies": [],
+          "remote": "https://www.nuget.org/api/v2",
+          "repository": "NUGET"
+        },
+        {
+          "name": "GitVersion",
+          "version": "3.6.4",
           "options": {},
           "dependencies": [],
           "remote": "https://www.nuget.org/api/v2",

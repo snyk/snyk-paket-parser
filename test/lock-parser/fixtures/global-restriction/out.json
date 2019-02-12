@@ -178,6 +178,14 @@
           "dependencies": [],
           "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nugets",
           "repository": "NUGET"
+        },
+        {
+          "name": "xunit.runner.visualstudio",
+          "version": "2.3.1",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nugets",
+          "repository": "NUGET"
         }
       ],
       "options": {

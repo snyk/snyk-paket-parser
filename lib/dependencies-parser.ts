@@ -1,5 +1,5 @@
 import {startsWith} from 'lodash';
-import {Line, parse as parseLines} from './line-parser';
+import {Line, parseLines} from './line-parser';
 
 const COMMENTS = ['#', '//'];
 const GROUP = 'group';
@@ -40,7 +40,7 @@ interface GithubDependency extends Dependency {
   token: string;
 }
 
-interface NugetDependency extends Dependency {
+export interface NugetDependency extends Dependency {
   source: 'nuget';
   name: string;
   versionRange: string;
@@ -127,7 +127,7 @@ function parseGroupOption(line: string): [string, string] {
   return [result[1] || '', result[3] || ''];
 }
 
-export function parse(input: string): PaketDependencies {
+export function parseDependenciesFile(input: string): PaketDependencies {
   const lines = parseLines(input);
   const result: PaketDependencies = [];
   let group: DependencyGroup = {

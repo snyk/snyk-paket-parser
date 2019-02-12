@@ -1,0 +1,25 @@
+RESTRICTION: >= net451
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    FAKE (5.8.4)
+    System.Diagnostics.DiagnosticSource (4.5.1) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (< net45) (>= net451) (>= netstandard1.3) (< netstandard1.6)) (&& (< net45) (>= net451) (>= netstandard1.6)) (>= net46)
+    System.IO (4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= dnxcore50) (>= net46)) (&& (>= dnxcore50) (>= net461)) (&& (< net45) (>= net451) (>= netstandard1.3) (< netstandard1.4)) (&& (< net45) (>= net451) (>= netstandard1.4) (< netstandard1.6)) (&& (< net45) (>= net451) (>= netstandard1.6)) (&& (< net46) (>= net461) (< netstandard1.4)) (&& (< net46) (>= net461) (>= netstandard1.6)) (&& (< net46) (>= net461) (< netstandard1.6)) (>= net463)
+    System.Net.Http (4.3)
+      System.Diagnostics.DiagnosticSource (>= 4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (< net45) (>= net451) (>= netstandard1.3) (< netstandard1.6)) (&& (< net45) (>= net451) (>= netstandard1.6)) (>= net46)
+      System.Security.Cryptography.X509Certificates (>= 4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (< net45) (>= net451) (>= netstandard1.3) (< netstandard1.6)) (&& (< net45) (>= net451) (>= netstandard1.6)) (>= net46)
+    System.Runtime (4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= dnxcore50) (>= net46)) (&& (>= dnxcore50) (>= net461)) (&& (< net45) (>= net451) (>= netstandard1.3) (< netstandard1.4)) (&& (< net45) (>= net451) (>= netstandard1.4) (< netstandard1.6)) (&& (< net45) (>= net451) (>= netstandard1.6)) (&& (< net46) (>= net461) (< netstandard1.4)) (&& (< net46) (>= net461) (>= netstandard1.6)) (&& (< net46) (>= net461) (< netstandard1.6)) (>= net463)
+    System.Security.Cryptography.Algorithms (4.3.1) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= dnxcore50) (>= net46)) (&& (< net45) (>= net451) (>= netstandard1.3) (< netstandard1.4)) (&& (< net45) (>= net451) (>= netstandard1.4) (< netstandard1.6)) (&& (< net45) (>= net451) (>= netstandard1.6)) (&& (>= net46) (< netstandard1.4)) (>= net461)
+      System.IO (>= 4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= net451) (< net46) (>= netstandard1.3) (< netstandard1.4)) (&& (>= net451) (< net46) (>= netstandard1.4) (< netstandard1.6)) (&& (>= net451) (< net46) (>= netstandard1.6)) (>= net463)
+      System.Runtime (>= 4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= net451) (< net46) (>= netstandard1.3) (< netstandard1.4)) (&& (>= net451) (< net46) (>= netstandard1.4) (< netstandard1.6)) (&& (>= net451) (< net46) (>= netstandard1.6)) (>= net463)
+      System.Security.Cryptography.Encoding (>= 4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= net451) (< net46) (>= netstandard1.6)) (>= net463)
+      System.Security.Cryptography.Primitives (>= 4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= net451) (< net46) (>= netstandard1.3) (< netstandard1.4)) (&& (>= net451) (< net46) (>= netstandard1.4) (< netstandard1.6)) (&& (>= net451) (< net46) (>= netstandard1.6)) (&& (>= net46) (< netstandard1.4)) (&& (>= net461) (< netstandard1.6)) (>= net463)
+    System.Security.Cryptography.Encoding (4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= dnxcore50) (>= net46)) (&& (< net45) (>= net451) (>= netstandard1.3) (< netstandard1.4)) (&& (< net45) (>= net451) (>= netstandard1.4) (< netstandard1.6)) (&& (< net45) (>= net451) (>= netstandard1.6)) (&& (>= net46) (< netstandard1.4)) (>= net461)
+    System.Security.Cryptography.Primitives (4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= dnxcore50) (>= net46)) (&& (>= dnxcore50) (>= net461)) (&& (< net45) (>= net451) (>= netstandard1.3) (< netstandard1.4)) (&& (< net45) (>= net451) (>= netstandard1.4) (< netstandard1.6)) (&& (< net45) (>= net451) (>= netstandard1.6)) (&& (>= net46) (< netstandard1.4)) (&& (< net46) (>= net461) (>= netstandard1.6)) (&& (>= net461) (< netstandard1.4)) (&& (>= net461) (< netstandard1.6)) (>= net463)
+    System.Security.Cryptography.X509Certificates (4.3.2) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (< net45) (>= net451) (>= netstandard1.3) (< netstandard1.6)) (&& (< net45) (>= net451) (>= netstandard1.6)) (>= net46)
+      System.Security.Cryptography.Algorithms (>= 4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= net451) (< net46) (>= netstandard1.3) (< netstandard1.4)) (&& (>= net451) (< net46) (>= netstandard1.4) (< netstandard1.6)) (&& (>= net451) (< net46) (>= netstandard1.6)) (&& (>= net46) (< netstandard1.4)) (>= net461)
+      System.Security.Cryptography.Encoding (>= 4.3) - restriction: || (&& (>= dnxcore50) (>= net451)) (&& (>= net451) (< net46) (>= netstandard1.3) (< netstandard1.4)) (&& (>= net451) (< net46) (>= netstandard1.4) (< netstandard1.6)) (&& (>= net451) (< net46) (>= netstandard1.6)) (&& (>= net46) (< netstandard1.4)) (>= net461)
+
+GROUP Test
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    NUnit (3.11.0) - version_in_path: true, restriction: == net451
