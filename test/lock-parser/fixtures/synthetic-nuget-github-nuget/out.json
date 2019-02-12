@@ -1,5 +1,5 @@
 {
-  "groups": [ 
+  "groups": [
     {
       "name": null,
       "repositories": {
@@ -10,33 +10,39 @@
           "fsharp/FAKE"
         ]
       },
-      "specs": true,
       "dependencies": [
         {
           "name": "FAKE",
-          "options": {},
           "version": "3.28.7",
+          "options": {},
+          "dependencies": [],
           "remote": "https://nuget.org/api/v2",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "modules/Octokit/Octokit.fsx",
-          "options": {},
           "version": "3e58233a84f9db0f6a6e34bfbc99aaa7fe8bbcdc",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Octokit",
+              "version": "",
+              "options": {}
+            }
+          ],
           "remote": "fsharp/FAKE",
-          "repository": "GITHUB",
-          "dependencies": []
+          "repository": "GITHUB"
         },
         {
           "name": "Moq",
-          "options": {},
           "version": "4.7.145",
+          "options": {},
+          "dependencies": [],
           "remote": "https://nuget.org/api/v2",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         }
-      ]
+      ],
+      "specs": true
     }
   ]
 }

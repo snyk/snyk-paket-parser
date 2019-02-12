@@ -1,6 +1,6 @@
 {
   "groups": [
-     {
+    {
       "name": null,
       "repositories": {
         "NUGET": [
@@ -10,11 +10,11 @@
       "dependencies": [
         {
           "name": "FSharp.Charting",
-          "options": {},
           "version": "0.90.14",
+          "options": {},
+          "dependencies": [],
           "remote": "https://api.nuget.org/v3/index.json",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         }
       ],
       "options": {

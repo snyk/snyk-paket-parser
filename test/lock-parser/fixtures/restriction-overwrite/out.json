@@ -1,22 +1,13 @@
 {
   "groups": [
-     {
+    {
       "name": null,
       "repositories": {
         "NUGET": [
           "https://www.nuget.org/api/v2"
         ]
       },
-      "dependencies": [
-        {
-          "name": "FSharp.Core",
-          "options": {},
-          "version": "4.0.0.1",
-          "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
-          "dependencies": []
-        }
-      ],
+      "dependencies": [],
       "options": {
         "RESTRICTION": "|| (== net45) (== portable-net45+win8+wp8+wpa81)"
       }
@@ -33,132 +24,131 @@
       },
       "dependencies": [
         {
-          "name": "FAKE",
+          "name": "FSharp.Core",
+          "version": "4.0.0.1",
           "options": {},
-          "version": "4.62.1",
+          "dependencies": [],
           "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
+        },
+        {
+          "name": "FAKE",
+          "version": "4.62.1",
+          "options": {},
+          "dependencies": [],
+          "remote": "https://www.nuget.org/api/v2",
+          "repository": "NUGET"
         },
         {
           "name": "FSharp.Compiler.Service",
-          "options": {},
           "version": "2.0.0.6",
+          "options": {},
+          "dependencies": [],
           "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "FSharp.Formatting",
-          "options": {},
           "version": "2.14.4",
-          "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
+          "options": {},
           "dependencies": [
             {
               "name": "FSharp.Compiler.Service",
-              "options": {},
-              "version": "2.0.0.6"
+              "version": "2.0.0.6",
+              "options": {}
+            },
+            {
+              "name": "FSharpVSPowerTools.Core",
+              "version": ">= 2.3 < 2.4",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "https://www.nuget.org/api/v2",
+          "repository": "NUGET"
         },
         {
           "name": "FSharpVSPowerTools.Core",
-          "options": {},
           "version": "2.3",
-          "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
+          "options": {},
           "dependencies": [
             {
-              "name": "FSharpVSPowerTools.Core",
-              "options": {},
-              "version": ">= 2.3 < 2.4"
-            },
-            {
               "name": "FSharp.Compiler.Service",
-              "options": {},
-              "version": ">= 2.0.0.3"
+              "version": ">= 2.0.0.3",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "https://www.nuget.org/api/v2",
+          "repository": "NUGET"
         },
         {
           "name": "Microsoft.Bcl",
+          "version": "1.1.10",
           "options": {
             "restriction": "|| (&& (== net45) (== portable-net45+win8+wp8+wpa81)) (== portable-net45+win8+wp8+wpa81)"
           },
-          "version": "1.1.10",
-          "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
           "dependencies": [
             {
               "name": "Microsoft.Bcl.Build",
-              "options": {},
-              "version": ">= 1.0.14"
+              "version": ">= 1.0.14",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "https://www.nuget.org/api/v2",
+          "repository": "NUGET"
         },
         {
           "name": "Microsoft.Bcl.Build",
+          "version": "1.0.21",
           "options": {
             "import_targets": "false",
             "restriction": "== portable-net45+win8+wp8+wpa81"
           },
-          "version": "1.0.21",
+          "dependencies": [],
           "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "Microsoft.Net.Http",
+          "version": "2.2.29",
           "options": {
             "restriction": "|| (&& (== net45) (== portable-net45+win8+wp8+wpa81)) (== portable-net45+win8+wp8+wpa81)"
           },
-          "version": "2.2.29",
-          "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
           "dependencies": [
             {
               "name": "Microsoft.Bcl",
-              "options": {},
-              "version": ">= 1.1.10"
+              "version": ">= 1.1.10",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Bcl.Build",
+              "version": ">= 1.0.14",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "https://www.nuget.org/api/v2",
+          "repository": "NUGET"
         },
         {
           "name": "Octokit",
-          "options": {},
           "version": "0.24",
-          "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
+          "options": {},
           "dependencies": [
             {
-              "name": "Microsoft.Bcl.Build",
-              "options": {},
-              "version": ">= 1.0.14"
+              "name": "Microsoft.Net.Http  - restriction: == portable-net45+win8+wp8+wpa81",
+              "version": "",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "https://www.nuget.org/api/v2",
+          "repository": "NUGET"
         },
         {
           "name": "SourceLink.Fake",
-          "options": {},
           "version": "1.1",
-          "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
-          "dependencies": []
-        },
-        {
-          "name": "modules/Octokit/Octokit.fsx",
           "options": {},
-          "version": "b5933798c1944051bf358a460fcdc8ffbd678dfc",
-          "remote": "fsharp/FAKE",
-          "repository": "GITHUB",
-          "dependencies": [
-            {
-              "name": "Octokit",
-              "options": {},
-              "version": ">= 0.20"
-            }
-          ]
+          "dependencies": [],
+          "remote": "https://www.nuget.org/api/v2",
+          "repository": "NUGET"
         }
       ],
       "options": {
@@ -174,42 +164,56 @@
       },
       "dependencies": [
         {
-          "name": "FsCheck",
+          "name": "modules/Octokit/Octokit.fsx",
+          "version": "b5933798c1944051bf358a460fcdc8ffbd678dfc",
           "options": {},
+          "dependencies": [
+            {
+              "name": "Octokit",
+              "version": ">= 0.20",
+              "options": {}
+            }
+          ],
+          "remote": "fsharp/FAKE",
+          "repository": "GITHUB"
+        },
+        {
+          "name": "FsCheck",
           "version": "2.9",
-          "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
+          "options": {},
           "dependencies": [
             {
               "name": "FSharp.Core",
-              "options": {},
-              "version": ">= 4.1"
+              "version": ">= 4.1",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "https://www.nuget.org/api/v2",
+          "repository": "NUGET"
         },
         {
           "name": "FSharp.Core",
-          "options": {},
           "version": "4.2.1",
+          "options": {},
+          "dependencies": [],
           "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "NUnit",
-          "options": {},
           "version": "2.6.4",
+          "options": {},
+          "dependencies": [],
           "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "NUnit.Runners",
-          "options": {},
           "version": "2.6.4",
+          "options": {},
+          "dependencies": [],
           "remote": "https://www.nuget.org/api/v2",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         }
       ],
       "options": {

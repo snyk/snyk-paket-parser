@@ -1,6 +1,6 @@
 {
   "groups": [
-     {
+    {
       "name": null,
       "repositories": {
         "NUGET": [
@@ -11,183 +11,182 @@
       "dependencies": [
         {
           "name": "Castle.Core",
-          "options": {},
           "version": "4.2.1",
+          "options": {},
+          "dependencies": [],
           "remote": "http://dev-artifactory.a.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "FluentAssertions",
-          "options": {},
           "version": "4.19.4",
+          "options": {},
+          "dependencies": [],
           "remote": "http://dev-artifactory.a.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "JetBrains.Annotations",
-          "options": {},
           "version": "11.1.0",
+          "options": {},
+          "dependencies": [],
           "remote": "http://dev-artifactory.a.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "Microsoft.NET.Test.Sdk",
-          "options": {},
           "version": "15.0.0",
-          "remote": "http://dev-artifactory.a.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
+          "options": {},
           "dependencies": [
             {
               "name": "Microsoft.TestPlatform.TestHost",
-              "options": {},
-              "version": ">= 15.0"
+              "version": ">= 15.0",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "http://dev-artifactory.a.local/artifactory/api/nuget/nugets",
+          "repository": "NUGET"
         },
         {
           "name": "Microsoft.TestPlatform.TestHost",
-          "options": {},
           "version": "15.5.0",
+          "options": {},
+          "dependencies": [],
           "remote": "http://dev-artifactory.a.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "Moq",
-          "options": {},
           "version": "4.7.145",
-          "remote": "http://dev-artifactory.a.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
+          "options": {},
           "dependencies": [
             {
               "name": "Castle.Core",
-              "options": {},
-              "version": ">= 4.2.1"
+              "version": ">= 4.2.1",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "http://dev-artifactory.a.local/artifactory/api/nuget/nugets",
+          "repository": "NUGET"
         },
         {
           "name": "SolarWinds.Packaging",
-          "options": {},
           "version": "1.1.0.10",
+          "options": {},
+          "dependencies": [],
           "remote": "http://dev-artifactory.a.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "xunit",
-          "options": {},
           "version": "2.3.1",
-          "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
+          "options": {},
           "dependencies": [
             {
               "name": "xunit.analyzers",
-              "options": {},
-              "version": ">= 0.7"
-            }
-          ]
-        },
-        {
-          "name": "xunit.abstractions",
-          "options": {},
-          "version": "2.0.1",
-          "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
-          "dependencies": [
+              "version": ">= 0.7",
+              "options": {}
+            },
             {
               "name": "xunit.assert",
-              "options": {},
-              "version": "2.3.1"
+              "version": "2.3.1",
+              "options": {}
             },
             {
               "name": "xunit.core",
-              "options": {},
-              "version": "2.3.1"
+              "version": "2.3.1",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
+          "repository": "NUGET"
+        },
+        {
+          "name": "xunit.abstractions",
+          "version": "2.0.1",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
+          "repository": "NUGET"
         },
         {
           "name": "xunit.analyzers",
-          "options": {},
           "version": "0.7.0",
+          "options": {},
+          "dependencies": [],
           "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "xunit.assert",
-          "options": {},
           "version": "2.3.1",
+          "options": {},
+          "dependencies": [],
           "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "xunit.core",
-          "options": {},
           "version": "2.3.1",
-          "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
+          "options": {},
           "dependencies": [
             {
               "name": "xunit.extensibility.core",
-              "options": {},
-              "version": "2.3.1"
+              "version": "2.3.1",
+              "options": {}
+            },
+            {
+              "name": "xunit.extensibility.execution",
+              "version": "2.3.1",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
+          "repository": "NUGET"
         },
         {
           "name": "xunit.extensibility.core",
-          "options": {},
           "version": "2.3.1",
-          "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
+          "options": {},
           "dependencies": [
             {
-              "name": "xunit.extensibility.execution",
-              "options": {},
-              "version": "2.3.1"
-            },
-            {
               "name": "xunit.abstractions",
-              "options": {},
-              "version": ">= 2.0.1"
+              "version": ">= 2.0.1",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
+          "repository": "NUGET"
         },
         {
           "name": "xunit.extensibility.execution",
-          "options": {},
           "version": "2.3.1",
-          "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
+          "options": {},
           "dependencies": [
             {
               "name": "xunit.extensibility.core",
-              "options": {},
-              "version": "2.3.1"
+              "version": "2.3.1",
+              "options": {}
             }
-          ]
+          ],
+          "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
+          "repository": "NUGET"
         },
         {
           "name": "xunit.runner.console",
-          "options": {},
           "version": "2.3.1",
+          "options": {},
+          "dependencies": [],
           "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         },
         {
           "name": "xunit.runner.visualstudio",
-          "options": {},
           "version": "2.3.1",
+          "options": {},
+          "dependencies": [],
           "remote": "http://dev-artifactory.b.local/artifactory/api/nuget/nugets",
-          "repository": "NUGET",
-          "dependencies": []
+          "repository": "NUGET"
         }
       ],
       "options": {
