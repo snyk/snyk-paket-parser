@@ -4,6 +4,8 @@ import * as path from 'path';
 import * as fs from 'fs';
 import {InvalidUserInputError} from './errors';
 
+const DEV_GROUPS = ['build', 'test', 'tests'];
+
 export interface DepTree {
   name: string;
   version: string;
@@ -88,7 +90,7 @@ function buildDependencyTree(
   }
 
   for (const group of lockFile.groups) {
-    const isDev = ['build', 'test', 'tests'].includes((group.name || '').toLowerCase());
+    const isDev = DEV_GROUPS.includes((group.name || '').toLowerCase());
 
     if (isDev && !includeDev) {
       continue;
