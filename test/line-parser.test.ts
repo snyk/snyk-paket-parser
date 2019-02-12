@@ -1,8 +1,8 @@
-import {parse} from '../lib/line-parser';
+import { parseLines } from '../lib/line-parser';
 
-it('parse', () => {
+it('parseLines()', () => {
   const input = '\t\ta\r\n    b\nc';
-  const out = parse(input);
+  const out = parseLines(input);
 
   expect(out).toHaveLength(3);
   expect(out[0].data).toEqual('a');
@@ -16,7 +16,7 @@ it('parse', () => {
 it('parse indentation malformed', () => {
   const input = ' test';
   try {
-    parse(input);
+    parseLines(input);
   } catch (e) {
     expect(e.message).toEqual('Line indentation malformed');
   }

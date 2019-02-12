@@ -1,5 +1,5 @@
 import {startsWith} from 'lodash';
-import {Line, parse as parseLines} from './line-parser';
+import {Line, parseLines} from './line-parser';
 
 const REPOSITORY_TYPES = ['HTTP', 'GIST', 'GIT', 'NUGET', 'GITHUB']; // naming convention in paket's standard parser
 const GROUP = 'GROUP';

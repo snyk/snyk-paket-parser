@@ -18,7 +18,7 @@ function countIndents(line: string, indent: string): number {
 }
 
 // parse space indented lines into array of Lines
-export function parse(
+export function parseLines(
   input: string,
   indent: string = '  ' /* two spaces */,
   lineSeparator: RegExp = /\r?\n/, /* lines separated by \r\n on Windows */

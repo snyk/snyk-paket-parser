@@ -1,6 +1,6 @@
-import {parse} from '../../lib/dependencies-parser';
-import {join} from 'path';
-import {readFileSync} from 'fs';
+import { parseDependenciesFile } from '../../lib/dependencies-parser';
+import { join } from 'path';
+import { readFileSync } from 'fs';
 
 describe('dependencies parser', () => {
   for (const fixtureName of [
@@ -25,7 +25,7 @@ describe('dependencies parser', () => {
       const depData = readFileSync(join(__dirname, 'fixtures', fixtureName, 'paket.dependencies'), 'utf8');
       const outData = readFileSync(join(__dirname, 'fixtures', fixtureName, 'out.json'), 'utf8');
       const expectedOut = JSON.parse(outData);
-      const out = parse(depData);
+      const out = parseDependenciesFile(depData);
 
       expect(out).toEqual(expectedOut);
     });
