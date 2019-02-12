@@ -1,1461 +1,1530 @@
 {
-  "groups": [ {
-    "name": null,
-    "repositories": {
-      "NUGET": [
-        "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-acceptance"
+  "groups": [
+    {
+      "name": null,
+      "repositories": {
+        "NUGET": [
+          "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-acceptance"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "Antlr",
+          "version": "3.5.0.2",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Castle.Core",
+          "version": "3.3.3",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "EasyNetQ",
+          "version": "0.54.3.424",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "RabbitMQ.Client",
+              "version": ">= 3.6",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "EULA",
+          "version": "1.0.54",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "jQuery",
+          "version": "1.10.2",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "log4net",
+          "version": "1.2.10",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.Cors",
+          "version": "5.2.3",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.Identity.Core",
+          "version": "2.1.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.Identity.Owin",
+          "version": "2.1.0",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.Identity.Core",
+              "version": ">= 2.1",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Owin.Security",
+              "version": ">= 2.1",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Owin.Security.Cookies",
+              "version": ">= 2.1",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Owin.Security.OAuth",
+              "version": ">= 2.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.Mvc",
+          "version": "5.2.3",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.Razor",
+              "version": ">= 3.2.3 < 3.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebPages",
+              "version": ">= 3.2.3 < 3.3",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.Razor",
+          "version": "3.2.3",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.SignalR",
+          "version": "2.1.2",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.SignalR.JS",
+              "version": ">= 2.1.2",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.SignalR.SystemWeb",
+              "version": ">= 2.1.2",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.SignalR.Core",
+          "version": "2.2.1",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.Owin",
+              "version": ">= 2.1",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Owin.Security",
+              "version": ">= 2.1",
+              "options": {}
+            },
+            {
+              "name": "Newtonsoft.Json",
+              "version": ">= 6.0.4",
+              "options": {}
+            },
+            {
+              "name": "Owin",
+              "version": ">= 1.0",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.SignalR.JS",
+          "version": "2.2.1",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "jQuery",
+              "version": ">= 1.6.4",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.SignalR.SystemWeb",
+          "version": "2.2.1",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.SignalR.Core",
+              "version": ">= 2.2.1",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Owin.Host.SystemWeb",
+              "version": ">= 2.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.Web.Optimization",
+          "version": "1.1.3",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.Web.Infrastructure",
+              "version": ">= 1.0",
+              "options": {}
+            },
+            {
+              "name": "WebGrease",
+              "version": ">= 1.5.2",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.WebApi",
+          "version": "5.2.3",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.WebApi.WebHost",
+              "version": ">= 5.2.3 < 5.3",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.WebApi.Client",
+          "version": "5.2.3",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.Net.Http",
+              "version": ">= 2.2.22",
+              "options": {
+                "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
+              }
+            },
+            {
+              "name": "Newtonsoft.Json",
+              "version": ">= 6.0.4",
+              "options": {
+                "restriction": ">= portable-net45+win8+wp8+wp81+wpa81"
+              }
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.WebApi.Core",
+          "version": "5.2.3",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.WebApi.Client",
+              "version": ">= 5.2.3",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.WebApi.Cors",
+          "version": "5.2.3",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.Cors",
+              "version": ">= 5.2.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebApi.Core",
+              "version": ">= 5.2.3 < 5.3",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.WebApi.OData",
+          "version": "5.2.2",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.WebApi.Client",
+              "version": ">= 5.2.2",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebApi.Core",
+              "version": ">= 5.2.2 < 5.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Data.OData",
+              "version": ">= 5.6",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.WebApi.Owin",
+          "version": "5.2.3",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.WebApi.Core",
+              "version": ">= 5.2.3 < 5.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Owin",
+              "version": ">= 2.0.2",
+              "options": {}
+            },
+            {
+              "name": "Owin",
+              "version": ">= 1.0",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.WebApi.Tracing",
+          "version": "5.2.3",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.WebApi.Core",
+              "version": ">= 5.2.3 < 5.3",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.WebApi.WebHost",
+          "version": "5.2.3",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.WebApi.Core",
+              "version": ">= 5.2.3 < 5.3",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.AspNet.WebPages",
+          "version": "3.2.3",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.Razor",
+              "version": ">= 3.2.3 < 3.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Web.Infrastructure",
+              "version": ">= 1.0",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Bcl",
+          "version": "1.1.9",
+          "options": {
+            "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
+          },
+          "dependencies": [
+            {
+              "name": "Microsoft.Bcl.Build",
+              "version": ">= 1.0.14",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Bcl.Build",
+          "version": "1.0.14",
+          "options": {
+            "import_targets": "false",
+            "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
+          },
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Data.Edm",
+          "version": "5.6.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Data.OData",
+          "version": "5.6.0",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.Data.Edm",
+              "version": "5.6",
+              "options": {}
+            },
+            {
+              "name": "System.Spatial",
+              "version": "5.6",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Net.Http",
+          "version": "2.2.28",
+          "options": {
+            "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
+          },
+          "dependencies": [
+            {
+              "name": "Microsoft.Bcl",
+              "version": ">= 1.1.9",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Bcl.Build",
+              "version": ">= 1.0.14",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Owin",
+          "version": "4.0.0",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Owin",
+              "version": ">= 1.0",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Owin.Host.SystemWeb",
+          "version": "3.0.1",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.Owin",
+              "version": ">= 3.0.1",
+              "options": {}
+            },
+            {
+              "name": "Owin",
+              "version": ">= 1.0",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Owin.Hosting",
+          "version": "4.0.0",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.Owin",
+              "version": ">= 4.0",
+              "options": {}
+            },
+            {
+              "name": "Owin",
+              "version": ">= 1.0",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Owin.Security",
+          "version": "3.0.1",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.Owin",
+              "version": ">= 3.0.1",
+              "options": {}
+            },
+            {
+              "name": "Owin",
+              "version": ">= 1.0",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Owin.Security.Cookies",
+          "version": "3.0.1",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.Owin",
+              "version": ">= 3.0.1",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Owin.Security",
+              "version": ">= 3.0.1",
+              "options": {}
+            },
+            {
+              "name": "Owin",
+              "version": ">= 1.0",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Owin.Security.OAuth",
+          "version": "3.0.0",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.Owin",
+              "version": ">= 3.0",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Owin.Security",
+              "version": ">= 3.0",
+              "options": {}
+            },
+            {
+              "name": "Newtonsoft.Json",
+              "version": ">= 6.0.4",
+              "options": {}
+            },
+            {
+              "name": "Owin",
+              "version": ">= 1.0",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Owin.Testing",
+          "version": "4.0.0",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.Owin.Hosting",
+              "version": ">= 4.0",
+              "options": {}
+            },
+            {
+              "name": "Owin",
+              "version": ">= 1.0",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Microsoft.Web.Infrastructure",
+          "version": "1.0.0.1",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Moq",
+          "version": "4.5.30",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Castle.Core",
+              "version": ">= 3.3.3",
+              "options": {
+                "restriction": ">= net45"
+              }
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Newtonsoft.Json",
+          "version": "6.0.4",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "NUnit",
+          "version": "2.6.4",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "NUnit.ConsoleRunner",
+          "version": "3.9.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "NUnit.Extension.NUnitProjectLoader",
+          "version": "3.6.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "NUnit.Extension.NUnitV2Driver",
+          "version": "3.7.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "NUnit.Extension.NUnitV2ResultWriter",
+          "version": "3.6.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "NUnit.Extension.TeamCityEventListener",
+          "version": "1.0.3",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "NUnit.Extension.VSProjectLoader",
+          "version": "3.7.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "NUnit.Runners",
+          "version": "3.7.0",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "NUnit.ConsoleRunner",
+              "version": ">= 3.7",
+              "options": {}
+            },
+            {
+              "name": "NUnit.Extension.NUnitProjectLoader",
+              "version": ">= 3.5",
+              "options": {}
+            },
+            {
+              "name": "NUnit.Extension.NUnitV2Driver",
+              "version": ">= 3.6",
+              "options": {}
+            },
+            {
+              "name": "NUnit.Extension.NUnitV2ResultWriter",
+              "version": ">= 3.5",
+              "options": {}
+            },
+            {
+              "name": "NUnit.Extension.TeamCityEventListener",
+              "version": ">= 1.0.2",
+              "options": {}
+            },
+            {
+              "name": "NUnit.Extension.VSProjectLoader",
+              "version": ">= 3.5",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "OrionImprovement",
+          "version": "2.9.0.301",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "Owin",
+          "version": "1.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "RabbitMQ.Client",
+          "version": "3.6.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Common",
+          "version": "10001.3.0.768",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Logging",
+              "version": ">= 10000.2.0.743 < 10000.2.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Database.Client",
+          "version": "0.1.0.128",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Database.TimeSeries.Contracts",
+          "version": "0.9.0.482",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.InformationService.Addons",
+          "version": "2017.5.0.2127",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Antlr",
+              "version": "3.5.0.2",
+              "options": {}
+            },
+            {
+              "name": "snyk.Logging",
+              "version": ">= 10000.2.0.743",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.InformationService.Contract",
+          "version": "2017.5.0.2127",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Logging",
+              "version": ">= 10000.2.0.743",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.InformationService.Linq",
+          "version": "1.0.25.319",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.InformationService.Linq.Generator",
+          "version": "1.0.25.319",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.InformationService.SchemaLint",
+          "version": "2017.5.0.2127",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Internationalization",
+          "version": "10001.3.0.751",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Logging",
+              "version": ">= 10000.2.0.743 < 10000.2.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Logging",
+          "version": "10000.2.0.743",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "log4net",
+              "version": "1.2.10",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.MessageBus",
+          "version": "1.6.0.952",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "EasyNetQ",
+              "version": ">= 0.54 < 0.55",
+              "options": {}
+            },
+            {
+              "name": "RabbitMQ.Client",
+              "version": ">= 3.6 < 3.7",
+              "options": {}
+            },
+            {
+              "name": "snyk.Serialization",
+              "version": "",
+              "options": {}
+            },
+            {
+              "name": "System.IO.Abstractions",
+              "version": ">= 2.0 < 2.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Auditing",
+          "version": "10001.3.0.3942",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.InformationService.Contract",
+              "version": ">= 2017.5.0.2127 < 2017.5.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Swis.Contract",
+              "version": ">= 10001.3.0.3272 < 10001.3.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Batching",
+          "version": "10001.3.0.1780",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Orion.Configuration",
+              "version": ">= 10001.3.0.1341 < 10001.3.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Channels",
+          "version": "10001.3.0.1840",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Orion.Configuration",
+              "version": ">= 10001.3.0.1341 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Security",
+              "version": ">= 10001.3.0.834 < 10001.3.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Common",
+          "version": "10001.3.0.1113",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Database.Client",
+              "version": ">= 0.1.0.128 < 0.1.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Logging",
+              "version": ">= 10000.2.0.743 < 10000.2.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Security",
+              "version": ">= 10001.3.0.834 < 10001.3.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Configuration",
+          "version": "10001.3.0.1341",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Common",
+              "version": ">= 10001.3.0.768 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Internationalization",
+              "version": ">= 10001.3.0.751 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Logging",
+              "version": ">= 10000.2.0.743 < 10000.2.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Common",
+              "version": ">= 10001.3.0.1113 < 10001.3.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Core.Bin",
+          "version": "2018.4.100.10499",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Castle.Core",
+              "version": ">= 3.3 < 3.4",
+              "options": {}
+            },
+            {
+              "name": "snyk.Database.TimeSeries.Contracts",
+              "version": "0.9.0.482",
+              "options": {}
+            },
+            {
+              "name": "snyk.InformationService.Linq",
+              "version": ">= 1.0 < 1.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.InformationService.Linq.Generator",
+              "version": ">= 1.0 < 1.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Core.Bin.Metadata",
+              "version": "2018.4.100.10499",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Core.SwisSchemas",
+              "version": "2018.4.100.10499",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Core.Bin.Metadata",
+          "version": "2018.4.100.10499",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Core.SharedCredentials",
+          "version": "10001.3.0.1184",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Common",
+              "version": ">= 10001.3.0.768 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Logging",
+              "version": ">= 10000.2.0.743 < 10000.2.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Common",
+              "version": ">= 10001.3.0.1113 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Security",
+              "version": ">= 10001.3.0.834 < 10001.3.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Core.SwisSchemas",
+          "version": "2018.4.100.10499",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Orion.Core.Bin.Metadata",
+              "version": "2018.4.100.10499",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Core.TypeScript.3rdParty",
+          "version": "2018.4.100.10499",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Core.TypeScript.Orion",
+          "version": "2018.4.100.10499",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Core.Web.Metadata",
+          "version": "2018.4.100.10499",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Orion.Core.Bin.Metadata",
+              "version": "2018.4.100.10499",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Core.WebSite",
+          "version": "2018.4.100.10499",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Orion.Core.TypeScript.3rdParty",
+              "version": "2018.4.100.10499",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Core.TypeScript.Orion",
+              "version": "2018.4.100.10499",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Core.Web.Metadata",
+              "version": "2018.4.100.10499",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.I18N",
+          "version": "10001.3.0.1204",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Internationalization",
+              "version": ">= 10001.3.0.751 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Logging",
+              "version": ">= 10000.2.0.743 < 10000.2.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Common",
+              "version": ">= 10001.3.0.1113 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Configuration",
+              "version": ">= 10001.3.0.1341 < 10001.3.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.PubSub",
+          "version": "10001.3.0.2346",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.MessageBus",
+              "version": ">= 1.6.0.952 < 1.6.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Security",
+          "version": "10001.3.0.834",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.Logging",
+              "version": ">= 10000.2.0.743 < 10000.2.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Swis.Client",
+          "version": "10001.3.0.3942",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.InformationService.Addons",
+              "version": ">= 2017.5.0.2127 < 2017.5.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.InformationService.Contract",
+              "version": ">= 2017.5.0.2127 < 2017.5.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Auditing",
+              "version": ">= 10001.3.0.3942 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Channels",
+              "version": ">= 10001.3.0.1840 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Common",
+              "version": ">= 10001.3.0.1113 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Swis.Contract",
+              "version": ">= 10001.3.0.3272 < 10001.3.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Swis.Contract",
+          "version": "10001.3.0.3272",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.InformationService.Contract",
+              "version": ">= 2017.5.0.2127 < 2017.5.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.I18N",
+              "version": ">= 10001.3.0.1204 < 10001.3.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Swis.PubSub",
+          "version": "10001.3.0.3942",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "snyk.InformationService.Addons",
+              "version": ">= 2017.5.0.2127 < 2017.5.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.InformationService.Contract",
+              "version": ">= 2017.5.0.2127 < 2017.5.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.MessageBus",
+              "version": ">= 1.6.0.952 < 1.6.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Auditing",
+              "version": ">= 10001.3.0.3942 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Batching",
+              "version": ">= 10001.3.0.1780 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Channels",
+              "version": ">= 10001.3.0.1840 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Configuration",
+              "version": ">= 10001.3.0.1341 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Core.SharedCredentials",
+              "version": ">= 10001.3.0.1184 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.PubSub",
+              "version": ">= 10001.3.0.2346 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Swis.Client",
+              "version": ">= 10001.3.0.3942 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Orion.Swis.Contract",
+              "version": ">= 10001.3.0.3272 < 10001.3.1",
+              "options": {}
+            },
+            {
+              "name": "snyk.Settings",
+              "version": ">= 1.3.0.679 < 1.3.1",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Packaging",
+          "version": "1.1.0.600",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Serialization",
+          "version": "1.3.0.787",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Settings",
+          "version": "1.3.0.679",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Tests.Shared",
+          "version": "11.0.0.77",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "log4net",
+              "version": ">= 1.2.10 < 1.3",
+              "options": {}
+            },
+            {
+              "name": "NUnit",
+              "version": ">= 2.6.3 < 2.7",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Tools",
+          "version": "1.0.0.2",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "System.IO.Abstractions",
+          "version": "2.0.0.144",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "System.Spatial",
+          "version": "5.6.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "WebGrease",
+          "version": "1.6.0",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Antlr",
+              "version": ">= 3.4.1.9004",
+              "options": {}
+            },
+            {
+              "name": "Newtonsoft.Json",
+              "version": ">= 5.0.4",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "WiX.Toolset",
+          "version": "3.9.1006.0",
+          "options": {},
+          "dependencies": [],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
+          "repository": "NUGET"
+        },
+        {
+          "name": "snyk.Orion.Apollo.SDK",
+          "version": "4.0.0.2472",
+          "options": {},
+          "dependencies": [
+            {
+              "name": "Microsoft.AspNet.Identity.Core",
+              "version": "2.1",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.Identity.Owin",
+              "version": "2.1",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.Mvc",
+              "version": "5.2.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.SignalR",
+              "version": "2.1.2",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.Web.Optimization",
+              "version": "1.1.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebApi",
+              "version": "5.2.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebApi.Client",
+              "version": "5.2.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebApi.Core",
+              "version": "5.2.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebApi.Cors",
+              "version": "5.2.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebApi.OData",
+              "version": "5.2.2",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebApi.Owin",
+              "version": "5.2.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebApi.Tracing",
+              "version": "5.2.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.AspNet.WebApi.WebHost",
+              "version": "5.2.3",
+              "options": {}
+            },
+            {
+              "name": "Microsoft.Owin.Testing",
+              "version": "4.0",
+              "options": {}
+            },
+            {
+              "name": "Newtonsoft.Json",
+              "version": "6.0.4",
+              "options": {}
+            }
+          ],
+          "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-acceptance",
+          "repository": "NUGET"
+        }
       ]
-    },
-    "dependencies": [
-      {
-        "name": "Antlr",
-        "options": {},
-        "version": "3.5.0.2",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "Castle.Core",
-        "options": {},
-        "version": "3.3.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "EasyNetQ",
-        "options": {},
-        "version": "0.54.3.424",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "RabbitMQ.Client",
-            "options": {},
-            "version": ">= 3.6"
-          }
-        ]
-      },
-      {
-        "name": "EULA",
-        "options": {},
-        "version": "1.0.54",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "jQuery",
-        "options": {},
-        "version": "1.10.2",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "log4net",
-        "options": {},
-        "version": "1.2.10",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "Microsoft.AspNet.Cors",
-        "options": {},
-        "version": "5.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "Microsoft.AspNet.Identity.Core",
-        "options": {},
-        "version": "2.1.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "Microsoft.AspNet.Identity.Owin",
-        "options": {},
-        "version": "2.1.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.Identity.Core",
-            "options": {},
-            "version": ">= 2.1"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.Mvc",
-        "options": {},
-        "version": "5.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Owin.Security",
-            "options": {},
-            "version": ">= 2.1"
-          },
-          {
-            "name": "Microsoft.Owin.Security.Cookies",
-            "options": {},
-            "version": ">= 2.1"
-          },
-          {
-            "name": "Microsoft.Owin.Security.OAuth",
-            "options": {},
-            "version": ">= 2.1"
-          },
-          {
-            "name": "Microsoft.AspNet.Razor",
-            "options": {},
-            "version": ">= 3.2.3 < 3.3"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.Razor",
-        "options": {},
-        "version": "3.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.WebPages",
-            "options": {},
-            "version": ">= 3.2.3 < 3.3"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.SignalR",
-        "options": {},
-        "version": "2.1.2",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.SignalR.JS",
-            "options": {},
-            "version": ">= 2.1.2"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.SignalR.Core",
-        "options": {},
-        "version": "2.2.1",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.SignalR.SystemWeb",
-            "options": {},
-            "version": ">= 2.1.2"
-          },
-          {
-            "name": "Microsoft.Owin",
-            "options": {},
-            "version": ">= 2.1"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.SignalR.JS",
-        "options": {},
-        "version": "2.2.1",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Owin.Security",
-            "options": {},
-            "version": ">= 2.1"
-          },
-          {
-            "name": "Newtonsoft.Json",
-            "options": {},
-            "version": ">= 6.0.4"
-          },
-          {
-            "name": "Owin",
-            "options": {},
-            "version": ">= 1.0"
-          },
-          {
-            "name": "jQuery",
-            "options": {},
-            "version": ">= 1.6.4"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.SignalR.SystemWeb",
-        "options": {},
-        "version": "2.2.1",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.SignalR.Core",
-            "options": {},
-            "version": ">= 2.2.1"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.Web.Optimization",
-        "options": {},
-        "version": "1.1.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Owin.Host.SystemWeb",
-            "options": {},
-            "version": ">= 2.1"
-          },
-          {
-            "name": "Microsoft.Web.Infrastructure",
-            "options": {},
-            "version": ">= 1.0"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.WebApi",
-        "options": {},
-        "version": "5.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "WebGrease",
-            "options": {},
-            "version": ">= 1.5.2"
-          },
-          {
-            "name": "Microsoft.AspNet.WebApi.WebHost",
-            "options": {},
-            "version": ">= 5.2.3 < 5.3"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.WebApi.Client",
-        "options": {},
-        "version": "5.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Net.Http",
-            "options": {
-              "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
-            },
-            "version": ">= 2.2.22"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.WebApi.Core",
-        "options": {},
-        "version": "5.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Newtonsoft.Json",
-            "options": {
-              "restriction": ">= portable-net45+win8+wp8+wp81+wpa81"
-            },
-            "version": ">= 6.0.4"
-          },
-          {
-            "name": "Microsoft.AspNet.WebApi.Client",
-            "options": {},
-            "version": ">= 5.2.3"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.WebApi.Cors",
-        "options": {},
-        "version": "5.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.Cors",
-            "options": {},
-            "version": ">= 5.2.3"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.WebApi.OData",
-        "options": {},
-        "version": "5.2.2",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.WebApi.Core",
-            "options": {},
-            "version": ">= 5.2.3 < 5.3"
-          },
-          {
-            "name": "Microsoft.AspNet.WebApi.Client",
-            "options": {},
-            "version": ">= 5.2.2"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.WebApi.Owin",
-        "options": {},
-        "version": "5.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.WebApi.Core",
-            "options": {},
-            "version": ">= 5.2.2 < 5.3"
-          },
-          {
-            "name": "Microsoft.Data.OData",
-            "options": {},
-            "version": ">= 5.6"
-          },
-          {
-            "name": "Microsoft.AspNet.WebApi.Core",
-            "options": {},
-            "version": ">= 5.2.3 < 5.3"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.WebApi.Tracing",
-        "options": {},
-        "version": "5.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Owin",
-            "options": {},
-            "version": ">= 2.0.2"
-          },
-          {
-            "name": "Owin",
-            "options": {},
-            "version": ">= 1.0"
-          },
-          {
-            "name": "Microsoft.AspNet.WebApi.Core",
-            "options": {},
-            "version": ">= 5.2.3 < 5.3"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.WebApi.WebHost",
-        "options": {},
-        "version": "5.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.WebApi.Core",
-            "options": {},
-            "version": ">= 5.2.3 < 5.3"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.AspNet.WebPages",
-        "options": {},
-        "version": "3.2.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.Razor",
-            "options": {},
-            "version": ">= 3.2.3 < 3.3"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Bcl",
-        "options": {
-          "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
-        },
-        "version": "1.1.9",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Web.Infrastructure",
-            "options": {},
-            "version": ">= 1.0"
-          },
-          {
-            "name": "Microsoft.Bcl.Build",
-            "options": {},
-            "version": ">= 1.0.14"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Bcl.Build",
-        "options": {
-          "import_targets": "false",
-          "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
-        },
-        "version": "1.0.14",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "Microsoft.Data.Edm",
-        "options": {},
-        "version": "5.6.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "Microsoft.Data.OData",
-        "options": {},
-        "version": "5.6.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Data.Edm",
-            "options": {},
-            "version": "5.6"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Net.Http",
-        "options": {
-          "restriction": "&& (< net45) (>= portable-net45+win8+wp8+wp81+wpa81)"
-        },
-        "version": "2.2.28",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "System.Spatial",
-            "options": {},
-            "version": "5.6"
-          },
-          {
-            "name": "Microsoft.Bcl",
-            "options": {},
-            "version": ">= 1.1.9"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Owin",
-        "options": {},
-        "version": "4.0.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Bcl.Build",
-            "options": {},
-            "version": ">= 1.0.14"
-          },
-          {
-            "name": "Owin",
-            "options": {},
-            "version": ">= 1.0"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Owin.Host.SystemWeb",
-        "options": {},
-        "version": "3.0.1",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Owin",
-            "options": {},
-            "version": ">= 3.0.1"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Owin.Hosting",
-        "options": {},
-        "version": "4.0.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Owin",
-            "options": {},
-            "version": ">= 1.0"
-          },
-          {
-            "name": "Microsoft.Owin",
-            "options": {},
-            "version": ">= 4.0"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Owin.Security",
-        "options": {},
-        "version": "3.0.1",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Owin",
-            "options": {},
-            "version": ">= 1.0"
-          },
-          {
-            "name": "Microsoft.Owin",
-            "options": {},
-            "version": ">= 3.0.1"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Owin.Security.Cookies",
-        "options": {},
-        "version": "3.0.1",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Owin",
-            "options": {},
-            "version": ">= 1.0"
-          },
-          {
-            "name": "Microsoft.Owin",
-            "options": {},
-            "version": ">= 3.0.1"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Owin.Security.OAuth",
-        "options": {},
-        "version": "3.0.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Owin.Security",
-            "options": {},
-            "version": ">= 3.0.1"
-          },
-          {
-            "name": "Owin",
-            "options": {},
-            "version": ">= 1.0"
-          },
-          {
-            "name": "Microsoft.Owin",
-            "options": {},
-            "version": ">= 3.0"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Owin.Testing",
-        "options": {},
-        "version": "4.0.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.Owin.Security",
-            "options": {},
-            "version": ">= 3.0"
-          },
-          {
-            "name": "Newtonsoft.Json",
-            "options": {},
-            "version": ">= 6.0.4"
-          },
-          {
-            "name": "Owin",
-            "options": {},
-            "version": ">= 1.0"
-          },
-          {
-            "name": "Microsoft.Owin.Hosting",
-            "options": {},
-            "version": ">= 4.0"
-          }
-        ]
-      },
-      {
-        "name": "Microsoft.Web.Infrastructure",
-        "options": {},
-        "version": "1.0.0.1",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Owin",
-            "options": {},
-            "version": ">= 1.0"
-          }
-        ]
-      },
-      {
-        "name": "Moq",
-        "options": {},
-        "version": "4.5.30",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Castle.Core",
-            "options": {
-              "restriction": ">= net45"
-            },
-            "version": ">= 3.3.3"
-          }
-        ]
-      },
-      {
-        "name": "Newtonsoft.Json",
-        "options": {},
-        "version": "6.0.4",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "NUnit",
-        "options": {},
-        "version": "2.6.4",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "NUnit.ConsoleRunner",
-        "options": {},
-        "version": "3.9.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "NUnit.Extension.NUnitProjectLoader",
-        "options": {},
-        "version": "3.6.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "NUnit.Extension.NUnitV2Driver",
-        "options": {},
-        "version": "3.7.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "NUnit.Extension.NUnitV2ResultWriter",
-        "options": {},
-        "version": "3.6.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "NUnit.Extension.TeamCityEventListener",
-        "options": {},
-        "version": "1.0.3",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "NUnit.Extension.VSProjectLoader",
-        "options": {},
-        "version": "3.7.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "NUnit.Runners",
-        "options": {},
-        "version": "3.7.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "NUnit.ConsoleRunner",
-            "options": {},
-            "version": ">= 3.7"
-          }
-        ]
-      },
-      {
-        "name": "OrionImprovement",
-        "options": {},
-        "version": "2.9.0.301",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "NUnit.Extension.NUnitProjectLoader",
-            "options": {},
-            "version": ">= 3.5"
-          },
-          {
-            "name": "NUnit.Extension.NUnitV2Driver",
-            "options": {},
-            "version": ">= 3.6"
-          },
-          {
-            "name": "NUnit.Extension.NUnitV2ResultWriter",
-            "options": {},
-            "version": ">= 3.5"
-          },
-          {
-            "name": "NUnit.Extension.TeamCityEventListener",
-            "options": {},
-            "version": ">= 1.0.2"
-          },
-          {
-            "name": "NUnit.Extension.VSProjectLoader",
-            "options": {},
-            "version": ">= 3.5"
-          }
-        ]
-      },
-      {
-        "name": "Owin",
-        "options": {},
-        "version": "1.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "RabbitMQ.Client",
-        "options": {},
-        "version": "3.6.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "snyk.Common",
-        "options": {},
-        "version": "10001.3.0.768",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Logging",
-            "options": {},
-            "version": ">= 10000.2.0.743 < 10000.2.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Database.Client",
-        "options": {},
-        "version": "0.1.0.128",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "snyk.Database.TimeSeries.Contracts",
-        "options": {},
-        "version": "0.9.0.482",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "snyk.InformationService.Addons",
-        "options": {},
-        "version": "2017.5.0.2127",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Antlr",
-            "options": {},
-            "version": "3.5.0.2"
-          }
-        ]
-      },
-      {
-        "name": "snyk.InformationService.Contract",
-        "options": {},
-        "version": "2017.5.0.2127",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Logging",
-            "options": {},
-            "version": ">= 10000.2.0.743"
-          },
-          {
-            "name": "snyk.Logging",
-            "options": {},
-            "version": ">= 10000.2.0.743"
-          }
-        ]
-      },
-      {
-        "name": "snyk.InformationService.Linq",
-        "options": {},
-        "version": "1.0.25.319",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "snyk.InformationService.Linq.Generator",
-        "options": {},
-        "version": "1.0.25.319",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "snyk.InformationService.SchemaLint",
-        "options": {},
-        "version": "2017.5.0.2127",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "snyk.Internationalization",
-        "options": {},
-        "version": "10001.3.0.751",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Logging",
-            "options": {},
-            "version": ">= 10000.2.0.743 < 10000.2.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Logging",
-        "options": {},
-        "version": "10000.2.0.743",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "log4net",
-            "options": {},
-            "version": "1.2.10"
-          }
-        ]
-      },
-      {
-        "name": "snyk.MessageBus",
-        "options": {},
-        "version": "1.6.0.952",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "EasyNetQ",
-            "options": {},
-            "version": ">= 0.54 < 0.55"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Auditing",
-        "options": {},
-        "version": "10001.3.0.3942",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "RabbitMQ.Client",
-            "options": {},
-            "version": ">= 3.6 < 3.7"
-          },
-          {
-            "name": "System.IO.Abstractions",
-            "options": {},
-            "version": ">= 2.0 < 2.1"
-          },
-          {
-            "name": "snyk.InformationService.Contract",
-            "options": {},
-            "version": ">= 2017.5.0.2127 < 2017.5.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Batching",
-        "options": {},
-        "version": "10001.3.0.1780",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Orion.Swis.Contract",
-            "options": {},
-            "version": ">= 10001.3.0.3272 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Configuration",
-            "options": {},
-            "version": ">= 10001.3.0.1341 < 10001.3.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Channels",
-        "options": {},
-        "version": "10001.3.0.1840",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Orion.Configuration",
-            "options": {},
-            "version": ">= 10001.3.0.1341 < 10001.3.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Common",
-        "options": {},
-        "version": "10001.3.0.1113",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Orion.Security",
-            "options": {},
-            "version": ">= 10001.3.0.834 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Database.Client",
-            "options": {},
-            "version": ">= 0.1.0.128 < 0.1.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Configuration",
-        "options": {},
-        "version": "10001.3.0.1341",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Logging",
-            "options": {},
-            "version": ">= 10000.2.0.743 < 10000.2.1"
-          },
-          {
-            "name": "snyk.Orion.Security",
-            "options": {},
-            "version": ">= 10001.3.0.834 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Common",
-            "options": {},
-            "version": ">= 10001.3.0.768 < 10001.3.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Core.Bin",
-        "options": {},
-        "version": "2018.4.100.10499",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Internationalization",
-            "options": {},
-            "version": ">= 10001.3.0.751 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Logging",
-            "options": {},
-            "version": ">= 10000.2.0.743 < 10000.2.1"
-          },
-          {
-            "name": "snyk.Orion.Common",
-            "options": {},
-            "version": ">= 10001.3.0.1113 < 10001.3.1"
-          },
-          {
-            "name": "Castle.Core",
-            "options": {},
-            "version": ">= 3.3 < 3.4"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Core.Bin.Metadata",
-        "options": {},
-        "version": "2018.4.100.10499",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Database.TimeSeries.Contracts",
-            "options": {},
-            "version": "0.9.0.482"
-          },
-          {
-            "name": "snyk.InformationService.Linq",
-            "options": {},
-            "version": ">= 1.0 < 1.1"
-          },
-          {
-            "name": "snyk.InformationService.Linq.Generator",
-            "options": {},
-            "version": ">= 1.0 < 1.1"
-          },
-          {
-            "name": "snyk.Orion.Core.Bin.Metadata",
-            "options": {},
-            "version": "2018.4.100.10499"
-          },
-          {
-            "name": "snyk.Orion.Core.SwisSchemas",
-            "options": {},
-            "version": "2018.4.100.10499"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Core.SharedCredentials",
-        "options": {},
-        "version": "10001.3.0.1184",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Common",
-            "options": {},
-            "version": ">= 10001.3.0.768 < 10001.3.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Core.SwisSchemas",
-        "options": {},
-        "version": "2018.4.100.10499",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Logging",
-            "options": {},
-            "version": ">= 10000.2.0.743 < 10000.2.1"
-          },
-          {
-            "name": "snyk.Orion.Common",
-            "options": {},
-            "version": ">= 10001.3.0.1113 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Security",
-            "options": {},
-            "version": ">= 10001.3.0.834 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Core.Bin.Metadata",
-            "options": {},
-            "version": "2018.4.100.10499"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Core.TypeScript.3rdParty",
-        "options": {},
-        "version": "2018.4.100.10499",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "snyk.Orion.Core.TypeScript.Orion",
-        "options": {},
-        "version": "2018.4.100.10499",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "snyk.Orion.Core.Web.Metadata",
-        "options": {},
-        "version": "2018.4.100.10499",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Orion.Core.Bin.Metadata",
-            "options": {},
-            "version": "2018.4.100.10499"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Core.WebSite",
-        "options": {},
-        "version": "2018.4.100.10499",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Orion.Core.TypeScript.3rdParty",
-            "options": {},
-            "version": "2018.4.100.10499"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.I18N",
-        "options": {},
-        "version": "10001.3.0.1204",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Orion.Core.TypeScript.Orion",
-            "options": {},
-            "version": "2018.4.100.10499"
-          },
-          {
-            "name": "snyk.Orion.Core.Web.Metadata",
-            "options": {},
-            "version": "2018.4.100.10499"
-          },
-          {
-            "name": "snyk.Internationalization",
-            "options": {},
-            "version": ">= 10001.3.0.751 < 10001.3.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.PubSub",
-        "options": {},
-        "version": "10001.3.0.2346",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Logging",
-            "options": {},
-            "version": ">= 10000.2.0.743 < 10000.2.1"
-          },
-          {
-            "name": "snyk.Orion.Common",
-            "options": {},
-            "version": ">= 10001.3.0.1113 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Configuration",
-            "options": {},
-            "version": ">= 10001.3.0.1341 < 10001.3.1"
-          },
-          {
-            "name": "snyk.MessageBus",
-            "options": {},
-            "version": ">= 1.6.0.952 < 1.6.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Security",
-        "options": {},
-        "version": "10001.3.0.834",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Logging",
-            "options": {},
-            "version": ">= 10000.2.0.743 < 10000.2.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Swis.Client",
-        "options": {},
-        "version": "10001.3.0.3942",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.InformationService.Addons",
-            "options": {},
-            "version": ">= 2017.5.0.2127 < 2017.5.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Swis.Contract",
-        "options": {},
-        "version": "10001.3.0.3272",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.InformationService.Contract",
-            "options": {},
-            "version": ">= 2017.5.0.2127 < 2017.5.1"
-          },
-          {
-            "name": "snyk.Orion.Auditing",
-            "options": {},
-            "version": ">= 10001.3.0.3942 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Channels",
-            "options": {},
-            "version": ">= 10001.3.0.1840 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Common",
-            "options": {},
-            "version": ">= 10001.3.0.1113 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Swis.Contract",
-            "options": {},
-            "version": ">= 10001.3.0.3272 < 10001.3.1"
-          },
-          {
-            "name": "snyk.InformationService.Contract",
-            "options": {},
-            "version": ">= 2017.5.0.2127 < 2017.5.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Swis.PubSub",
-        "options": {},
-        "version": "10001.3.0.3942",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.Orion.I18N",
-            "options": {},
-            "version": ">= 10001.3.0.1204 < 10001.3.1"
-          },
-          {
-            "name": "snyk.InformationService.Addons",
-            "options": {},
-            "version": ">= 2017.5.0.2127 < 2017.5.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Packaging",
-        "options": {},
-        "version": "1.1.0.600",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "snyk.InformationService.Contract",
-            "options": {},
-            "version": ">= 2017.5.0.2127 < 2017.5.1"
-          },
-          {
-            "name": "snyk.MessageBus",
-            "options": {},
-            "version": ">= 1.6.0.952 < 1.6.1"
-          },
-          {
-            "name": "snyk.Orion.Auditing",
-            "options": {},
-            "version": ">= 10001.3.0.3942 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Batching",
-            "options": {},
-            "version": ">= 10001.3.0.1780 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Channels",
-            "options": {},
-            "version": ">= 10001.3.0.1840 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Configuration",
-            "options": {},
-            "version": ">= 10001.3.0.1341 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Core.SharedCredentials",
-            "options": {},
-            "version": ">= 10001.3.0.1184 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.PubSub",
-            "options": {},
-            "version": ">= 10001.3.0.2346 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Swis.Client",
-            "options": {},
-            "version": ">= 10001.3.0.3942 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Orion.Swis.Contract",
-            "options": {},
-            "version": ">= 10001.3.0.3272 < 10001.3.1"
-          },
-          {
-            "name": "snyk.Settings",
-            "options": {},
-            "version": ">= 1.3.0.679 < 1.3.1"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Serialization",
-        "options": {},
-        "version": "1.3.0.787",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "snyk.Settings",
-        "options": {},
-        "version": "1.3.0.679",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "snyk.Tests.Shared",
-        "options": {},
-        "version": "11.0.0.77",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "log4net",
-            "options": {},
-            "version": ">= 1.2.10 < 1.3"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Tools",
-        "options": {},
-        "version": "1.0.0.2",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "NUnit",
-            "options": {},
-            "version": ">= 2.6.3 < 2.7"
-          }
-        ]
-      },
-      {
-        "name": "System.IO.Abstractions",
-        "options": {},
-        "version": "2.0.0.144",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "System.Spatial",
-        "options": {},
-        "version": "5.6.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": []
-      },
-      {
-        "name": "WebGrease",
-        "options": {},
-        "version": "1.6.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Antlr",
-            "options": {},
-            "version": ">= 3.4.1.9004"
-          }
-        ]
-      },
-      {
-        "name": "WiX.Toolset",
-        "options": {},
-        "version": "3.9.1006.0",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-stable",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Newtonsoft.Json",
-            "options": {},
-            "version": ">= 5.0.4"
-          }
-        ]
-      },
-      {
-        "name": "snyk.Orion.Apollo.SDK",
-        "options": {},
-        "version": "4.0.0.2472",
-                "remote": "http://dev-artifactory.dev.local/artifactory/api/nuget/nuget-acceptance",
-        "repository": "NUGET",
-        "dependencies": [
-          {
-            "name": "Microsoft.AspNet.Identity.Core",
-            "options": {},
-            "version": "2.1"
-          }
-        ]
-      }
-    ]
-  }
-]
+    }
+  ]
 }
