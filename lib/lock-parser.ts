@@ -1,6 +1,5 @@
 import {startsWith} from 'lodash';
 import {Line, parse as parseLines} from './line-parser';
-import * as util from 'util';
 
 const REPOSITORY_TYPES = ['HTTP', 'GIST', 'GIT', 'NUGET', 'GITHUB']; // naming convention in paket's standard parser
 const GROUP = 'GROUP';
@@ -15,12 +14,9 @@ interface Dependency {
   name: string;
   version: string;
   options: Option;
-}
-
-interface ResolvedDependency extends Dependency {
-  repository: string;
-  remote: string;
-  dependencies: Dependency[];
+  repository?: string;
+  remote?: string;
+  dependencies?: Dependency[];
 }
 
 export interface Group {
@@ -28,7 +24,7 @@ export interface Group {
   repositories: {
     [name: string]: string[];
   };
-  dependencies: ResolvedDependency[];
+  dependencies: Dependency[];
   options: Option;
   specs: boolean; // TODO: keeping as meta, but what to do with this?
 }
@@ -50,19 +46,37 @@ function parseOptions(optionsString: string): Option {
   return options;
 }
 
-function parseDependencyLine(line: Line): any {
+function parseDependencyLine(line: Line, isSubDependency: boolean): Dependency {
   const re = /^([^ ]+)\W+\(([^)]+)\)\W*(.*)$/;
   const match = line.data.match(re);
 
-  if (!match) {
-    return null;
+  const result: Dependency = {
+    name: '',
+    version: '',
+    options: {},
+  };
+
+  if (!match && !isSubDependency) {
+    throw new Error(`Malformed paket.lock file: Missing resolved version on ${line.data}`);
   }
 
-  return {
-    name: match[1],
-    options: parseOptions(match[3]),
-    version: match[2],
-  };
+  //    Octokit (0.10.0)
+  //      Microsoft.Net.Http
+  // For this case where there is no version in the transitive,
+  // we are not yet sure it is valid but want to retain the data.
+  if (!match) {
+    result.name = line.data;
+  } else {
+    result.name =  match[1];
+    result.version = match[2];
+    result.options = parseOptions(match[3]);
+  }
+
+  if (!isSubDependency) {
+    result.dependencies = [];
+  }
+
+  return result;
 }
 
 export function parseLockFile(input: string): PaketLock {
@@ -77,17 +91,8 @@ export function parseLockFile(input: string): PaketLock {
   } as Group;
   let depContext = {} as any;
   let dependency = null;
-  let transitives = [];
-  let oldIndentation = 0;
 
   for (const line of lines) {
-    if (oldIndentation >= line.indentation && dependency) {
-      dependency.dependencies = transitives;
-      group.dependencies.push(dependency);
-      dependency = null;
-      transitives = [];
-    }
-
     const upperCaseLine = line.data.toUpperCase();
     if (line.indentation === 0) { // group or group option
       if (startsWith(upperCaseLine, GROUP)) {
@@ -120,29 +125,24 @@ export function parseLockFile(input: string): PaketLock {
         group.specs = true;
       }
     } else {
-      const dep = parseDependencyLine(line);
-
-      if (!dep) {
-        continue;
-      }
+      const dep = parseDependencyLine(line, line.indentation === 3);
 
       if (line.indentation === 2) { // Resolved Dependency
+        if (dependency) {
+          group.dependencies.push(dependency);
+        }
         dep.remote = depContext.remote;
         dep.repository = depContext.repository;
         dependency = dep;
       } else { // Transitive Dependency
-        transitives.push(dep);
+        dependency.dependencies.push(dep);
       }
     }
-    oldIndentation = line.indentation;
   }
 
   // handles final dependency & group
   if (dependency) {
-    dependency.dependencies = transitives;
     group.dependencies.push(dependency);
-    dependency = null;
-    transitives = [];
   }
   result.groups.push(group);
 
