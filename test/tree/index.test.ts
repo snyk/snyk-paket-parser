@@ -4,8 +4,8 @@ import {readFileSync} from 'fs';
 
 describe('dependencies parser', () => {
   for (const fixtureName of [
-    // 'simple',
-    'with-test-dependencies',
+    'simple',
+    // 'with-test-dependencies',
   ]) {
     it(fixtureName, async () => {
       const tree = await buildDepTreeFromFiles(
