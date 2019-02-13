@@ -1,5 +1,4 @@
-import {startsWith} from 'lodash';
-import {Line, parseLines} from './line-parser';
+import {parseLines} from './line-parser';
 
 const COMMENTS = ['#', '//'];
 const GROUP = 'group';
@@ -138,14 +137,14 @@ export function parseDependenciesFile(input: string): PaketDependencies {
   };
 
   for (const line of lines) {
-    const isComment = !!COMMENTS.find((comment) => startsWith(line.data, comment));
+    const isComment = !!COMMENTS.find((comment) => line.data.startsWith(comment));
 
     // Ignore commented lines.
     if (isComment) {
       continue;
     }
 
-    if (startsWith(line.data, `${GROUP} `)) {
+    if (line.data.startsWith(`${GROUP} `)) {
       result.push(group);
       group = {
         dependencies: [],
@@ -153,19 +152,19 @@ export function parseDependenciesFile(input: string): PaketDependencies {
         options: {},
         sources: [],
       };
-    } else if (startsWith(line.data, `${SOURCE} `)) {
+    } else if (line.data.startsWith(`${SOURCE} `)) {
       group.sources.push(parseSource(line.data));
-    } else if (startsWith(line.data, `${GITHUB} `)) {
+    } else if (line.data.startsWith(`${GITHUB} `)) {
       group.dependencies.push(parseGithub(line.data));
-    } else if (startsWith(line.data, `${NUGET} `)) {
+    } else if (line.data.startsWith(`${NUGET} `)) {
       group.dependencies.push(parseNuget(line.data));
-    } else if (startsWith(line.data, `${CLITOOL} `)) {
+    } else if (line.data.startsWith(`${CLITOOL} `)) {
       // TODO
-    } else if (startsWith(line.data, `${GIT} `)) {
+    } else if (line.data.startsWith(`${GIT} `)) {
       // TODO
-    } else if (startsWith(line.data, `${GIST} `)) {
+    } else if (line.data.startsWith(`${GIST} `)) {
       // TODO
-    } else if (startsWith(line.data, `${HTTP} `)) {
+    } else if (line.data.startsWith(`${HTTP} `)) {
       // TODO
     } else {
       const [name, value] = parseGroupOption(line.data);

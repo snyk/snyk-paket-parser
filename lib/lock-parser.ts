@@ -1,4 +1,3 @@
-import {startsWith} from 'lodash';
 import {Line, parseLines} from './line-parser';
 
 const REPOSITORY_TYPES = ['HTTP', 'GIST', 'GIT', 'NUGET', 'GITHUB']; // naming convention in paket's standard parser
@@ -96,7 +95,7 @@ export function parseLockFile(input: string): PaketLock {
     const upperCaseLine = line.data.toUpperCase();
 
     if (line.indentation === 0) { // group or group option
-      if (startsWith(upperCaseLine, GROUP)) {
+      if (upperCaseLine.startsWith(GROUP)) {
         result.groups.push(group);
         depContext = {};
         group = {
@@ -115,13 +114,13 @@ export function parseLockFile(input: string): PaketLock {
         group.options[optionName.trim()] = optionValue ? optionValue.trim() : null;
       }
     } else if (line.indentation === 1) { // remote or specs
-      if (startsWith(upperCaseLine, REMOTE)) {
+      if (upperCaseLine.startsWith(REMOTE)) {
         const remote = line.data.substring(REMOTE.length + ':'.length).trim();
         if (remote) {
           depContext.remote = remote;
           group.repositories[depContext.repository].push(remote);
         }
-      } else if (startsWith(upperCaseLine, SPECS)) {
+      } else if (upperCaseLine.startsWith(SPECS)) {
         // TODO: for now we add the specs as boolean in meta
         group.specs = true;
       }
