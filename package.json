@@ -3,7 +3,9 @@
   "description": "Generate a dep tree given a collection of manifests",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "node ./test-runner.js",
+    "test-jest": "jest",
+    "test-node4": "npm build && node ./test/node4/index.js",
     "lint": "tslint -p tsconfig.json",
     "build": "tsc",
     "build-watch": "tsc -w",

@@ -1,5 +1,5 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import {readFileSync} from 'fs';
+import {join} from 'path';
 import {PaketLock, parseLockFile} from '../../lib/lock-parser';
 
 function loadFixture(fixtureName: string) {
@@ -31,13 +31,13 @@ function buildOptions(options: any) {
   return ' - ' + opts.join(', ');
 }
 
-function checkValidDependencyTree (paketLock: PaketLock, lockFileData: string) {
+function checkValidDependencyTree(paketLock: PaketLock, lockFileData: string) {
   for (const group of paketLock.groups) {
     for (const dep of group.dependencies) {
       let text = `    ${dep.name} (${dep.version})${buildOptions(dep.options)}\n`;
 
       for (const sd of dep.dependencies || []) {
-        let version = sd.version ? ` (${sd.version})` : '';
+        const version = sd.version ? ` (${sd.version})` : '';
         text += `      ${sd.name}${version}${buildOptions(sd.options)}\n`;
       }
 

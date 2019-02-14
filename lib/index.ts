@@ -90,7 +90,7 @@ function buildDependencyTree(
   }
 
   for (const group of lockFile.groups) {
-    const isDev = DEV_GROUPS.includes((group.name || '').toLowerCase());
+    const isDev = DEV_GROUPS.indexOf((group.name || '').toLowerCase()) !== -1;
 
     if (isDev && !includeDev) {
       continue;
