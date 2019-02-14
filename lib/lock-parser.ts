@@ -103,7 +103,7 @@ export function parseLockFile(input: string): PaketLock {
           repositories: {} as any,
           dependencies: [],
         } as Group;
-      } else if (REPOSITORY_TYPES.includes(upperCaseLine)) {
+      } else if (REPOSITORY_TYPES.indexOf(upperCaseLine) !== -1) {
         depContext.repository = line.data;
         group.repositories[line.data] = [];
       } else {
@@ -136,7 +136,7 @@ export function parseLockFile(input: string): PaketLock {
       }
     }
 
-    if (group && dependency && !group.dependencies.includes(dependency)) {
+    if (group && dependency && group.dependencies.indexOf(dependency) === -1) {
       group.dependencies.push(dependency);
     }
   }
