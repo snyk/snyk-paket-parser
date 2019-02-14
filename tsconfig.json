@@ -10,6 +10,7 @@
     "importHelpers": true,
     "strict": true,
     "strictNullChecks": false,
+    "downlevelIteration": true
   },
   "include": [
     "./lib/**/*"
