@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "A": {
+      "name": "A",
+      "version": "1.1.1",
+      "dependencies": {},
+      "depType": "prod"
+    },
+    "B": {
+      "name": "B",
+      "version": "1.1.1",
+      "dependencies": {
+        "D": {
+          "name": "D",
+          "version": "2.2.2",
+          "dependencies": {},
+          "depType": "prod"
+        }
+      },
+      "depType": "prod"
+    },
+    "C": {
+      "name": "C",
+      "version": "",
+      "dependencies": {},
+      "depType": "prod",
+      "missingLockFileEntry": true
+    }
+  },
+  "name": "test",
+  "version": ""
+}
