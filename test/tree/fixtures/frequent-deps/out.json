@@ -1,0 +1,637 @@
+{
+  "dependencies": {
+    "A": {
+      "name": "A",
+      "version": "1.1.1",
+      "dependencies": {
+        "A0": {
+          "name": "A0",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A1": {
+          "name": "A1",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A2": {
+          "name": "A2",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A3": {
+          "name": "A3",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A4": {
+          "name": "A4",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A5": {
+          "name": "A5",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A6": {
+          "name": "A6",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A7": {
+          "name": "A7",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A8": {
+          "name": "A8",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A9": {
+          "name": "A9",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A10": {
+          "name": "A10",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A11": {
+          "name": "A11",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A12": {
+          "name": "A12",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A13": {
+          "name": "A13",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A14": {
+          "name": "A14",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A15": {
+          "name": "A15",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A16": {
+          "name": "A16",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A17": {
+          "name": "A17",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A18": {
+          "name": "A18",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A19": {
+          "name": "A19",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A20": {
+          "name": "A20",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A21": {
+          "name": "A21",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A22": {
+          "name": "A22",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A23": {
+          "name": "A23",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A24": {
+          "name": "A24",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A25": {
+          "name": "A25",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A26": {
+          "name": "A26",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A27": {
+          "name": "A27",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A28": {
+          "name": "A28",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A29": {
+          "name": "A29",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A30": {
+          "name": "A30",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A31": {
+          "name": "A31",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A32": {
+          "name": "A32",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A33": {
+          "name": "A33",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A34": {
+          "name": "A34",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A35": {
+          "name": "A35",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A36": {
+          "name": "A36",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A37": {
+          "name": "A37",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A38": {
+          "name": "A38",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A39": {
+          "name": "A39",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A40": {
+          "name": "A40",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A41": {
+          "name": "A41",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A42": {
+          "name": "A42",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A43": {
+          "name": "A43",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A44": {
+          "name": "A44",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A45": {
+          "name": "A45",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A46": {
+          "name": "A46",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A47": {
+          "name": "A47",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A48": {
+          "name": "A48",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A49": {
+          "name": "A49",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A50": {
+          "name": "A50",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A51": {
+          "name": "A51",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A52": {
+          "name": "A52",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A53": {
+          "name": "A53",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A54": {
+          "name": "A54",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A55": {
+          "name": "A55",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A56": {
+          "name": "A56",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A57": {
+          "name": "A57",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A58": {
+          "name": "A58",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A59": {
+          "name": "A59",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A60": {
+          "name": "A60",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A61": {
+          "name": "A61",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A62": {
+          "name": "A62",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A63": {
+          "name": "A63",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A64": {
+          "name": "A64",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A65": {
+          "name": "A65",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A66": {
+          "name": "A66",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A67": {
+          "name": "A67",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A68": {
+          "name": "A68",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A69": {
+          "name": "A69",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A70": {
+          "name": "A70",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A71": {
+          "name": "A71",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A72": {
+          "name": "A72",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A73": {
+          "name": "A73",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A74": {
+          "name": "A74",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A75": {
+          "name": "A75",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A76": {
+          "name": "A76",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A77": {
+          "name": "A77",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A78": {
+          "name": "A78",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A79": {
+          "name": "A79",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A80": {
+          "name": "A80",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A81": {
+          "name": "A81",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A82": {
+          "name": "A82",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A83": {
+          "name": "A83",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A84": {
+          "name": "A84",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A85": {
+          "name": "A85",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A86": {
+          "name": "A86",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A87": {
+          "name": "A87",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A88": {
+          "name": "A88",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A89": {
+          "name": "A89",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A90": {
+          "name": "A90",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A91": {
+          "name": "A91",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A92": {
+          "name": "A92",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A93": {
+          "name": "A93",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A94": {
+          "name": "A94",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A95": {
+          "name": "A95",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A96": {
+          "name": "A96",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A97": {
+          "name": "A97",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A98": {
+          "name": "A98",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A99": {
+          "name": "A99",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        },
+        "A100": {
+          "name": "A100",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        }
+      },
+      "depType": "prod"
+    },
+    "B": {
+      "name": "B",
+      "version": "1.1.1",
+      "dependencies": {},
+      "depType": "prod"
+    },
+    "meta-common-packages": {
+      "name": "meta-common-packages",
+      "version": "meta",
+      "dependencies": {
+        "C": {
+          "name": "C",
+          "version": "1.1.1",
+          "dependencies": {},
+          "depType": "prod"
+        }
+      }
+    }
+  },
+  "name": "test",
+  "version": ""
+}
