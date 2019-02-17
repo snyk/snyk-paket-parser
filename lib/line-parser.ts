@@ -17,6 +17,19 @@ function countIndents(line: string, indent: string): number {
   return count;
 }
 
+// On windows machines first symbol of the file sometimes is special
+// "ZERO WIDTH NO-BREAK SPACE". Remove it before continue processing because it
+// could be counted as a space in `countIndents`.
+//
+// - https://en.wikipedia.org/wiki/Byte_order_mark
+// - https://stackoverflow.com/questions/6784799/what-is-this-char-65279
+function removeByteOrderMark(input: string): string {
+  if (input.length > 0 && input.charAt(0) === '\uFEFF') {
+    return input.substr(1);
+  }
+  return input;
+}
+
 // parse space indented lines into array of Lines
 export function parseLines(
   input: string,
@@ -24,7 +37,7 @@ export function parseLines(
   lineSeparator: RegExp = /\r?\n/, /* lines separated by \r\n on Windows */
 ): Line[] {
 
-  const lines = input.split(lineSeparator);
+  const lines = removeByteOrderMark(input).split(lineSeparator);
   const result: Line[] = [];
 
   for (const line of lines) {
