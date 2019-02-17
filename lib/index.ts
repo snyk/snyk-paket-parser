@@ -59,24 +59,21 @@ export async function buildDepTreeFromFiles(
   const manifestFileContents = fs.readFileSync(manifestFileFullPath, 'utf-8');
   const lockFileContents = fs.readFileSync(lockFileFullPath, 'utf-8');
 
-  return await buildDepTree(manifestFileContents, lockFileContents, includeDev, strict, manifestFileFullPath);
+  return {
+    dependencies: await buildDepTree(manifestFileContents, lockFileContents, includeDev, strict),
+    name: root,
+    version: '',
+  } as DepTree;
 }
 
-export async function buildDepTree(
+async function buildDepTree(
   manifestFileContents: string,
   lockFileContents: string,
   includeDev: boolean = false,
   strict: boolean = true,
-  defaultManifestFileName: string = 'paket.dependencies',
-): Promise<DepTree> {
+): Promise<{ [dep: string]: DepTree }> {
   const manifestFile = parseDependenciesFile(manifestFileContents);
   const lockFile = parseLockFile(lockFileContents);
-
-  const depTree = {
-    dependencies: {},
-    name: defaultManifestFileName,
-    version: '',
-  } as DepTree;
 
   const dependenciesMap: Map<string, FlatDependency> = new Map();
 
@@ -89,16 +86,18 @@ export async function buildDepTree(
     }
   }
 
+  const dependencies = {} as { [dep: string]: DepTree };
+
   for (const dep of dependenciesMap.values()) {
     if (dep.root && (includeDev || dep.depType === DepType.prod)) {
       if (strict && !dep.resolved) {
         throw new OutOfSyncError(dep.name);
       }
 
-      depTree.dependencies[dep.name] = buildTreeFromList(dep, dependenciesMap);
+      dependencies[dep.name] = buildTreeFromList(dep, dependenciesMap);
 
       if (!dep.resolved) {
-        depTree.dependencies[dep.name].missingLockFileEntry = true;
+        dependencies[dep.name].missingLockFileEntry = true;
       }
     }
   }
@@ -106,10 +105,10 @@ export async function buildDepTree(
   const frequentSubTree = buildFrequentDepsSubtree(dependenciesMap);
 
   if (Object.keys(frequentSubTree.dependencies).length) {
-    depTree.dependencies[frequentSubTree.name] = frequentSubTree;
+    dependencies[frequentSubTree.name] = frequentSubTree;
   }
 
-  return depTree;
+  return dependencies;
 }
 
 function collectRootDeps(manifestFile: PaketDependencies, dependenciesMap: Map<string, FlatDependency>) {
