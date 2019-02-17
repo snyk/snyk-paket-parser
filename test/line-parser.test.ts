@@ -22,3 +22,14 @@ it('parse indentation malformed', () => {
   }
   expect.hasAssertions();
 });
+
+it('byte order mark', () => {
+  const input = '\uFEFF  test1\n    test1';
+  const out = parseLines(input);
+
+  expect(out).toHaveLength(2);
+  expect(out[0].data).toEqual('test1');
+  expect(out[0].indentation).toEqual(1);
+  expect(out[1].data).toEqual('test1');
+  expect(out[1].indentation).toEqual(2);
+});
