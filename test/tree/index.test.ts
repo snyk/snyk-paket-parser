@@ -16,8 +16,6 @@ describe('dependencies parser', () => {
         true,
       );
 
-      tree.name = 'test';
-
       const outData = readFileSync(join(__dirname, 'fixtures', fixtureName, 'out.json'), 'utf8');
       const expectedOut = JSON.parse(outData);
 
@@ -32,8 +30,6 @@ describe('dependencies parser', () => {
       'paket.lock',
       false,
     );
-
-    tree.name = 'test';
 
     const outData = readFileSync(
       join(__dirname, 'fixtures', 'with-test-dependencies', 'out-without-dev.json'),
@@ -69,8 +65,6 @@ describe('dependencies parser', () => {
       false,
       false,
     );
-
-    tree.name = 'test';
 
     const outData = readFileSync(join(__dirname, 'fixtures', 'out-of-sync', 'out.json'), 'utf8');
     const expectedOut = JSON.parse(outData);
