@@ -15,8 +15,6 @@ const deepStrictEqual = require('assert').deepStrictEqual;
     'paket.lock',
     true)
     .then((tree) => {
-      tree.name = 'test';
-
       const outData = readFileSync(join(__dirname, '../tree/fixtures', fixtureName, 'out.json'), 'utf8');
       const expectedOut = JSON.parse(outData);
 

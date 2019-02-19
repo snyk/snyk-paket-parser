@@ -61,7 +61,7 @@ export async function buildDepTreeFromFiles(
 
   return {
     dependencies: await buildDepTree(manifestFileContents, lockFileContents, includeDev, strict),
-    name: root,
+    name: path.basename(path.dirname(manifestFileFullPath)),
     version: '',
   } as DepTree;
 }
