@@ -49,36 +49,32 @@ export interface NugetDependency extends Dependency {
 export interface PaketDependencies extends Array<DependencyGroup> {
 }
 
+const NUGET_RE = /(\S+)\s*([^:\n]*)(:.*)?/;
+const NUGET_OPTIONS_RE = /(\S+):([^,/#]+),?/g;
+
 function parseNuget(line: string): NugetDependency {
-  const result: NugetDependency = {
-    name: '',
-    options: {},
+  // Get position of first option.
+  const [, name, versionRangeAndFirstOption, optionsAndCommentString] = line.replace(NUGET, '').trim().match(NUGET_RE);
+  let versionRange = versionRangeAndFirstOption;
+  const options: Options = {};
+
+  if (optionsAndCommentString) {
+    versionRange = versionRangeAndFirstOption.substring(0, versionRangeAndFirstOption.lastIndexOf(' '));
+    // grab first options
+    const firstOptionName = versionRangeAndFirstOption.substring(versionRangeAndFirstOption.lastIndexOf(' '));
+    const parsedOptions = optionsAndCommentString.trim().match(NUGET_OPTIONS_RE);
+
+    // make the options hash
+  }
+  return {
+    name,
+    options,
     source: 'nuget',
-    versionRange: '',
+    versionRange,
   };
 
-  // Get position of first option.
-  const firstOptionMatch = /\s*[^\s]+\s*:/.exec(line);
-  let dependencyString = line;
-  // let optionsString = '';
-
-  if (firstOptionMatch) {
-    // Split line by position of first option.
-    dependencyString = line.substr(0, firstOptionMatch.index);
-    // optionsString = line.substr(firstOptionMatch.index).trim();
-  }
-
-  dependencyString = dependencyString.replace(NUGET, '').trim();
-
-  // Split by space between words. First chunk will be name of the dependency and all rest - version.
-  const dependencyStringParts = dependencyString.split(/\s+/);
-
-  result.name = dependencyStringParts[0];
-  result.versionRange = dependencyStringParts.splice(1).join(' ');
-
   // TODO: parse options
-
-  return result;
+  // result.options
 }
 
 // https://fsprojects.github.io/Paket/github-dependencies.html
