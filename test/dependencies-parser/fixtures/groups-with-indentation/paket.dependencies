@@ -1,7 +1,7 @@
 framework: auto-detect
 source https://nuget.org/api/v2
 
-nuget FSharp.Core redirects: force
+nuget FSharp.Core redirects: force # !important
 nuget Suave
 nuget System.Net.Http
 group Build

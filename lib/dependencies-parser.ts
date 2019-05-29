@@ -50,33 +50,50 @@ export interface PaketDependencies extends Array<DependencyGroup> {
 }
 
 function parseNuget(line: string): NugetDependency {
+  const commentRegex = new RegExp(`(?:${COMMENTS[0]}|${COMMENTS[1]}).+`);
+  const nameVersionOptionsRegex = new RegExp(/(\S+)\s*([^:\n]*)(:.*)?/);
+  const versionFirstOptionRegex = new RegExp(/\s(?=[^ ]*$)/);
+
+  const [, name, versionRangeAndFirstOption, restOptions] = line
+      .replace(NUGET, '')  // Remove 'nuget' string
+      .replace(commentRegex, '') // Remove comments from line end
+      .trim()
+      .match(nameVersionOptionsRegex); // Split into groups for further parsing
+
+  // nuget dependency result object to be returned
   const result: NugetDependency = {
-    name: '',
+    source: NUGET,
+    name,
+    versionRange: versionRangeAndFirstOption,
     options: {},
-    source: 'nuget',
-    versionRange: '',
   };
 
-  // Get position of first option.
-  const firstOptionMatch = /\s*[^\s]+\s*:/.exec(line);
-  let dependencyString = line;
-  // let optionsString = '';
+  if (restOptions) {
+    // tslint:disable-next-line:prefer-const
+    let [versionRange, firstOptionName] = versionRangeAndFirstOption.split(versionFirstOptionRegex);
 
-  if (firstOptionMatch) {
-    // Split line by position of first option.
-    dependencyString = line.substr(0, firstOptionMatch.index);
-    // optionsString = line.substr(firstOptionMatch.index).trim();
+    result.versionRange = versionRange;
+
+    // If version is missing it will treat first option as version
+    if (!firstOptionName) {
+      result.versionRange = '';
+      firstOptionName = versionRange;
+    }
+
+    result.options = `${firstOptionName}${restOptions}`
+        .split(/\s*,\s*/) // Split by comma if there is couple possibilities for option (e.g. framework >= net40, net45)
+        .reverse()
+        .reduce((optionsMap: any, option: string, index: number, array: string[]) => {
+          if (option.includes(':')) {
+            const [optionKey, value] = option.split(/:\s*/);
+            optionsMap[optionKey] = value;
+          } else {
+            array[index + 1] = `${array[index + 1]}, ${option}`;
+          }
+
+          return optionsMap;
+        }, {});
   }
-
-  dependencyString = dependencyString.replace(NUGET, '').trim();
-
-  // Split by space between words. First chunk will be name of the dependency and all rest - version.
-  const dependencyStringParts = dependencyString.split(/\s+/);
-
-  result.name = dependencyStringParts[0];
-  result.versionRange = dependencyStringParts.splice(1).join(' ');
-
-  // TODO: parse options
 
   return result;
 }

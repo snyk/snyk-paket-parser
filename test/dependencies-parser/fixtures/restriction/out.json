@@ -3,25 +3,33 @@
     "dependencies": [
       {
         "name": "Microsoft.Build",
-        "options": {},
+        "options": {
+          "restriction": ">= net461"
+        },
         "source": "nuget",
         "versionRange": "15.3.409"
       },
       {
         "name": "Microsoft.Build.Tasks.Core",
-        "options": {},
+        "options": {
+          "restriction": ">= net461"
+        },
         "source": "nuget",
         "versionRange": "15.3.409"
       },
       {
         "name": "Microsoft.CodeAnalysis",
-        "options": {},
+        "options": {
+          "restriction": ">= net461"
+        },
         "source": "nuget",
         "versionRange": "2.4.0-beta1-62122-04"
       },
       {
         "name": "Microsoft.Net.Compilers",
-        "options": {},
+        "options": {
+          "restriction": ">= net461"
+        },
         "source": "nuget",
         "versionRange": "2.4.0-beta1-62122-04"
       }
