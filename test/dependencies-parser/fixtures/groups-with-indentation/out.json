@@ -3,7 +3,9 @@
     "dependencies": [
       {
         "name": "FSharp.Core",
-        "options": {},
+        "options": {
+          "redirects": "force"
+        },
         "source": "nuget",
         "versionRange": ""
       },

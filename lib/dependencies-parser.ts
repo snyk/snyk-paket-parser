@@ -49,32 +49,53 @@ export interface NugetDependency extends Dependency {
 export interface PaketDependencies extends Array<DependencyGroup> {
 }
 
-const NUGET_RE = /(\S+)\s*([^:\n]*)(:.*)?/;
-const NUGET_OPTIONS_RE = /(\S+):([^,/#]+),?/g;
-
 function parseNuget(line: string): NugetDependency {
-  // Get position of first option.
-  const [, name, versionRangeAndFirstOption, optionsAndCommentString] = line.replace(NUGET, '').trim().match(NUGET_RE);
-  let versionRange = versionRangeAndFirstOption;
-  const options: Options = {};
+  const commentRegex = new RegExp(`(?:${COMMENTS[0]}|${COMMENTS[1]}).+`);
+  const nameVersionOptionsRegex = new RegExp(/(\S+)\s*([^:\n]*)(:.*)?/);
+  const versionFirstOptionRegex = new RegExp(/\s(?=[^ ]*$)/);
 
-  if (optionsAndCommentString) {
-    versionRange = versionRangeAndFirstOption.substring(0, versionRangeAndFirstOption.lastIndexOf(' '));
-    // grab first options
-    const firstOptionName = versionRangeAndFirstOption.substring(versionRangeAndFirstOption.lastIndexOf(' '));
-    const parsedOptions = optionsAndCommentString.trim().match(NUGET_OPTIONS_RE);
+  const [, name, versionRangeAndFirstOption, restOptions] = line
+      .replace(NUGET, '')  // Remove 'nuget' string
+      .replace(commentRegex, '') // Remove comments from line end
+      .trim()
+      .match(nameVersionOptionsRegex); // Split into groups for further parsing
 
-    // make the options hash
-  }
-  return {
+  // nuget dependency result object to be returned
+  const result: NugetDependency = {
+    source: NUGET,
     name,
-    options,
-    source: 'nuget',
-    versionRange,
+    versionRange: versionRangeAndFirstOption,
+    options: {},
   };
 
-  // TODO: parse options
-  // result.options
+  if (restOptions) {
+    // tslint:disable-next-line:prefer-const
+    let [versionRange, firstOptionName] = versionRangeAndFirstOption.split(versionFirstOptionRegex);
+
+    result.versionRange = versionRange;
+
+    // If version is missing it will treat first option as version
+    if (!firstOptionName) {
+      result.versionRange = '';
+      firstOptionName = versionRange;
+    }
+
+    result.options = `${firstOptionName}${restOptions}`
+        .split(/\s*,\s*/) // Split by comma if there is couple possibilities for option (e.g. framework >= net40, net45)
+        .reverse()
+        .reduce((optionsMap: any, option: string, index: number, array: string[]) => {
+          if (option.includes(':')) {
+            const [optionKey, value] = option.split(/:\s*/);
+            optionsMap[optionKey] = value;
+          } else {
+            array[index + 1] = `${array[index + 1]}, ${option}`;
+          }
+
+          return optionsMap;
+        }, {});
+  }
+
+  return result;
 }
 
 // https://fsprojects.github.io/Paket/github-dependencies.html

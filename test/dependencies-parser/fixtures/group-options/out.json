@@ -15,7 +15,9 @@
       },
       {
         "name": "SourceLink.Create.CommandLine",
-        "options": {},
+        "options": {
+          "copy_local": "true"
+        },
         "source": "nuget",
         "versionRange": "2.8.1"
       },
