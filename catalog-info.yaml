@@ -5,4 +5,5 @@ metadata:
   labels:
     snyk.io/assetClassfication: xxxx
 spec:
+  type: library
   owner: os-managed
