@@ -6,4 +6,5 @@ metadata:
     snyk.io/assetClassfication: xxxx
 spec:
   type: library
+  lifecycle: production
   owner: os-managed
