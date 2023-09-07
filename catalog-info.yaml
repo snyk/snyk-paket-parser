@@ -4,3 +4,5 @@ metadata:
   name: snyk-paket-parser
   labels:
     snyk.io/assetClassfication: xxxx
+spec:
+  owner: os-managed
