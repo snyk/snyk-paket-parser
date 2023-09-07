@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: snyk-paket-parser
+  labels:
+    snyk.io/assetClassfication: external-library
+spec:
+  type: library
+  lifecycle: production
+  owner: os-managed
