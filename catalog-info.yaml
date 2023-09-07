@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: snyk-paket-parser
   labels:
-    snyk.io/assetClassfication: xxxx
+    snyk.io/assetClassfication: external-library
 spec:
   type: library
   lifecycle: production
