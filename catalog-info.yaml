@@ -4,5 +4,5 @@ metadata:
   name: snyk-paket-parser
 spec:
   type: external-library
-  lifecycle: unused-field
+  lifecycle: "-"
   owner: os-managed
