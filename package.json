@@ -4,7 +4,6 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "test-jest": "jest",
     "lint": "tslint -p tsconfig.json",
     "build": "tsc",
     "build-watch": "tsc -w",
@@ -21,10 +20,15 @@
     "node": ">=6"
   },
   "files": [
-    "bin",
     "dist"
   ],
   "homepage": "https://github.com/snyk/snyk-paket-parser#readme",
+  "bugs": {
+    "url": "https://github.com/snyk/snyk-paket-parser/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "tslib": "^1.9.3"
   },
