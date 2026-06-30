@@ -117,7 +117,6 @@ workflows:
           matrix:
             parameters:
               version:
-                - 6.17.1
                 - 8.17.0
                 - 10.24.1
                 - 12.22.12
