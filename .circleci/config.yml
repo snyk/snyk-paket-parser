@@ -3,6 +3,42 @@ version: 2.1
 orbs:
   prodsec: snyk/prodsec-orb@1
 
+executors:
+  docker-node:
+    parameters:
+      version:
+        default: 'lts'
+        type: string
+    docker:
+      - image: cimg/node:<<parameters.version>>
+
+commands:
+  install:
+    steps:
+      - run:
+          name: Install
+          command: npm install
+
+  test:
+    steps:
+      - run:
+          name: Test
+          command: npm test
+
+  release:
+    steps:
+      - run:
+          name: Release
+          command: |
+            export NPM_ID_TOKEN=$(circleci run oidc get --claims '{"aud": "npm:registry.npmjs.org"}')
+            npx semantic-release@25.0.3
+
+  lint:
+    steps:
+      - run:
+          name: Lint
+          command: npm run lint
+
 jobs:
   security-scans:
     resource_class: small
@@ -18,6 +54,38 @@ jobs:
           release-branch: master
           open-source-additional-arguments: --exclude=test
           iac-scan: disabled
+
+  test:
+    resource_class: small
+    parameters:
+      version:
+        default: 'lts'
+        type: string
+    executor:
+      name: docker-node
+      version: <<parameters.version>>
+    steps:
+      - checkout
+      - install
+      - test
+
+  lint:
+    resource_class: small
+    executor:
+      name: docker-node
+    steps:
+      - checkout
+      - install
+      - lint
+
+  release:
+    resource_class: small
+    executor:
+      name: docker-node
+    steps:
+      - checkout
+      - install
+      - release
 
 workflows:
   version: 2
@@ -35,3 +103,36 @@ workflows:
       - security-scans:
           name: Security Scans
           context: open_source-managed
+      - lint:
+          name: Lint
+          filters:
+            branches:
+              ignore:
+                - master
+      - test:
+          requires:
+            - Lint
+            - Scan repository for secrets
+            - Security Scans
+          matrix:
+            parameters:
+              version:
+                - 8.17.0
+                - 10.24.1
+                - 12.22.12
+                - 14.21.3
+                - 16.20.2
+                - 18.20.8
+                - 20.20.2
+                - 22.23.1
+                - 24.18.0
+      - release:
+          context:
+            - nodejs-install
+            - github-release
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
