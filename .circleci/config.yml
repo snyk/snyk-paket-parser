@@ -17,7 +17,7 @@ commands:
     steps:
       - run:
           name: Install
-          command: npm install
+          command: npm ci
 
   test:
     steps:
@@ -48,7 +48,7 @@ jobs:
       - checkout
       - run:
           name: Install
-          command: npm install
+          command: npm ci
       - prodsec/security_scans:
           mode: auto
           release-branch: master
